@@ -1,4 +1,4 @@
-# If moose is NOT online
+# If PolishKrowa is NOT online
 tellraw @a[distance=..8] {text:"PolishKrowa is not online.",color:red}
 
 # Modify Entity

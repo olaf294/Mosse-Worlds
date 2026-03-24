@@ -17,8 +17,8 @@ visibility @a[tag=!legitermoose.is_playing] hide @a[tag=legitermoose.is_playing]
 
 
 # Spawn Mannequinss
-execute as @e[type=mannequin,tag=legitermoose.spawn] at @s if entity @a[distance=..20,gamemode=!spectator] run rotate @s facing entity @p[gamemode=!spectator]
-execute as @e[type=mannequin,tag=legitermoose.spawn] at @s unless entity @a[distance=..20,gamemode=!spectator] run rotate @s -90 0
+execute as @e[type=mannequin,tag=legitermoose.spawn] at @s if entity @a[distance=..25,gamemode=!spectator] run rotate @s facing entity @p[gamemode=!spectator]
+execute as @e[type=mannequin,tag=legitermoose.spawn] at @s unless entity @a[distance=..25,gamemode=!spectator] run rotate @s -90 0
 
 execute as @e[type=interaction,tag=legitermoose.spawn.interact_play] on target run inventory @s block 992 54 1 Search Worlds 
 execute as @e[type=interaction,tag=legitermoose.spawn.interact_play] on attacker run inventory @s block 992 54 1 Search Worlds
@@ -95,13 +95,9 @@ execute as @a run function legitermoose:util/no_gma_blocks
 # World ID
 execute positioned 0 64 0 as @a[distance=251..] run function legitermoose:util/get_worldid
 
-
-# Store UUID in storage
 # Ranks
 execute as @a run function legitermoose:util/gm/world_gm
 
-
-# trigger
 
 execute as @a at @s run function legitermoose:player/tick
 execute as @e[type=item] if items entity @s container.0 *[custom_data~{custom_ui:1b}] run kill @s

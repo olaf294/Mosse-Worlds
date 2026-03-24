@@ -1,5 +1,5 @@
-
-function legitermoose:triggers_tick
+# trigger tick
+function legitermoose:triggers/tick
 
 execute if score @s join matches 1.. run function legitermoose:player/join
 

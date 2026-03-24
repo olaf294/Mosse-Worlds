@@ -1,4 +1,4 @@
-# If moose is online
+# If PolishKrowa is online
 tellraw @a[distance=..10] [{text:"PolishKrowa is online.",color:green},"\n",{text:"World: ",color:gold},{storage:player_detect,nbt:"a.response[{players:[\"PolishKrowa\"]}].world",color:green}]
 
 # Modify Entity
