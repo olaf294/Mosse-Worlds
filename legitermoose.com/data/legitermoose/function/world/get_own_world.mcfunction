@@ -1,9 +1,3 @@
-# Check if you own worlds
-    # $execute unless data storage legitermoose:worlds {worlds:[{uuid:$(UUID)}]} at @s run playsound block.note_block.bass ui @s ~ ~ ~ 1 .5 
-    # $execute unless data storage legitermoose:worlds {worlds:[{uuid:$(UUID)}]} run tellraw @s {text:"You don't own any worlds!",color:red}
-    # $execute unless data storage legitermoose:worlds {worlds:[{uuid:$(UUID)}]} run return run tellraw @s {text:"Create a world to play!",color:yellow}
-
-
 # clear data
 data remove block 992 56 7 Items
 
@@ -32,8 +26,10 @@ $data modify storage legitermoose:temp item.components.lore[4][0].text set strin
 # set visits
 $data modify storage legitermoose:temp item.components.lore[4][2].text set string storage legitermoose:worlds worlds[{uuid:$(UUID)}].visits
 
+# set players
+function legitermoose:world/get_player_count with storage legitermoose:temp item.components.custom_data."legitermoose.data"
 
 data modify block 992 56 7 Items append from storage legitermoose:temp item
 clone 992 56 7 992 56 7 992 54 7
 
-inventory @s block 992 54 7 Your Worlds
+inventory @s block 992 54 7 World

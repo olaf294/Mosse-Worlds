@@ -4,6 +4,8 @@
 execute positioned 1000 64 0 as @a[distance=..250] run function legitermoose:lobby/lobby_tick
 execute positioned 0 64 0 as @a[distance=..250] run tag @s remove legitermoose.is_playing
 execute positioned 0 64 0 as @a[distance=..250] run spawnpoint @s 0 64 0 0 8
+execute positioned 0 64 0 as @a[distance=..250] run clear @s *[custom_data~{world_browser:1b}]
+
 execute positioned 0 64 0 run gamemode adventure @a[distance=..250,tag=!is_admin]
 execute positioned 0 64 0 run scoreboard players set @a[distance=..250] worldid -1
 execute positioned 0 64 0 as @a[distance=250..] run function legitermoose:util/get_worldid
@@ -52,6 +54,8 @@ kill @e[type=tnt_minecart]
 kill @e[type=end_crystal]
 kill @e[type=fireball]
 kill @e[type=area_effect_cloud]
+kill @e[type=wither]
+kill @e[type=ender_dragon]
 
 kill @e[type=item,nbt={Item:{id:"minecraft:potion"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:splash_potion"}}]

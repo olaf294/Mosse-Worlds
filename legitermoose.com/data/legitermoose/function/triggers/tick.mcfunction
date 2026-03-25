@@ -1,10 +1,12 @@
 
 # Voting
 scoreboard players enable @s[tag=legitermoose.is_playing,tag=!legitermoose.has_voted_lobby] vote
-scoreboard players enable @s[tag=legitermoose.is_playing,tag=legitermoose.has_voted_lobby,scores={worldid=1..}] vote
+scoreboard players enable @s[tag=legitermoose.has_voted_lobby,scores={worldid=1..}] vote
+scoreboard players reset @s[tag=legitermoose.has_voted_lobby,scores={worldid=-8}] vote
 execute positioned 0 64 0 run scoreboard players reset @s[distance=..250] vote
 execute as @a[scores={vote=1..}] run function legitermoose:vote/vote
 scoreboard players reset @s[scores={vote=1..}] vote
+
 
 # Lobby
 scoreboard players enable @s lobby
@@ -25,5 +27,6 @@ execute as @s[scores={settings=1..}] run function legitermoose:world/feat/worlds
 
 # Play
 scoreboard players enable @s play
+execute positioned 0 64 0 run scoreboard players reset @s[distance=..250] play
 execute as @s at @s if score @s play matches 1.. run function legitermoose:world_browser/open
 scoreboard players reset @s[scores={play=1..}] play 

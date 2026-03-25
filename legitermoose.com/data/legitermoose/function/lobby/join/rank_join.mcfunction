@@ -1,3 +1,5 @@
+tag @s add legitermoose.is_playing
+
 # Get Name
 function legitermoose:util/get_name
 

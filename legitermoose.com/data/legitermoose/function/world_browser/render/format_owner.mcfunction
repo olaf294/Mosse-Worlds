@@ -2,7 +2,7 @@ execute if data storage legitermoose:world_browser browser{rank:"moose"} run dat
 {text:"e",color:"#FF27A0"},{text:"r",color:"#FF29AF"},{text:"m",color:"#FF2ABF"},{text:"o",color:"#FF2CCF"},{text:"o",color:"#FF2DDF"},{text:"s",color:"#FF2FEF"},{text:"e",color:"#FF30FF"}]
 
 $data modify storage legitermoose:world_browser browser.formatted set value {text:"$(owner)"}
-$execute if data storage legitermoose:world_browser browser{rank:"mm"} run data modify storage legitermoose:world_browser browser.formatted set value [{text:"ᴍᴍO ",color:"dark_green"},{text:"| ",color:dark_gray},{text:"$(owner)",color:"#80d480"}]
+$execute if data storage legitermoose:world_browser browser{rank:"mm"} run data modify storage legitermoose:world_browser browser.formatted set value [{text:"ᴍᴍ💰 ",color:"dark_green"},{text:"| ",color:dark_gray},{text:"$(owner)",color:"#80d480"}]
 $execute if data storage legitermoose:world_browser browser{rank:"xm"} run data modify storage legitermoose:world_browser browser.formatted set value [{text:"xᴍ ",color:"#ff33ff"},{text:"| ",color:dark_gray},{text:"$(owner)",color:"#d662ff"}]
 $execute if data storage legitermoose:world_browser browser{rank:"fm2"} run data modify storage legitermoose:world_browser browser.formatted set value [{text:"ꜰᴍ",color:"#8888ff"},{text:"² ",color:"#ba094a"},{text:"| ",color:dark_gray},{text:"$(owner)",color:"#6ec4ff"}]
 $execute if data storage legitermoose:world_browser browser{rank:"fm"} run data modify storage legitermoose:world_browser browser.formatted set value [{text:"ꜰᴍ ",color:"#8888ff"},{text:"| ",color:dark_gray},{text:"$(owner)",color:"#6ec4ff"}]
