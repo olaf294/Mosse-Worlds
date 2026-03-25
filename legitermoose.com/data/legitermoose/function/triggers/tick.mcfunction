@@ -30,3 +30,7 @@ scoreboard players enable @s play
 execute positioned 0 64 0 run scoreboard players reset @s[distance=..250] play
 execute as @s at @s if score @s play matches 1.. run function legitermoose:world_browser/open
 scoreboard players reset @s[scores={play=1..}] play 
+
+
+scoreboard players reset @s[tag=legitermoose.global_banned] lobby
+scoreboard players reset @s[tag=legitermoose.global_banned] play
