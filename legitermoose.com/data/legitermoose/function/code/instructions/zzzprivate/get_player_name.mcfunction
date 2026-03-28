@@ -1,0 +1,1 @@
+$execute as @a[scores={id=$(player_id)}] run function legitermoose:util/get_name

@@ -3,6 +3,7 @@
 # Spawn Stuff
 execute positioned 1000 64 0 as @a[distance=..250] run function legitermoose:lobby/lobby_tick
 execute positioned 0 64 0 as @a[distance=..250] run tag @s remove legitermoose.is_playing
+execute positioned 0 64 0 as @a[distance=250..] run tag @s add legitermoose.is_playing
 execute positioned 0 64 0 as @a[distance=..250] run spawnpoint @s 0 64 0 0 8
 execute positioned 0 64 0 as @a[distance=..250] run clear @s *[custom_data~{world_browser:1b}]
 
@@ -37,25 +38,10 @@ tag @a[scores={legitermoose.gmc_time=0..},gamemode=adventure] remove legitermoos
 execute as @a[scores={legitermoose.gmc_time=1..},gamemode=creative] run function legitermoose:lobby/_timed_gmc_tick
 
 # Forbidden Items
-clear @a[tag=!is_admin,scores={worldid=-8}] splash_potion
-clear @a[tag=!is_admin,scores={worldid=-8}] lingering_potion
-clear @a[tag=!is_admin,scores={worldid=-8}] tipped_arrow
-clear @a[tag=!is_admin,scores={worldid=-8}] ender_dragon_spawn_egg
-clear @a[tag=!is_admin,scores={worldid=-8}] wither_spawn_egg
-clear @a[tag=!is_admin,scores={worldid=-8}] tnt_minecart
-clear @a[tag=!is_admin,scores={worldid=-8}] end_crystal
-clear @a[tag=!is_admin,scores={worldid=-8}] goat_horn
-clear @a[tag=!is_admin,scores={worldid=-8}] ender_chest
+clear @a[tag=!is_admin] #legitermoose:forbidden_items
+clear @a[tag=!is_admin,scores={worldid=-8}] #legitermoose:lobby_forbidden_items
 
-kill @e[type=splash_potion]
-kill @e[type=lingering_potion]
-kill @e[type=tnt]
-kill @e[type=tnt_minecart]
-kill @e[type=end_crystal]
-kill @e[type=fireball]
-kill @e[type=area_effect_cloud]
-kill @e[type=wither]
-kill @e[type=ender_dragon]
+kill @e[type=#legitermoose:forbidden_entities]
 
 kill @e[type=item,nbt={Item:{id:"minecraft:potion"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:splash_potion"}}]
@@ -77,7 +63,6 @@ execute as @a[tag=legitermoose.teleported,scores={legitermoose.tp_cd=..21}] run 
 
 tag @a[scores={legitermoose.tp_cd=61..}] remove legitermoose.teleported
 scoreboard players reset @a[scores={legitermoose.tp_cd=61..}] legitermoose.tp_cd
-
 
 # Searching
 execute as @a[scores={worldsearch=1..}] store result storage legitermoose:temp search.world_id int 1 run scoreboard players get @s worldsearch

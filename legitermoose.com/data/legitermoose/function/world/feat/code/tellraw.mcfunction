@@ -1,0 +1,1 @@
+$tellraw @a[scores={id=$(player_id)}] {text:"", extra:[{text:"Click ", color:gray}, {text:"HERE", color:gold, bold:true}, {text: " to open the code editor.", color:gray}], click_event:{action:"open_url", url:"$(url)"}, hover_event:{action:"show_text", value:{text:"Click to open editor.", color:gold, italic:true}}}

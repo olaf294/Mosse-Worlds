@@ -15,6 +15,7 @@ execute if entity @s[tag=legitermoose.lobby.gma] run gamemode adventure @s
 scoreboard players add .visits legitermoose.misc 1
 
 clear @s *
+effect clear @s
 item replace entity @s player.cursor with air
 
 inventory @s close

@@ -1,5 +1,4 @@
-# Return if already owning a world
-    # $execute if data storage legitermoose:worlds {worlds:[{uuid:$(UUID)}]} at @s run playsound block.note_block.bass ui @s ~ ~ ~ 1 .5 
+# Return if already owning a world 
 $execute if data storage legitermoose:worlds {worlds:[{uuid:$(UUID)}]} as @s run return run function legitermoose:world/get_own_world with entity @s
 
 tellraw @s {text:"Creating a new world.",color:green}
@@ -57,3 +56,4 @@ execute at @s run playsound entity.player.levelup ui @s ~ ~ ~ 1 2
 tellraw @s {text:"World successfully created.",color:green}
 tellraw @s [{text:"Your Player ID: ",color:yellow},{score:{name:"@s",objective:id},color:gold}]
 tellraw @s [{text:"World ID assigned: ",color:yellow},{score:{name:".global_id",objective:legitermoose.misc},color:gold}]
+tellraw @s [{text:"TIP: ",color:green},{text:"Cʟɪᴄᴋ ᴄʀᴇᴀᴛᴇ ᴀɢᴀɪɴ ᴛᴏ ᴊᴏɪɴ ʏᴏᴜʀ ɴᴇᴡ ᴡᴏʀʟᴅ!",color:yellow}]

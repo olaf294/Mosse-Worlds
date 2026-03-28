@@ -1,0 +1,1 @@
+$tellraw @a[scores={world_id=$(world_id)}] "$(message)"

@@ -26,6 +26,9 @@ $data modify storage legitermoose:temp item.components.lore[4][0].text set strin
 # set visits
 $data modify storage legitermoose:temp item.components.lore[4][2].text set string storage legitermoose:worlds worlds[{uuid:$(UUID)}].visits
 
+# set icon
+$data modify storage legitermoose:temp item.id set from storage legitermoose:worlds worlds[{uuid:$(UUID)}].icon
+
 # set players
 function legitermoose:world/get_player_count with storage legitermoose:temp item.components.custom_data."legitermoose.data"
 

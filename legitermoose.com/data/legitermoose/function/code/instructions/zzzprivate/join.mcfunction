@@ -1,0 +1,1 @@
+$data modify storage legitermoose:code code.temp.OUT set value "$(A)$(B)"

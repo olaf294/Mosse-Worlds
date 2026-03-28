@@ -19,6 +19,10 @@ scoreboard objectives add vote trigger
 scoreboard objectives add lobby trigger
 scoreboard objectives add fly trigger
 scoreboard objectives add settings trigger
+scoreboard objectives add find trigger
+
+scoreboard objectives add code trigger
+scoreboard objectives add reload trigger
 
 scoreboard objectives add worldsearch trigger
 scoreboard objectives add playersearch trigger
@@ -26,7 +30,25 @@ scoreboard objectives add playersearch trigger
 forceload add 990 10
 execute if loaded 1000 64 0 run function legitermoose:load/spawn
 
+team add 0_mosse {text:"ᴍᴏꜱꜱᴇ",color:"#ff00ff"}
+team modify 0_mosse color light_purple
+team modify 0_mosse prefix [{text:"ᴍᴏꜱꜱᴇ",color:"#ff00ff"},{text:" | ",color:dark_gray}]
+
+team add A_adnim {text:"ᴀᴅɴɪᴍ",color:"#ff0033"}
+team modify A_adnim color dark_red
+team modify A_adnim prefix [{text:"ᴀᴅɴɪᴍ",color:"#ff0033"},{text:" | ",color:dark_gray}]
+
+team add M_mood {text:"ᴍᴏᴏᴅ",color:"#1fff0f"}
+team modify M_mood color green
+team modify M_mood prefix [{text:"ᴍᴏᴏᴅ",color:"#1fff0f"},{text:" | ",color:dark_gray}]
+
+
+
+
 tellraw @a[tag=is_admin] [{text:"ʟᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ.ᴄᴏᴍ ʟᴏᴀᴅᴇᴅ!",color:gray}]
+
+
+
 
 #   edit name <gradient:gold:yellow><shadow:#ff00007f>M<shadow:#ff0f007f>o<shadow:#ff1f007f>s<shadow:#ff2e007f>s<shadow:#ff3e007f>e <shadow:#ff5d007f>W<shadow:#ff6c007f>o<shadow:#ff7c007f>r<shadow:#ff8b007f>l<shadow:#ff9b007f>d<yellow><shadow:gold:.5>s
 
