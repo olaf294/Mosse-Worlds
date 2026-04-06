@@ -1,4 +1,4 @@
 # Get request to players endpoint
 tellraw @a[tag=is_admin,tag=!ignore] {text:"Cᴀʟʟɪɴɢ API... (Mᴏᴏꜱᴇ / PᴏʟɪꜱʜKʀᴏᴡᴀ Dᴇᴛᴇᴄᴛ)",color:"#333388"}
 
-http store player_detect a callback code:playerdetect/detect send "https://api.legiti.dev/players" GET
+http store player_detect a callback code:playerdetect/detect send "https://api.legiti.dev/player" GET

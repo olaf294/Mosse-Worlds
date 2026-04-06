@@ -1,0 +1,14 @@
+execute if score len_playername legitermoose.temp matches 3 run return run function legitermoose:lobby/join/rank/fm/3
+execute if score len_playername legitermoose.temp matches 4 run return run function legitermoose:lobby/join/rank/fm/4
+execute if score len_playername legitermoose.temp matches 5 run return run function legitermoose:lobby/join/rank/fm/5
+execute if score len_playername legitermoose.temp matches 6 run return run function legitermoose:lobby/join/rank/fm/6
+execute if score len_playername legitermoose.temp matches 7 run return run function legitermoose:lobby/join/rank/fm/7
+execute if score len_playername legitermoose.temp matches 8 run return run function legitermoose:lobby/join/rank/fm/8
+execute if score len_playername legitermoose.temp matches 9 run return run function legitermoose:lobby/join/rank/fm/9
+execute if score len_playername legitermoose.temp matches 10 run return run function legitermoose:lobby/join/rank/fm/10
+execute if score len_playername legitermoose.temp matches 11 run return run function legitermoose:lobby/join/rank/fm/11
+execute if score len_playername legitermoose.temp matches 12 run return run function legitermoose:lobby/join/rank/fm/12
+execute if score len_playername legitermoose.temp matches 13 run return run function legitermoose:lobby/join/rank/fm/13
+execute if score len_playername legitermoose.temp matches 14 run return run function legitermoose:lobby/join/rank/fm/14
+execute if score len_playername legitermoose.temp matches 15 run return run function legitermoose:lobby/join/rank/fm/15
+execute if score len_playername legitermoose.temp matches 16 run return run function legitermoose:lobby/join/rank/fm/16

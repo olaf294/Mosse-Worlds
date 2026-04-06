@@ -49,6 +49,7 @@ kill @e[type=item,nbt={Item:{id:"minecraft:lingering_potion"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:ender_dragon_spawn_egg"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:wither_spawn_egg"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:tnt_minecart"}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:ender_chest"}}]
 kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{ui:1b}}}}]
 
 # Player Count

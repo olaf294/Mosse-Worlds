@@ -45,7 +45,8 @@ execute if entity @s[tag=is_fm2,tag=!is_xm] run data modify storage legitermoose
 execute if entity @s[tag=is_xm] run data modify storage legitermoose:temp temp.rank set value "xm"
 execute if entity @s[name=Legitermoose] run data modify storage legitermoose:temp temp.rank set value "moose"
 
-
+# Set Icon
+data modify storage legitermoose:temp temp.icon set value "player_head"
 
 
 

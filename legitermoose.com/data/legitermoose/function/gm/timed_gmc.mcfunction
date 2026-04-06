@@ -11,7 +11,7 @@ tag @s remove legitermoose.lobby.gmsp
 tag @s add legitermoose.lobby.gmc
 tag @s add legitermoose.disable_global_time
 
-tp @s 1000 64 0
+tp @s 1000 64 0 90 0
 gamemode creative @s
 
 $scoreboard players set @s legitermoose.gmc_time $(time)

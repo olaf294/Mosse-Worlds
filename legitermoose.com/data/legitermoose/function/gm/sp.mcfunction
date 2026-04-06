@@ -9,7 +9,7 @@ tag @s remove legitermoose.disable_global_time
 
 tag @s add legitermoose.lobby.gmsp
 
-tp @s 1000 64 0
+tp @s 1000 64 0 90 0
 gamemode spectator @s
 
 tellraw @s {translate:"gameMode.changed",with:[{translate:"gameMode.spectator"}]}

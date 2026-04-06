@@ -17,10 +17,10 @@ execute unless data storage player_detect {a:{status_code:200}} run tellraw @a[t
 
 
 # =-=-=-= Moose Detect =-=-=-=
-execute if data storage player_detect a.response[{players:["Legitermoose"]}] positioned 9 64 -19 run function code:playerdetect/moose/_found
-execute unless data storage player_detect a.response[{players:["Legitermoose"]}] positioned 9 64 -19 run function code:playerdetect/moose/_notfound
+execute if data storage player_detect a.response[{name:"Legitermoose"}] positioned 9 64 -19 run function code:playerdetect/moose/_found
+execute unless data storage player_detect a.response[{name:"Legitermoose"}] positioned 9 64 -19 run function code:playerdetect/moose/_notfound
 
 
 # =-=-=-= PolishKrowa Detect =-=-=-=
-execute if data storage player_detect a.response[{players:["PolishKrowa"]}] positioned 9 64 -19 run function code:playerdetect/polishkrowa/_found
-execute unless data storage player_detect a.response[{players:["PolishKrowa"]}] positioned 9 64 -19 run function code:playerdetect/polishkrowa/_notfound
+execute if data storage player_detect a.response[{name:"PolishKrowa"}] positioned 9 64 -19 run function code:playerdetect/polishkrowa/_found
+execute unless data storage player_detect a.response[{name:"PolishKrowa"}] positioned 9 64 -19 run function code:playerdetect/polishkrowa/_notfound

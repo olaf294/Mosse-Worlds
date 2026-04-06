@@ -1,6 +1,6 @@
 # TODO: attempt spawning entity that pre loads your world, then kill it once you go there
 # That won't work anyway so.
-tp @s ~ ~ ~
+tp @s ~ ~ ~ 0 0
 
 # commenting out a bad attempt at loading the chunk
     #fill ~-1 ~-2 ~-1 ~1 ~-2 ~1 bedrock

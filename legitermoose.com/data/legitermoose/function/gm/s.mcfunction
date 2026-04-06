@@ -9,7 +9,7 @@ tag @s remove legitermoose.disable_global_time
 
 tag @s add legitermoose.lobby.gms
 
-tp @s 1000 64 0
+tp @s 1000 64 0 90 0
 gamemode survival @s
 
 tellraw @s {translate:"gameMode.changed",with:[{translate:"gameMode.survival"}]}

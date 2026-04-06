@@ -1,4 +1,4 @@
-tp @s 1000 64 0
+tp @s 1000 64 0 90 0
 
 tellraw @s [{text:"Connecting to legitermoose.com...",color:gray}]
 
