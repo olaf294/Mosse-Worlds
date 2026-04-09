@@ -9,7 +9,10 @@ scoreboard players reset @s[scores={vote=1..}] vote
 
 
 # Lobby
-scoreboard players enable @s lobby
+execute if score .lobby_enabled legitermoose.misc matches 1 run scoreboard players enable @s lobby
+execute unless score .lobby_enabled legitermoose.misc matches 1 run scoreboard players enable @s[tag=is_admin] lobby
+execute unless score .lobby_enabled legitermoose.misc matches 1 run scoreboard players reset @s[tag=!is_admin] lobby
+
 execute if score @s lobby matches 1.. run function legitermoose:triggers/lobby
 scoreboard players reset @s[scores={lobby=1..}] lobby
 
@@ -21,9 +24,9 @@ execute positioned 1000 64 0 run scoreboard players reset @s[distance=..250,tag=
 scoreboard players enable @s[scores={legitermoose.rank=10}] fly
 
 # Setttings
-scoreboard players enable @s[scores={legitermoose.rank=10}] settings
-execute unless score @s legitermoose.rank matches 10 run scoreboard players reset @s settings
-execute as @s[scores={settings=1..}] run function legitermoose:world/feat/worldsettings
+scoreboard players enable @s[scores={legitermoose.rank=10}] worldsettings
+execute unless score @s legitermoose.rank matches 10 run scoreboard players reset @s worldsettings
+execute as @s[scores={worldsettings=1..}] run function legitermoose:world/feat/worldsettings
 
 # Play
 scoreboard players enable @s play

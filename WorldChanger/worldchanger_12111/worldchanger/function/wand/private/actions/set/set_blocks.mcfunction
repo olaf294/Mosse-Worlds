@@ -1,0 +1,2 @@
+$fill $(x1) $(y1) $(z1) $(x2) $(y2) $(z2) $(block) 
+tellraw @s [{text:"W",color:gold},{text:"C",color:yellow},{text:" » ",color:gray},{text:"Oᴘᴇʀᴀᴛɪᴏɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ (",color:blue},{score:{name:".total_area",objective:"wc.values"},color:aqua},{text:" ʙʟᴏᴄᴋꜱ)",color:blue}]

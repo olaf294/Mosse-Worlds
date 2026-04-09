@@ -5,7 +5,7 @@ data modify storage legitermoose:temp ranks.UUID set from entity @s UUID
 execute store result storage legitermoose:temp ranks.world_id int 1 run scoreboard players get @s worldid
 
 # Get Rank into Score
-execute as @s[tag=legitermoose.is_playing] run function legitermoose:world/ranks/get_ranks with storage legitermoose:temp ranks
+execute as @s[tag=legitermoose.is_playing] run function legitermoose:world/perm/get_perms with storage legitermoose:temp ranks
 
 # All players not on Legitermoose don't have any rank score
 scoreboard players reset @s[tag=!legitermoose.is_playing] legitermoose.rank

@@ -5,6 +5,7 @@ scoreboard objectives add legitermoose.tp_cd dummy
 scoreboard objectives add worldid dummy
 scoreboard objectives add previd dummy
 scoreboard objectives add legitermoose.rank dummy
+scoreboard objectives add legitermoose.gamemode dummy
 
 scoreboard objectives add join custom:leave_game
 scoreboard objectives add leave custom:leave_game
@@ -18,7 +19,7 @@ scoreboard objectives add play trigger
 scoreboard objectives add vote trigger
 scoreboard objectives add lobby trigger
 scoreboard objectives add fly trigger
-scoreboard objectives add settings trigger
+scoreboard objectives add worldsettings trigger
 scoreboard objectives add find trigger
 
 scoreboard objectives add code trigger

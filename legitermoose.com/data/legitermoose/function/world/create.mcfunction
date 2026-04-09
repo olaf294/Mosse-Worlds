@@ -36,7 +36,13 @@ data modify storage legitermoose:ranks worlds append value {id:0,uuids:[]}
 data modify storage legitermoose:ranks worlds[-1].id set from storage legitermoose:temp temp.world_id
 data modify storage legitermoose:ranks worlds[-1].uuids set value [{id:[],rank:10}]
 data modify storage legitermoose:ranks worlds[-1].uuids[0].id set from entity @s UUID
-
+ 
+# Update Gamemode Storage to contain Owner UUID
+data modify storage legitermoose:gm worlds append value {id:0,uuids:[],default:0}
+data modify storage legitermoose:gm worlds[-1].id set from storage legitermoose:temp temp.world_id
+data modify storage legitermoose:gm worlds[-1].uuids set value [{id:[],gamemode:2}]
+data modify storage legitermoose:gm worlds[-1].uuids[0].id set from entity @s UUID
+ 
 # Set Rank
 execute if entity @s[tag=!is_am] run data modify storage legitermoose:temp temp.rank set value "non"
 execute if entity @s[tag=is_am,tag=!is_fm] run data modify storage legitermoose:temp temp.rank set value "am"
@@ -47,8 +53,6 @@ execute if entity @s[name=Legitermoose] run data modify storage legitermoose:tem
 
 # Set Icon
 data modify storage legitermoose:temp temp.icon set value "player_head"
-
-
 
 data modify storage legitermoose:worlds worlds append from storage legitermoose:temp temp
 

@@ -13,7 +13,7 @@ function legitermoose:code/run_event with storage legitermoose:temp code
 data modify storage legitermoose:code code.player_id set value -1
 
 # merge data
-function legitermoose:util/gm/world_gm
+function legitermoose:util/perm/world_gm
 execute if score @s legitermoose.rank matches 10 run return fail
 execute if entity @s[tag=is_admin] run return fail
 

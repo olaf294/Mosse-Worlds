@@ -1,7 +1,7 @@
 # trigger tick
 function legitermoose:triggers/tick
 execute positioned 1000 64 0 as @s[distance=..250] run function legitermoose:util/no_gma_blocks
-function legitermoose:util/gm/world_gm
+function legitermoose:util/perm/world_gm
 
 execute if score @s join matches 1.. run function legitermoose:player/join
 

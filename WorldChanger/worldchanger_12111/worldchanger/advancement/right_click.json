@@ -1,0 +1,24 @@
+{
+	"criteria": {
+		"click": {
+			"trigger": "minecraft:using_item",
+			"conditions": {
+				"item": {
+					"components": {
+						"minecraft:custom_data": {
+							"wc.edit_wand": true
+						}
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"click"
+		]
+	],
+	"rewards": {
+		"function": "worldchanger:wand/private/right_click/register"
+	}
+}

@@ -5,3 +5,7 @@ tp @s 0 64 0 0 8
 gamemode adventure @s[tag=!is_admin]
 clear @s
 scoreboard players reset @s leave
+
+kill @s[tag=legacy]
+
+

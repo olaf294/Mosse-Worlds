@@ -1,3 +1,4 @@
-scoreboard players reset @s settings
-scoreboard players enable @s settings
-tellraw @s [{text:"World Settings:",color:gray}]
+scoreboard players reset @s worldsettings
+scoreboard players enable @s worldsettings
+tellraw @s [{text:"Wᴏʀʟᴅ Sᴇᴛᴛɪɴɢꜱ:",color:gray}]
+tellraw @s [{text:""}]
