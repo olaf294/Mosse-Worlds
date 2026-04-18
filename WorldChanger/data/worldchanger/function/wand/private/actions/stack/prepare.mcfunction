@@ -1,0 +1,1 @@
+tellraw @s "You are currently in Left Click Mode. tChange Sprint Mode to act as a right-click."

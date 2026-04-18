@@ -3,19 +3,5 @@
         "description": "WorldChanger - WorldEdit in a Datapack",
         "min_format": [88, 0],
         "max_format": [94, 1]
-    },
-    "overlays": {
-        "entries": [
-            {
-                "min_format": [94, 0],
-                "max_format": [94, 1],
-                "directory": "worldchanger_12111"
-            },
-            {
-                "directory": "worldchanger_1219",
-                "min_format": [88, 0],
-                "max_format": [88, 2]
-            }
-        ]
     }
 }

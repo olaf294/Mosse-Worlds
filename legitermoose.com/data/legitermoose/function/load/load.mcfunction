@@ -44,6 +44,7 @@ team modify M_mood color green
 team modify M_mood prefix [{text:"ᴍᴏᴏᴅ",color:"#1fff0f"},{text:" | ",color:dark_gray}]
 
 
+#function legitermoose:world_browser/new_maybe/refresh
 
 
 tellraw @a[tag=is_admin] [{text:"ʟᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ.ᴄᴏᴍ ʟᴏᴀᴅᴇᴅ!",color:gray}]

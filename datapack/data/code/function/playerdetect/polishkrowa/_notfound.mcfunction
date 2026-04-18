@@ -1,5 +1,5 @@
 # If PolishKrowa is NOT online
-tellraw @a[distance=..8] {text:"PolishKrowa is not online.",color:red}
+tellraw @a[distance=..10] {text:"PolishKrowa is not online.",color:red}
 
 # Modify Entity
 execute as @e[type=text_display,tag=polish_status] run data modify entity @s text.extra[1].text set value "ᴏꜰꜰʟɪɴᴇ"

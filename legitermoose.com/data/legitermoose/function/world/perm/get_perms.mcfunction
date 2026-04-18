@@ -5,4 +5,4 @@ $execute unless data storage legitermoose:gm worlds[{id:$(world_id)}].default ru
 $execute store result score @s legitermoose.gamemode run data get storage legitermoose:gm worlds[{id:$(world_id)}].default
 
 # If you are the world owner
-$execute if data storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(uuid)}].gamemode run say i have a gamemode
+$execute if data storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].gamemode store result score @s legitermoose.glegitermoose.gamemode run data get storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].gamemode  

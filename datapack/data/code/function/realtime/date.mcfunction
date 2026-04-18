@@ -1,4 +1,4 @@
-# Days since Jan 1 2026
+# Days since Jan 1
 execute store result score .date time run data get entity @p bukkit.lastPlayed 0.0000000115741
 scoreboard players remove .date time 20453
 
@@ -6,63 +6,11 @@ scoreboard players remove .date time 20453
 scoreboard players set .month time 1
 scoreboard players set .year time 2026
 
-# January 2026
-execute unless score .date time matches 32.. run return run function code:realtime/store_date
-execute if score .date time matches 32.. run scoreboard players add .month time 1
-execute if score .date time matches 32.. run scoreboard players remove .date time 31
+# Offset Day according to offset
+scoreboard players operation .offset2 time = .offset time
+scoreboard players operation .offset2 time += .hour_utc time
 
-# February 2026
-execute unless score .date time matches 29.. run return run function code:realtime/store_date
-execute if score .date time matches 29.. run scoreboard players add .month time 1
-execute if score .date time matches 29.. run scoreboard players remove .date time 28
+function code:realtime/offset_day
 
-# March 2026
-execute unless score .date time matches 32.. run return run function code:realtime/store_date
-execute if score .date time matches 32.. run scoreboard players add .month time 1
-execute if score .date time matches 32.. run scoreboard players remove .date time 31
-
-# April 2026
-execute unless score .date time matches 31.. run return run function code:realtime/store_date
-execute if score .date time matches 31.. run scoreboard players add .month time 1
-execute if score .date time matches 31.. run scoreboard players remove .date time 30
-
-# May 2026
-execute unless score .date time matches 32.. run return run function code:realtime/store_date
-execute if score .date time matches 32.. run scoreboard players add .month time 1
-execute if score .date time matches 32.. run scoreboard players remove .date time 31
-
-# June 2026
-execute unless score .date time matches 31.. run return run function code:realtime/store_date
-execute if score .date time matches 31.. run scoreboard players add .month time 1
-execute if score .date time matches 31.. run scoreboard players remove .date time 30
-
-# July 2026
-execute unless score .date time matches 32.. run return run function code:realtime/store_date
-execute if score .date time matches 32.. run scoreboard players add .month time 1
-execute if score .date time matches 32.. run scoreboard players remove .date time 31
-
-# August 2026
-execute unless score .date time matches 32.. run return run function code:realtime/store_date
-execute if score .date time matches 32.. run scoreboard players add .month time 1
-execute if score .date time matches 32.. run scoreboard players remove .date time 31
-
-# September 2026
-execute unless score .date time matches 31.. run return run function code:realtime/store_date
-execute if score .date time matches 31.. run scoreboard players add .month time 1
-execute if score .date time matches 31.. run scoreboard players remove .date time 30
-
-# October 2026
-execute unless score .date time matches 32.. run return run function code:realtime/store_date
-execute if score .date time matches 32.. run scoreboard players add .month time 1
-execute if score .date time matches 32.. run scoreboard players remove .date time 31
-
-# November 2026
-execute unless score .date time matches 31.. run return run function code:realtime/store_date
-execute if score .date time matches 31.. run scoreboard players add .month time 1
-execute if score .date time matches 31.. run scoreboard players remove .date time 30
-
-# December 2026
-execute unless score .date time matches 32.. run return run function code:realtime/store_date
-execute if score .date time matches 32.. run scoreboard players add .month time 1
-execute if score .date time matches 32.. run scoreboard players remove .date time 31
-    
+# Get Years
+function code:realtime/year/nextyear

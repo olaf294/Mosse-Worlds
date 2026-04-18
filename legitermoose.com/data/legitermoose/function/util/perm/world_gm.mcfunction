@@ -17,13 +17,13 @@ execute positioned 1000 64 0 run scoreboard players set @s[tag=!is_admin,tag=leg
 execute as @s[tag=!is_admin] unless score @s legitermoose.rank matches -2147483648..2147483647 run gamemode adventure @s
 
 # Clear those players too
-execute as @s[tag=!is_admin] unless score @s legitermoose.rank matches -2147483648..2147483647 run clear @s *[!custom_data~{ui:1b}]
+execute as @s[tag=!is_admin] unless score @s legitermoose.rank matches -2147483648..2147483647 run clear @s *[!custom_data~{ui:1b}, !custom_data~{world_browser:1b}]
 
 # All Lobby GMC players get Creative if they are at lobby
 gamemode creative @s[tag=!is_admin,scores={legitermoose.rank=5}]
 
 # All Admins in Lobby get Rank 10
-execute positioned 1000 64 0 run scoreboard players set @a[tag=is_admin,distance=..250] legitermoose.rank 10
+execute positioned 1000 64 0 run scoreboard players set @s[tag=is_admin,distance=..250] legitermoose.rank 10
 
 # Set all Rank 10s to Creative
 gamemode creative @s[tag=!is_admin,scores={legitermoose.rank=10}]

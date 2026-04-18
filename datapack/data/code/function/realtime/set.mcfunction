@@ -1,8 +1,3 @@
-# only run once every 10 ticks
-    #scoreboard players add .cooldown time 1
-    #execute unless score .cooldown time matches 10.. run return fail
-    #execute if score .cooldown time matches 10.. run scoreboard players set .cooldown time 0
-
 # Get Time
 execute store result score .time time run data get entity @p bukkit.lastPlayed .001
 
@@ -36,13 +31,5 @@ scoreboard players operation @s hour = .hour_utc time
 scoreboard players operation @s hour += @s hour2
 scoreboard players operation @s hour %= 24 numbers
 
-
-execute store result storage time hours int 1 run scoreboard players get .hours time
-execute store result storage time minutes int 1 run scoreboard players get .minutes time
-execute store result storage time seconds int 1 run scoreboard players get .seconds time
-
-execute store result storage time hourself int 1 run scoreboard players get @s hour
-
 function code:realtime/date
-
-function code:realtime/update with storage time
+function code:realtime/update

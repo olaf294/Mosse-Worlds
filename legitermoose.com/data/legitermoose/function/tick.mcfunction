@@ -82,3 +82,9 @@ execute as @e[type=item] if items entity @s contents *[custom_data~{custom_ui:1b
 
 execute as @a[scores={worldid=-8}] run function legitermoose:world_browser/ensure_compass
 execute as @e[type=item] if items entity @s contents *[custom_data~{world_browser:1b}] run kill @s
+
+execute as @e[type=ender_pearl] run function legitermoose:util/ender_pearls
+
+
+execute if block 0 65 4 polished_blackstone_button[powered=true] positioned 0 65 4 as @p run function legitermoose:lobby/join_server/pre_check with entity @p
+execute if block 0 65 4 polished_blackstone_button[powered=true] run setblock 0 65 4 polished_blackstone_button[powered=false,face=floor,facing=south]
