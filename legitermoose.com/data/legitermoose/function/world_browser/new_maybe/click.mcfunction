@@ -3,4 +3,8 @@ execute if items entity @s player.cursor *[custom_data~{new_previous_page:1b}] r
 execute if items entity @s player.cursor *[custom_data~{new_last_page:1b}] run function legitermoose:world_browser/new_maybe/open_page/end
 execute if items entity @s player.cursor *[custom_data~{new_first_page:1b}] run function legitermoose:world_browser/new_maybe/open_page {page:1}
 
+execute unless items entity @s player.cursor *[custom_data~{world:1b}] run return run item replace entity @s player.cursor with air
+
+item replace entity @s enderchest.0 from entity @s player.cursor
+execute store result score @s worldsearch run data get entity @s EnderItems[{Slot:0b}].components.minecraft:custom_data.world_id
 item replace entity @s player.cursor with air

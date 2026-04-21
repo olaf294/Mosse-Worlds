@@ -6,7 +6,7 @@ tellraw @s {text:"Creating a new world.",color:green}
 # Set value
 data remove storage legitermoose:temp temp
 data merge storage legitermoose:temp \
-{temp:{owner:"unknown",rank:"unknown",uuid:[I; 0, 0, 0, 0],world_id:0,created_at:0,votes:0,visits:0,name:[{text:"Player",color:white,italic:0b},{text:"'s world",color:white,italic:0b}],description:[{text:"This is the default description",color:gray,italic:0b},{text:"for worlds on legitermoose.com",color:gray,italic:0b}],custom_data:{ui:1b,"legitermoose.data":{plot_position:{x:10000,y:64,z:0}}}}}
+{temp:{owner:"unknown",rank:"unknown",uuid:[I; 0, 0, 0, 0],world_id:0,created_at:0,votes:0,visits:0,name:[{text:"Player",color:white,italic:0b},{text:"'s world",color:white,italic:0b}],description:[{text:"This is the default description",color:gray,italic:0b},{text:"for worlds on legitermoose.com",color:gray,italic:0b}],settings:{whitelist:0b},custom_data:{ui:1b,"legitermoose.data":{plot_position:{x:10000,y:64,z:0}}}}}
 
 # Increment World ID by 1
 scoreboard players add .global_id legitermoose.misc 1
@@ -49,6 +49,7 @@ execute if entity @s[tag=is_am,tag=!is_fm] run data modify storage legitermoose:
 execute if entity @s[tag=is_fm,tag=!is_fm2] run data modify storage legitermoose:temp temp.rank set value "fm"
 execute if entity @s[tag=is_fm2,tag=!is_xm] run data modify storage legitermoose:temp temp.rank set value "fm2"
 execute if entity @s[tag=is_xm] run data modify storage legitermoose:temp temp.rank set value "xm"
+
 execute if entity @s[name=Legitermoose] run data modify storage legitermoose:temp temp.rank set value "moose"
 
 # Set Icon

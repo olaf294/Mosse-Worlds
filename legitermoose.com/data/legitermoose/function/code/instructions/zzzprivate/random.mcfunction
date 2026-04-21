@@ -1,0 +1,1 @@
+$execute store result storage legitermoose:code code.temp.OUT int 1 run random value $(A)..$(B)

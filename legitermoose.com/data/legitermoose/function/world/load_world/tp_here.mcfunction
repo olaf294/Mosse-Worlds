@@ -1,4 +1,5 @@
 tp @s ~ ~ ~ 0 0
+spawnpoint @s ~ ~ ~
 
 # LEGACY - Move Test Block at spawn down by 1 block
 execute if block ~ ~-2 ~ test_block run tellraw @a[distance=..100] {text:"Tʜɪꜱ Wᴏʀʟᴅ ʜᴀꜱ ᴀ ʟᴇɢᴀᴄʏ Sᴘᴀᴡɴᴘᴏɪɴᴛ ᴀᴛ Y=62 ᴀɴᴅ ʜᴀꜱ ʙᴇᴇɴ ᴍᴏᴠᴇᴅ ᴅᴏᴡɴ.",color:yellow}

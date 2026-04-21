@@ -1,4 +1,3 @@
-
 # Put back in chest
 $item replace block -5 64 9 container.$(slot) from entity @s player.cursor 
 

@@ -1,0 +1,1 @@
+$scoreboard players set $X code $(X)

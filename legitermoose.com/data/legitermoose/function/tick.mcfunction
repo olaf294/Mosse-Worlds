@@ -1,4 +1,7 @@
 # Welcome to Legitermoose.com Datapack. This is a terrible recreation of Legitimoose on Legitimoose.
+scoreboard players operation .players_prev misc = .players misc
+execute store result score .players misc if entity @a
+execute if score .players_prev misc > .players misc run function legitermoose:util/someone_left
 
 # Spawn Stuff
 execute positioned 1000 64 0 as @a[distance=..250] run function legitermoose:lobby/lobby_tick

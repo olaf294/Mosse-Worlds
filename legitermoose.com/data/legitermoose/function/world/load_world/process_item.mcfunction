@@ -1,8 +1,11 @@
+$execute store result score .owner_id legitermoose.temp run data get storage legitermoose:worlds worlds[{world_id:$(world_id)}].owner_id
+$execute if data storage legitermoose:worlds worlds[{world_id:$(world_id)}].settings{whitelist:1b} if entity @s[tag=!is_admin] unless score @s id = .owner_id legitermoose.temp run return run tellraw @s {text:"Tʜɪꜱ ᴡᴏʀʟᴅ ɪꜱ ᴡʜɪᴛᴇʟɪꜱᴛᴇᴅ.",color:red}
+
 tellraw @s {text:"Loading world...",color:gray}
 
 $say world id is $(world_id)
 
-clear @s *[custom_data~{ui:1b}]
+clear @s
 item replace entity @s player.cursor with air
 execute at @s run playsound block.wooden_button.click_on ui @s ~ ~ ~ 1 1
 

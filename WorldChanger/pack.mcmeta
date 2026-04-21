@@ -1,7 +1,6 @@
 {
     "pack": {
         "description": "WorldChanger - WorldEdit in a Datapack",
-        "min_format": [88, 0],
-        "max_format": [94, 1]
+        "pack_format": 88
     }
 }

@@ -1,7 +1,6 @@
 scoreboard players set page legitermoose.temp 1
 
 scoreboard players set test legitermoose.temp 0
-execute as @a unless score @s worldid matches 1.. run tag @s add sorted_world
 data modify storage legitermoose:world_browser unsorted_worlds set from storage legitermoose:worlds worlds
 data modify storage legitermoose:world_browser sorted set value []
 function legitermoose:world_browser/new_maybe/refresh/sort

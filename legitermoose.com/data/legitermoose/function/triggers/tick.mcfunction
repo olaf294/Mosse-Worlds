@@ -25,8 +25,12 @@ scoreboard players enable @s[scores={legitermoose.rank=10}] fly
 
 # Setttings
 scoreboard players enable @s[scores={legitermoose.rank=10}] worldsettings
-execute unless score @s legitermoose.rank matches 10 run scoreboard players reset @s worldsettings
-execute as @s[scores={worldsettings=1..}] run function legitermoose:world/feat/worldsettings
+execute unless score @s[tag=!is_admin] legitermoose.rank matches 10 run scoreboard players reset @s worldsettings
+execute as @s[tag=is_admin] unless score @s worldid matches -1 run scoreboard players enable @s worldsettings
+execute if entity @s[scores={worldsettings=1..}] store result storage legitermoose:temp settings.world_id int 1 run scoreboard players get @s worldid 
+execute as @s[scores={worldsettings=1..}] run function legitermoose:world/feat/worldsettings/show_settings with storage legitermoose:temp settings
+scoreboard players reset @s[scores={worldsettings=1..}] worldsettings
+
 
 # Play
 scoreboard players enable @s play
@@ -41,16 +45,16 @@ execute as @s if score @s find matches 1.. store result storage legitermoose:tem
 execute as @s[scores={find=1..}] run function legitermoose:triggers/find/find with storage legitermoose:temp find_player
 
 # Code
-scoreboard players enable @s[scores={legitermoose.rank=10}, tag=is_dev] code
+scoreboard players enable @s[scores={legitermoose.rank=10}] code
 scoreboard players enable @a[tag=is_dev] code
 execute unless score @s[tag=!is_dev] legitermoose.rank matches 10 run scoreboard players reset @s code
 execute as @s[scores={code=1..}] run function legitermoose:world/feat/code/run
 
 # Reload
-scoreboard players enable @s[scores={legitermoose.rank=10}, tag=is_dev] reload
+scoreboard players enable @s[scores={legitermoose.rank=10}] reload
 scoreboard players enable @a[tag=is_dev] reload
 execute unless score @s[tag=!is_dev] legitermoose.rank matches 10 run scoreboard players reset @s reload
-execute as @s[scores={reload=1..}, tag=is_dev] run function legitermoose:world/feat/reload/run
+execute as @s[scores={reload=1..}] run function legitermoose:world/feat/reload/run
 
 
 scoreboard players reset @s[tag=legitermoose.global_banned] lobby

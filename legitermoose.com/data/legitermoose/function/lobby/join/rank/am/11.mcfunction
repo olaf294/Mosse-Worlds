@@ -11,7 +11,7 @@ tellraw @a[tag=legitermoose.is_playing] [{text:"[",color:gray},{text:"+",color:d
 {storage:str,nbt:"out[9]",color:"#BAF9CC"},\
 {storage:str,nbt:"out[10]",color:"#C2FCD2"}]
 
-tellraw @a[tag=!legitermoose.is_playing] [{text:"[",color:gray,hover_event:{action:show_text,value:[{storage:"legitermoose:temp",nbt:playername},{text:" has mysteriously disappeared.",color:white}]}},{text:"→",color:aqua},{text:"] ",color:gray},{text:"ᴀᴍ ",color:"#98fdb5"},{text:"| ",color:dark_gray},\
+tellraw @a[tag=!legitermoose.is_playing] [{text:"[",color:gray},{text:"→",color:aqua},{text:"] ",color:gray},{text:"ᴀᴍ ",color:"#98fdb5"},{text:"| ",color:dark_gray},\
 {storage:str,nbt:"out[0]",color:"#71DF92"},\
 {storage:str,nbt:"out[1]",color:"#79E298"},\
 {storage:str,nbt:"out[2]",color:"#81E59F"},\

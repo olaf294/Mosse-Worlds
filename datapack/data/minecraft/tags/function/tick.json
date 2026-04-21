@@ -1,5 +1,6 @@
 {
 	"values": [
-	"code:tick"
+	"code:tick",
+	"code:streak/tick"
 	]
 }

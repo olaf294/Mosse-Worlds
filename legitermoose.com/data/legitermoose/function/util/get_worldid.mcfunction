@@ -17,5 +17,6 @@ scoreboard players remove .temp worldid 9
 scoreboard players operation @s worldid = .temp worldid
 
 
-# If World ID is not equal previous ID 
+# If World ID is not equal previous ID
+execute unless score @s worldid = @s previd at @s run playsound entity.experience_orb.pickup block @s ~ ~ ~ 10 1
 execute unless score @s worldid = @s previd run function legitermoose:util/changed_world

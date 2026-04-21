@@ -1,10 +1,10 @@
 team join player @a[team=]
-effect give @a[nbt=!{active_effects:[{id:"minecraft:saturation"}]}] saturation 100 1 true
-execute store result score .players misc if entity @a
+effect give @a saturation 100 1 true
 
 execute as @a unless score @s id matches -2147483648..2147483647 run function code:_id
 
 execute as @a run function code:realtime/set
+execute as @a[tag=!legitermoose.is_playing] run function code:browser/tick
 
 scoreboard players enable @a offset
 execute as @a[scores={offset=-2147483648..2147483647}] unless score @s offset = @s hour2 run function code:realtime/update_offset

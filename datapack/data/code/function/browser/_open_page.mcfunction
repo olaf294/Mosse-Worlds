@@ -1,3 +1,2 @@
-
 inventory @s close
 $tellraw @s [{text:"Click here to open world page.",bold:0b,color:blue,underlined:1b,click_event:{action:run_command,command:"world $(id)"},hover_event:{action:show_text,value:{text:"Click to Join",italic:1b,color:gray}}}]
