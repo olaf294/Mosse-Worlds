@@ -1,7 +1,11 @@
 # Welcome to Legitermoose.com Datapack. This is a terrible recreation of Legitimoose on Legitimoose.
+# Total Player Count
 scoreboard players operation .players_prev misc = .players misc
 execute store result score .players misc if entity @a
 execute if score .players_prev misc > .players misc run function legitermoose:util/someone_left
+
+# Player Count (only Lobby)
+execute store result score .players legitermoose.misc if entity @a[tag=legitermoose.is_playing]
 
 # Spawn Stuff
 execute positioned 1000 64 0 as @a[distance=..250] run function legitermoose:lobby/lobby_tick
@@ -24,7 +28,11 @@ visibility @a[tag=!legitermoose.is_playing] show @a[tag=!legitermoose.is_playing
 visibility @a[tag=legitermoose.is_playing] hide @a[tag=!legitermoose.is_playing]
 visibility @a[tag=!legitermoose.is_playing] hide @a[tag=legitermoose.is_playing]
 
-# Spawn Mannequinss
+# Playerlist
+playerlist @a[tag=!legitermoose.is_playing] footer set <gold> <b> </b> Yᴏᴜ ᴀʀᴇ ᴘʟᴀʏɪɴɢ ᴏɴ: <gradient:gold:yellow><shadow:#ff00007f>M<shadow:#ff0f007f>o<shadow:#ff1f007f>s<shadow:#ff2e007f>s<shadow:#ff3e007f>e <shadow:#ff5d007f>W<shadow:#ff6c007f>o<shadow:#ff7c007f>r<shadow:#ff8b007f>l<shadow:#ff9b007f>d<yellow><shadow:gold:.5>s <b></b> <b> </b>
+playerlist @a[tag=legitermoose.is_playing] footer set <gold> <b> </b> Yᴏᴜ ᴀʀᴇ ᴘʟᴀʏɪɴɢ ᴏɴ: <#3366ff><u>ʟᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ.ᴄᴏᴍ</u> <b></b> <b> </b>
+
+# Lobby Mannequinss
 execute as @e[type=mannequin,tag=legitermoose.spawn] at @s if entity @a[distance=..25,gamemode=!spectator] run rotate @s facing entity @p[gamemode=!spectator]
 execute as @e[type=mannequin,tag=legitermoose.spawn] at @s unless entity @a[distance=..25,gamemode=!spectator] run rotate @s -90 0
 
@@ -43,7 +51,7 @@ execute as @a[scores={legitermoose.gmc_time=1..},gamemode=creative] run function
 # Forbidden Items
 clear @a[tag=!is_admin] #legitermoose:forbidden_items
 clear @a[tag=!is_admin,scores={worldid=-8}] #legitermoose:lobby_forbidden_items
-
+    
 kill @e[type=#legitermoose:forbidden_entities]
 
 kill @e[type=item,nbt={Item:{id:"minecraft:potion"}}]
@@ -54,13 +62,6 @@ kill @e[type=item,nbt={Item:{id:"minecraft:wither_spawn_egg"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:tnt_minecart"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:ender_chest"}}]
 kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{ui:1b}}}}]
-
-# Player Count
-execute store result score .players legitermoose.misc if entity @a[tag=legitermoose.is_playing]
-
-# Playerlist
-playerlist @a[tag=!legitermoose.is_playing] footer set <gold> <b> </b> Yᴏᴜ ᴀʀᴇ ᴘʟᴀʏɪɴɢ ᴏɴ: <gradient:gold:yellow><shadow:#ff00007f>M<shadow:#ff0f007f>o<shadow:#ff1f007f>s<shadow:#ff2e007f>s<shadow:#ff3e007f>e <shadow:#ff5d007f>W<shadow:#ff6c007f>o<shadow:#ff7c007f>r<shadow:#ff8b007f>l<shadow:#ff9b007f>d<yellow><shadow:gold:.5>s <b></b> <b> </b>
-playerlist @a[tag=legitermoose.is_playing] footer set <gold> <b> </b> Yᴏᴜ ᴀʀᴇ ᴘʟᴀʏɪɴɢ ᴏɴ: <#3366ff><u>ʟᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ.ᴄᴏᴍ</u> <b></b> <b> </b>
 
 # Teleporting
 execute as @a[tag=legitermoose.teleported,scores={legitermoose.tp_cd=..21}] run function legitermoose:world/load_world/tp_to_plot with storage legitermoose:temp plot_position

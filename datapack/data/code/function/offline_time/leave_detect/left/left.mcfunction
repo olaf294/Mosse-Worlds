@@ -1,0 +1,1 @@
+function code:offline_time/leave_detect/left/macro with storage playerlist current_player

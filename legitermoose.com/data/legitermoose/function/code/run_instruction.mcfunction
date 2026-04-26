@@ -31,13 +31,14 @@ return 0
 
 
 ####### code that we need 
+# V A R I A B L E S 
+# tick (i suggest only having 10 ticks for performance but we'll see)
 # block conditions (if block ___)
-# give_item
 # item conditions (if item ___)
+# give_item
 # for_loop
 # while_loop
 # if_else (not just if)
-# on_player_spawn                   <---- what, isnt that just on player join     <--- ok fine it might kinda be useless, removing in 24 hours if its still there
 # colored / formatted text (would need to be SUPER SAFE BECAUSE TEXT COMPONENTS ARE DANGEROUS)      <--- formatting codes exist, i call that a win  <--- nuh uh we need real colors, """Formatting codes are deprecated and will be removed in the future."""
 # make coordinates a special block that takes in 3 numbers instead of always taking in 3 numbers (this is to let you have a "get world spawn" block:
 #   example: (with setblock)

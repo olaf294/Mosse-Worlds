@@ -1,2 +1,2 @@
 $setblock $(X) $(Y) $(Z) $(BLOCK)
-$execute positioned $(X) $(Y) $(Z) if block ~ ~ ~ #legitermoose:banned_blocks run setblock ~ ~ ~ air
+$execute positioned $(X) $(Y) $(Z) run function legitermoose:code/instructions/zzzprivate/setblock/check_block 

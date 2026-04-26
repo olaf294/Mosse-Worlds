@@ -13,3 +13,7 @@ execute unless score @s ui matches 0 if predicate legitermoose:out_of_ui if scor
 scoreboard players add @s time_since_open 1
 
 stopsound @s * block.end_portal.spawn
+
+execute if items entity @s player.cursor paper[custom_data~{rename_world:1b},custom_name] run function legitermoose:world/feat/worldsettings/world_name/prep_setting_name
+execute if items entity @s container.* paper[custom_data~{rename_world:1b}] run clear @s paper[custom_data~{rename_world:1b}]
+execute if items entity @s weapon.offhand paper[custom_data~{rename_world:1b}] run clear @s paper[custom_data~{rename_world:1b}]

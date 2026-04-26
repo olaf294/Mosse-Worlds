@@ -1,5 +1,10 @@
 {
     "values": [
-        "ender_chest"
+        "ender_chest",
+        "command_block",
+        "chain_command_block",
+        "repeating_command_block",
+        "spawner",
+        "trial_spawner"
     ]   
 }

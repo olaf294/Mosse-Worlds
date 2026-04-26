@@ -5,6 +5,8 @@ execute as @a unless score @s id matches -2147483648..2147483647 run function co
 
 execute as @a run function code:realtime/set
 execute as @a[tag=!legitermoose.is_playing] run function code:browser/tick
+execute as @a run function code:streak/tick
+function code:offline_time/leave_detect/tick
 
 scoreboard players enable @a offset
 execute as @a[scores={offset=-2147483648..2147483647}] unless score @s offset = @s hour2 run function code:realtime/update_offset
@@ -15,6 +17,7 @@ execute if score .globaltimer misc matches 1200 run function code:playerdetect/i
 
 # Optimize if not loaded
 execute unless loaded 0 64 0 run return fail
+
 
 
 execute if score .globaltimer misc matches 600 run function code:live_vote_count/init
@@ -45,5 +48,3 @@ execute as @e[type=interaction,tag=chest_protection_interaction] on target at @s
 # discord interaction
 execute as @e[type=interaction,tag=discord_join] on target run tellraw @s {text:"Click here to join the discord!",color:blue,underlined:1b,click_event:{action:"open_url",url:"https://discord.gg/KTAusBx2GH"}}
 execute as @e[type=interaction,tag=discord_join] run data remove entity @s interaction
-
-function code:browser/tick

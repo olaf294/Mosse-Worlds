@@ -6,6 +6,7 @@ scoreboard objectives add worldid dummy
 scoreboard objectives add previd dummy
 scoreboard objectives add legitermoose.rank dummy
 scoreboard objectives add legitermoose.gamemode dummy
+scoreboard objectives add legitermoose.world_slots dummy
 
 scoreboard objectives add join custom:leave_game
 scoreboard objectives add leave custom:leave_game

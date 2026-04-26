@@ -18,7 +18,8 @@ scoreboard objectives add hour dummy
 scoreboard objectives add hour2 dummy
 scoreboard objectives add timeout dummy
 scoreboard objectives add requests dummy
-
+scoreboard objectives add last_played dummy
+ 
 scoreboard objectives add numbers dummy
 scoreboard players set -24 numbers -24
 scoreboard players set -1 numbers -1
