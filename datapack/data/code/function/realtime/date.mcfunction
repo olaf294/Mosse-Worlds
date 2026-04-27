@@ -1,4 +1,4 @@
-# Days since Jan 1
+# Days since Jan 1 2025
 execute store result score .date time run data get entity @p bukkit.lastPlayed 0.0000000115741
 scoreboard players remove .date time 20453
 

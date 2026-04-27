@@ -16,11 +16,19 @@ execute if data storage player_detect {a:{status_code:200}} run tellraw @a[tag=i
 execute unless data storage player_detect {a:{status_code:200}} run tellraw @a[tag=is_admin,tag=!ignore] [{text:"(API) Rᴇꜱᴘᴏɴꜱᴇ: ",color:gray,hover_event:{action:show_text,value:"API - Detect Players"}},{storage:player_detect,nbt:"a.status_code",color:yellow}]
 
 
+
+# =-=-=-= Logbog Detect =-=-=-=
+execute if data storage player_detect a.response[{name:"Logbog"}] positioned 47 69 -35 run function code:playerdetect/logbog/_found
+execute unless data storage player_detect a.response[{name:"Logbog"}] positioned 47 69 -35 run function code:playerdetect/logbog/_notfound
+
 # =-=-=-= Moose Detect =-=-=-=
 execute if data storage player_detect a.response[{name:"Legitermoose"}] positioned 9 64 -19 run function code:playerdetect/moose/_found
 execute unless data storage player_detect a.response[{name:"Legitermoose"}] positioned 9 64 -19 run function code:playerdetect/moose/_notfound
 
-
 # =-=-=-= PolishKrowa Detect =-=-=-=
 execute if data storage player_detect a.response[{name:"PolishKrowa"}] positioned 9 64 -19 run function code:playerdetect/polishkrowa/_found
 execute unless data storage player_detect a.response[{name:"PolishKrowa"}] positioned 9 64 -19 run function code:playerdetect/polishkrowa/_notfound
+
+# =-=-=-= Arvelyx Detect =-=-=-=
+execute if data storage player_detect a.response[{name:"Arvelyx"}] positioned 47 69 -44 run function code:playerdetect/arvelyx/_found
+execute unless data storage player_detect a.response[{name:"Arvelyx"}] positioned 47 69 -44 run function code:playerdetect/arvelyx/_notfound

@@ -1,0 +1,1 @@
+$http body value '{"username":"Mosse Player Detect","avatar_url":"https://api.mcheads.org/head/Logbog/256","content":"@everyone","embeds":[{"title":"Logbog is online!","description":"Logbog has been detected by the Mosse Worlds Player Detect!","color":65280}]}' headers value {"Content-Type":"application/json"} send "$(url)" POST

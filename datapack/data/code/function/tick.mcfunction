@@ -46,5 +46,5 @@ visibility @a[tag=is_admin] hide @e[tag=show_for_timed_out_users]
 execute as @e[type=interaction,tag=chest_protection_interaction] on target at @s run function code:browser/timed_out
 
 # discord interaction
-execute as @e[type=interaction,tag=discord_join] on target run tellraw @s {text:"Click here to join the discord!",color:blue,underlined:1b,click_event:{action:"open_url",url:"https://discord.gg/KTAusBx2GH"}}
+execute as @e[type=interaction,tag=discord_join] on target run tellraw @s {text:"Click here to join the discord!",color:"#0099ff",underlined:1b,click_event:{action:"open_url",url:"https://discord.gg/KTAusBx2GH"}}
 execute as @e[type=interaction,tag=discord_join] run data remove entity @s interaction

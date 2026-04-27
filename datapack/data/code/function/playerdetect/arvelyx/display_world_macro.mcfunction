@@ -1,0 +1,1 @@
+$tellraw @a[distance=..10] [{text:"Click ",color:green},{text:"[HERE] ",color:gold,click_event:{action:"run_command",command:"/world $(world_uuid)"}},{text:"to join \"",color:green},{storage:player_detect,nbt:temp.a.world.response.raw_name,interpret:1b},{text:"\".",color:green}]
