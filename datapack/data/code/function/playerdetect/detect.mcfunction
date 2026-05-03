@@ -1,7 +1,7 @@
 scoreboard players set .globaltimer misc 0
 
 # =-=-=-= Error Handling =-=-=-=
-execute if data storage player_detect {a:{status_code:503}} positioned 9 64 -19 run return run tellraw @a[distance=..10] [{text:"\n⚠ Aɴ API ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ!\nEʀʀᴏʀ: ",color:red},{storage:player_detect,nbt:a.response.message}]
+execute if data storage player_detect {a:{status_code:503}} positioned 9 64 -19 run return run tellraw @a[distance=..12] [{text:"\n⚠ Aɴ API ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ!\nEʀʀᴏʀ: ",color:red},{storage:player_detect,nbt:a.response.message}]
 
 # =-=-=-= Player Detect =-=-=-=
 scoreboard players add .total requests 1
@@ -18,12 +18,16 @@ execute unless data storage player_detect {a:{status_code:200}} run tellraw @a[t
 
 
 # =-=-=-= Logbog Detect =-=-=-=
-execute if data storage player_detect a.response[{name:"Logbog"}] positioned 47 69 -35 run function code:playerdetect/logbog/_found
-execute unless data storage player_detect a.response[{name:"Logbog"}] positioned 47 69 -35 run function code:playerdetect/logbog/_notfound
+execute if data storage player_detect a.response[{name:"Logbog"}] positioned 47 69 -36 run function code:playerdetect/logbog/_found
+execute unless data storage player_detect a.response[{name:"Logbog"}] positioned 47 69 -36 run function code:playerdetect/logbog/_notfound
 
 # =-=-=-= Moose Detect =-=-=-=
 execute if data storage player_detect a.response[{name:"Legitermoose"}] positioned 9 64 -19 run function code:playerdetect/moose/_found
 execute unless data storage player_detect a.response[{name:"Legitermoose"}] positioned 9 64 -19 run function code:playerdetect/moose/_notfound
+
+# =-=-=-= mmmmmaaaaaxxxxx Detect =-=-=-=
+execute if data storage player_detect a.response[{name:"mmmmmaaaaaxxxxx"}] positioned 47 69 -28 run function code:playerdetect/max/_found
+execute unless data storage player_detect a.response[{name:"mmmmmaaaaaxxxxx"}] positioned 47 69 -28 run function code:playerdetect/max/_notfound
 
 # =-=-=-= PolishKrowa Detect =-=-=-=
 execute if data storage player_detect a.response[{name:"PolishKrowa"}] positioned 9 64 -19 run function code:playerdetect/polishkrowa/_found
@@ -32,3 +36,11 @@ execute unless data storage player_detect a.response[{name:"PolishKrowa"}] posit
 # =-=-=-= Arvelyx Detect =-=-=-=
 execute if data storage player_detect a.response[{name:"Arvelyx"}] positioned 47 69 -44 run function code:playerdetect/arvelyx/_found
 execute unless data storage player_detect a.response[{name:"Arvelyx"}] positioned 47 69 -44 run function code:playerdetect/arvelyx/_notfound
+
+# =-=-=-= KooriKitsune38 Detect =-=-=-=
+execute if data storage player_detect a.response[{name:"KooriKitsune38"}] positioned 47 69 -20 run function code:playerdetect/koori/_found
+execute unless data storage player_detect a.response[{name:"KooriKitsune38"}] positioned 47 69 -20 run function code:playerdetect/koori/_notfound
+
+# =-=-=-= T0rston Detect =-=-=-=
+execute if data storage player_detect a.response[{name:"T0rston"}] positioned 47 69 -12 run function code:playerdetect/torston/_found
+execute unless data storage player_detect a.response[{name:"T0rston"}] positioned 47 69 -12 run function code:playerdetect/torston/_notfound

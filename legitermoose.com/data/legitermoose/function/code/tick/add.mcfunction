@@ -1,0 +1,1 @@
+$execute unless data storage legitermoose:code online_worlds{worlds:[$(world)]} run data modify storage legitermoose:code online_worlds.worlds append value $(world)

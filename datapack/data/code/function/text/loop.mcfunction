@@ -1,1 +1,0 @@
-execute if score .len misc = .len2 misc

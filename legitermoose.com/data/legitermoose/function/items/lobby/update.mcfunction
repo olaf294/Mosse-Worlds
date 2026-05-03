@@ -12,4 +12,4 @@ data modify block 992 56 5 Items[0].components.minecraft:lore[3].text set string
 data modify block 992 56 5 Items[0].components.minecraft:lore[3].extra[1].text set string storage legitermoose:temp visits
 data modify block 992 56 5 Items[0].components.minecraft:lore[2].text set string storage legitermoose:temp players
 
-#tellraw @a[distance=..10] {block:"992 56 5",nbt:"Items[0]"}
+#tellraw @a[distance=..12] {block:"992 56 5",nbt:"Items[0]"}

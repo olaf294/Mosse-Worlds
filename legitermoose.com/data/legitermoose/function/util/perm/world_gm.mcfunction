@@ -7,6 +7,12 @@ execute store result storage legitermoose:temp ranks.world_id int 1 run scoreboa
 # Get Rank into Score
 execute as @s[tag=legitermoose.is_playing] run function legitermoose:world/perm/get_perms with storage legitermoose:temp ranks
 
+# new: set by gm scores (for now this code is useless)
+    #gamemode survival @s[tag=!is_admin,scores={legitermoose.gamemode=0}]
+    #gamemode creative @s[tag=!is_admin,scores={legitermoose.gamemode=1}]
+    #gamemode adventure @s[tag=!is_admin,scores={legitermoose.gamemode=2}]
+    #gamemode spectator @s[tag=!is_admin,scores={legitermoose.gamemode=3}]
+
 # All players not on Legitermoose don't have any rank score
 scoreboard players reset @s[tag=!legitermoose.is_playing] legitermoose.rank
 

@@ -9,6 +9,6 @@ execute as @e[type=text_display,tag=logbog_status] run data modify entity @s tex
 data modify storage player_detect temp.a.uuid set from storage player_detect a.response[{name:"Logbog"}].world
 
 # Send webhook to notify
-function code:playerdetect/logbog/send_webhook with storage player_detect http
+execute if score .logbog_online playerdetect matches 0 run function code:playerdetect/logbog/send_webhook with storage player_detect http
 
 function code:playerdetect/logbog/get_world with storage player_detect temp.a

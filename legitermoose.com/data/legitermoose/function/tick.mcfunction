@@ -22,6 +22,8 @@ execute positioned 0 64 0 as @a[distance=250..] run function legitermoose:util/g
 execute as @a[predicate=code:is_y_below_40,tag=legitermoose.is_playing] run function legitermoose:lobby/join/rank_leave
 tp @a[predicate=code:is_y_below_40] 0 64 0 0 8
 
+function legitermoose:code/tick/_
+
 # Visibility across "worlds"
 visibility @a[tag=legitermoose.is_playing] show @a[tag=legitermoose.is_playing]
 visibility @a[tag=!legitermoose.is_playing] show @a[tag=!legitermoose.is_playing]

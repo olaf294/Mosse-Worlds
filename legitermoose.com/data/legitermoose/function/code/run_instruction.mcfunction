@@ -7,7 +7,7 @@ execute if data storage legitermoose:code code{op:3} run return 1
 execute if data storage legitermoose:code code{op:4} run return run function legitermoose:code/instructions/print
 execute if data storage legitermoose:code code{op:5} run return run function legitermoose:code/instructions/tell_player
 execute if data storage legitermoose:code code{op:6} run return run function legitermoose:code/instructions/setblock
-#execute if data storage legitermoose:code code{op:7} run return run function legitermoose:code/instructions/teleport
+execute if data storage legitermoose:code code{op:7} run return run function legitermoose:code/instructions/teleport
 #execute if data storage legitermoose:code code{op:8} run return run function legitermoose:code/instructions/jump
 execute if data storage legitermoose:code code{op:9} run return run function legitermoose:code/instructions/load_if_true
 execute if data storage legitermoose:code code{op:10} run return run function legitermoose:code/instructions/not
@@ -31,19 +31,13 @@ return 0
 
 
 ####### code that we need 
-# V A R I A B L E S 
-# tick (i suggest only having 10 ticks for performance but we'll see)
+# V A R I A B L E S
 # block conditions (if block ___)
 # item conditions (if item ___)
 # give_item
+# kill
+# 
 # for_loop
 # while_loop
-# if_else (not just if)
+# if_else (not just if) (it working, not juts existing)
 # colored / formatted text (would need to be SUPER SAFE BECAUSE TEXT COMPONENTS ARE DANGEROUS)      <--- formatting codes exist, i call that a win  <--- nuh uh we need real colors, """Formatting codes are deprecated and will be removed in the future."""
-# make coordinates a special block that takes in 3 numbers instead of always taking in 3 numbers (this is to let you have a "get world spawn" block:
-#   example: (with setblock)
-#   ( (x) (y) (z) (block) ) <-- current
-#
-#   ( (position) (block) ) <-- new idea
-# 
-#   position:   ( (x) (y) (z) )

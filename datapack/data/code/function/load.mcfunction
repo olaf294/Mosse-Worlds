@@ -19,7 +19,8 @@ scoreboard objectives add hour2 dummy
 scoreboard objectives add timeout dummy
 scoreboard objectives add requests dummy
 scoreboard objectives add last_played dummy
- 
+scoreboard objectives add playerdetect dummy
+
 scoreboard objectives add numbers dummy
 scoreboard players set -24 numbers -24
 scoreboard players set -1 numbers -1
@@ -70,6 +71,22 @@ kill @e[tag=logbog]
 summon text_display 52.9 71.9 -35.5 {text:[{player:Logbog},{text:" Lᴏɢʙᴏɢ Sᴛᴀᴛᴜꜱ: ",color:light_purple},{text:"ᴜɴᴋɴᴏᴡɴ",color:yellow}],Tags:["logbog","logbog_status"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.6f, 1.6f, 1.6f], translation: [0.0f, 0.0f, 0.0f]}}
 summon text_display 52.9 71.5 -35.5 {text:{text:"Cʜᴇᴄᴋ ᴛᴏ ꜱᴇᴇ ɪꜰ Lᴏɢʙᴏɢ ɪꜱ ᴏɴʟɪɴᴇ.",color:gray},Tags:["logbog"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
 summon text_display 52.9 71.1 -35.5 {text:[{text:"Wᴏʀʟᴅ ᴡɪʟʟ ᴅɪꜱᴘʟᴀʏ ",color:gray,extra:[{text:"ʜᴇʀᴇ",color:dark_gray}]},{text:".",color:gray}],Tags:["logbog","logbog_world"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
+
+kill @e[tag=max]
+summon text_display 52.9 71.9 -27.5 {text:[{player:mmmmmaaaaaxxxxx},{text:" ᴍᴍᴍᴍᴍᴀᴀᴀᴀᴀxxxxx Sᴛᴀᴛᴜꜱ: ",color:light_purple},{text:"ᴜɴᴋɴᴏᴡɴ",color:yellow}],Tags:["max","max_status"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.45f, 1.45f, 1.45f], translation: [0.0f, 0.0f, 0.0f]}}
+summon text_display 52.9 71.5 -27.5 {text:{text:"Cʜᴇᴄᴋ ᴛᴏ ꜱᴇᴇ ɪꜰ ᴍᴍᴍᴍᴍᴀᴀᴀᴀᴀxxxxx ɪꜱ ᴏɴʟɪɴᴇ.",color:gray},Tags:["max"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
+summon text_display 52.9 71.1 -27.5 {text:[{text:"Wᴏʀʟᴅ ᴡɪʟʟ ᴅɪꜱᴘʟᴀʏ ",color:gray,extra:[{text:"ʜᴇʀᴇ",color:dark_gray}]},{text:".",color:gray}],Tags:["max","max_world"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
+
+kill @e[tag=koori]
+summon text_display 52.9 71.9 -19.5 {text:[{player:KooriKitsune38},{text:" KᴏᴏʀɪKɪᴛꜱᴜɴᴇ38 Sᴛᴀᴛᴜꜱ: ",color:light_purple},{text:"ᴜɴᴋɴᴏᴡɴ",color:yellow}],Tags:["koori","koori_status"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.45f, 1.45f, 1.45f], translation: [0.0f, 0.0f, 0.0f]}}
+summon text_display 52.9 71.5 -19.5 {text:{text:"Cʜᴇᴄᴋ ᴛᴏ ꜱᴇᴇ ɪꜰ KᴏᴏʀɪKɪᴛꜱᴜɴᴇ38 ɪꜱ ᴏɴʟɪɴᴇ.",color:gray},Tags:["koori"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
+summon text_display 52.9 71.1 -19.5 {text:[{text:"Wᴏʀʟᴅ ᴡɪʟʟ ᴅɪꜱᴘʟᴀʏ ",color:gray,extra:[{text:"ʜᴇʀᴇ",color:dark_gray}]},{text:".",color:gray}],Tags:["koori","koori_world"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
+
+kill @e[tag=torston]
+summon text_display 52.9 71.9 -11.5 {text:[{player:T0rston},{text:" T0ʀꜱᴛᴏɴ Sᴛᴀᴛᴜꜱ: ",color:light_purple},{text:"ᴜɴᴋɴᴏᴡɴ",color:yellow}],Tags:["torston","torston_status"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.6f, 1.6f, 1.6f], translation: [0.0f, 0.0f, 0.0f]}}
+summon text_display 52.9 71.5 -11.5 {text:{text:"Cʜᴇᴄᴋ ᴛᴏ ꜱᴇᴇ ɪꜰ T0ʀꜱᴛᴏɴ ɪꜱ ᴏɴʟɪɴᴇ.",color:gray},Tags:["torston"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
+summon text_display 52.9 71.1 -11.5 {text:[{text:"Wᴏʀʟᴅ ᴡɪʟʟ ᴅɪꜱᴘʟᴀʏ ",color:gray,extra:[{text:"ʜᴇʀᴇ",color:dark_gray}]},{text:".",color:gray}],Tags:["torston","torston_world"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
+
 
 
 kill @e[tag=discord_join]

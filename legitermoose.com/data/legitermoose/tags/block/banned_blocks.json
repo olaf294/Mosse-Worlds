@@ -5,6 +5,8 @@
         "chain_command_block",
         "repeating_command_block",
         "spawner",
-        "trial_spawner"
+        "trial_spawner",
+        "structure_block",
+        "jigsaw"
     ]   
 }

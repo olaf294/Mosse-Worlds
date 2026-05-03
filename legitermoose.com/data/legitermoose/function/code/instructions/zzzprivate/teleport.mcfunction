@@ -1,0 +1,1 @@
+$teleport @a[scores={id=$(player_id), worldid=$(world_id)}] $(X) $(Y) $(Z)

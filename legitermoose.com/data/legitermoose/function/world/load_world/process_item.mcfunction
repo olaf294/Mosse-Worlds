@@ -3,7 +3,7 @@ $execute if data storage legitermoose:worlds worlds[{world_id:$(world_id)}].sett
 
 tellraw @s {text:"Loading world...",color:gray}
 
-$say world id is $(world_id)
+#$say world id is $(world_id)
 
 clear @s
 item replace entity @s player.cursor with air
