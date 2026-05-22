@@ -1,0 +1,1 @@
+$execute store result score $p page if entity @a[scores={worldid=$(world_id)}]

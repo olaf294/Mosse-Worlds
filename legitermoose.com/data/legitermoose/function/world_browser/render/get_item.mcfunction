@@ -1,1 +1,0 @@
-$data modify storage legitermoose:world_browser browser merge from storage legitermoose:worlds worlds[$(world_offset)]

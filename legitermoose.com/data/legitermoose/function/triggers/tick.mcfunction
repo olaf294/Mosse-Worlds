@@ -2,7 +2,7 @@
 # Voting
 scoreboard players enable @s[tag=legitermoose.is_playing,tag=!legitermoose.has_voted_lobby] vote
 scoreboard players enable @s[tag=legitermoose.has_voted_lobby,scores={worldid=1..}] vote
-scoreboard players reset @s[tag=legitermoose.has_voted_lobby,scores={worldid=-8}] vote
+scoreboard players reset @s[tag=legitermoose.has_voted_lobby,scores={worldid=0}] vote
 execute positioned 0 64 0 run scoreboard players reset @s[distance=..250] vote
 execute as @a[scores={vote=1..}] run function legitermoose:vote/vote
 scoreboard players reset @s[scores={vote=1..}] vote
@@ -13,7 +13,7 @@ execute if score .lobby_enabled legitermoose.misc matches 1 run scoreboard playe
 execute unless score .lobby_enabled legitermoose.misc matches 1 run scoreboard players enable @s[tag=is_admin] lobby
 execute unless score .lobby_enabled legitermoose.misc matches 1 run scoreboard players reset @s[tag=!is_admin] lobby
 
-execute if score @s lobby matches 1.. run function legitermoose:triggers/lobby
+execute as @s[scores={lobby=1..}] run function legitermoose:triggers/lobby
 scoreboard players reset @s[scores={lobby=1..}] lobby
 
 # Fly
@@ -39,11 +39,11 @@ execute as @s at @s if score @s play matches 1.. run function legitermoose:world
 scoreboard players reset @s[scores={play=1..}] play 
 
 # Find
-scoreboard players enable @s find
-execute as @s if score @s find matches 1.. store result storage legitermoose:temp find_player.id int 1 run scoreboard players get @s find
+execute if score .lobby_enabled legitermoose.misc matches 1 run scoreboard players enable @s find
+execute unless score .lobby_enabled legitermoose.misc matches 1 run scoreboard players reset @s find
+execute as @s[scores={find=1..}] store result storage legitermoose:temp find_player.id int 1 run scoreboard players get @s find
     #data modify storage legitermoose:temp find_player.id set string storage legitermoose:temp find_player.id_int
 execute as @s[scores={find=1..}] run function legitermoose:triggers/find/find with storage legitermoose:temp find_player
-
 # Code
 scoreboard players enable @s[scores={legitermoose.rank=10}] code
 scoreboard players enable @a[tag=is_dev] code
@@ -56,6 +56,12 @@ scoreboard players enable @a[tag=is_dev] reload
 execute unless score @s[tag=!is_dev] legitermoose.rank matches 10 run scoreboard players reset @s reload
 execute as @s[scores={reload=1..}] run function legitermoose:world/feat/reload/run
 
+# Searching
+scoreboard players enable @s[tag=!legitermoose.global_banned] world
+scoreboard players enable @s[tag=!legitermoose.global_banned] visit
+
+execute unless score .lobby_enabled legitermoose.misc matches 1 run scoreboard players reset @s[tag=!is_admin] world
+execute unless score .lobby_enabled legitermoose.misc matches 1 run scoreboard players reset @s[tag=!is_admin] visit
 
 scoreboard players reset @s[tag=legitermoose.global_banned] lobby
 scoreboard players reset @s[tag=legitermoose.global_banned] play

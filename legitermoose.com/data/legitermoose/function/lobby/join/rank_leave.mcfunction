@@ -25,6 +25,3 @@ execute if entity @s[tag=is_fm2,tag=!is_xm] run tellraw @a[tag=!legitermoose.is_
 
 execute if entity @s[tag=is_xm] run tellraw @a[tag=legitermoose.is_playing] [{text:"[",color:gray},{text:"↓",color:yellow},{text:"] ",color:gray},{text:"xᴍ ",color:"#ff33ff"},{text:"| ",color:dark_gray},{storage:"legitermoose:temp",nbt:playername,color:"#d662ff"}]
 execute if entity @s[tag=is_xm] run tellraw @a[tag=!legitermoose.is_playing] [{text:"[",color:gray},{text:"↓",color:green},{text:"] ",color:gray},{text:"xᴍ ",color:"#ff33ff"},{text:"| ",color:dark_gray},{storage:"legitermoose:temp",nbt:playername,color:"#d662ff"}]
-
-
-

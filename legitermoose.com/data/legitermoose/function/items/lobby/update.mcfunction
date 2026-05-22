@@ -1,4 +1,3 @@
-
 execute store result storage legitermoose:temp votes int 1 run scoreboard players get .votes legitermoose.misc
 execute store result storage legitermoose:temp visits int 1 run scoreboard players get .visits legitermoose.misc
 execute store result storage legitermoose:temp players int 1 run scoreboard players get .players legitermoose.misc
@@ -11,5 +10,3 @@ data merge block 992 56 5 {Items:[{Slot:13b,id:"minecraft:grass_block",component
 data modify block 992 56 5 Items[0].components.minecraft:lore[3].text set string storage legitermoose:temp votes
 data modify block 992 56 5 Items[0].components.minecraft:lore[3].extra[1].text set string storage legitermoose:temp visits
 data modify block 992 56 5 Items[0].components.minecraft:lore[2].text set string storage legitermoose:temp players
-
-#tellraw @a[distance=..12] {block:"992 56 5",nbt:"Items[0]"}

@@ -1,1 +1,0 @@
-$execute store result storage legitermoose:world_browser browser.online int 1 if entity @a[scores={worldid=$(world_id)}]

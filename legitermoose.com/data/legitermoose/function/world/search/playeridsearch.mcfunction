@@ -1,3 +1,1 @@
-
-scoreboard players enable @s playersearch
-dialog show @s {type:"minecraft:notice",title:"Search by: Player ID",inputs:[{type:"minecraft:text",key:"id",width:100,label:{text:"Enter Player ID"},label_visible:1b,max_length:10}],can_close_with_escape:1b,pause:0b,after_action:"close",action:{label:"Find Worlds!",action:{type:"minecraft:dynamic/run_command",template:"trigger playersearch set 0$(id)"}}}
+dialog show @s {type:"minecraft:notice",title:"Search by: Player ID",inputs:[{type:"minecraft:text",key:"id",width:100,label:{text:"Enter Player ID"},label_visible:1b,max_length:10}],can_close_with_escape:1b,pause:0b,after_action:"close",action:{label:"Find Worlds!",action:{type:"minecraft:dynamic/run_command",template:"trigger visit set 0$(id)"}}}

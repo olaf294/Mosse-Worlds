@@ -32,12 +32,17 @@ return 0
 
 ####### code that we need 
 # V A R I A B L E S
-# block conditions (if block ___)
-# item conditions (if item ___)
+# block conditions (if block (str block))
+# item conditions (if item (str block))
+# entity conditions
+# title
+# effect
+# gamemode
+# 
 # give_item
 # kill
-# 
-# for_loop
+# wait_ticks (int time)
+# for_loop ((int range) (int increment))
 # while_loop
-# if_else (not just if) (it working, not juts existing)
+# if_else (not just if) (it working, not juts existing (else) (please))
 # colored / formatted text (would need to be SUPER SAFE BECAUSE TEXT COMPONENTS ARE DANGEROUS)      <--- formatting codes exist, i call that a win  <--- nuh uh we need real colors, """Formatting codes are deprecated and will be removed in the future."""

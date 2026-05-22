@@ -1,7 +1,8 @@
 execute unless score @s time_since_open matches 10.. run return run scoreboard players set @s time_since_open 0
 scoreboard players set @s time_since_open 0
 
-scoreboard players set @s ui 1
+scoreboard players set @s filter 1
+scoreboard players set @s ui 2
 scoreboard players set @s page 0
 
 function legitermoose:ui/render_ui

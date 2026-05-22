@@ -1,5 +1,5 @@
 # vote lobby
-execute if score @s worldid matches -8 at @s run return run function legitermoose:vote/lobby
+execute if score @s worldid matches 0 at @s run return run function legitermoose:vote/lobby
 
 scoreboard players reset @s vote
 scoreboard players enable @s vote

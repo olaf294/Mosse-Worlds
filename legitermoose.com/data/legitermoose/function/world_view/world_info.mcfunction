@@ -1,0 +1,5 @@
+execute store result storage legitermoose:world_browser temp.world_id int 1 run scoreboard players get @s page
+function legitermoose:world_browser/render/_get_world with storage legitermoose:world_browser temp
+tellraw @s [{text: "--- Wᴏʀʟᴅ Iɴꜰᴏ ---\n", color:green}, {text:"Name: ", color:"gray"}, [{text:"", color:white}, {storage:"legitermoose:world_browser", nbt:"temp.world.name", interpret:true}], "\n", {text:"Owner: ", color:"gray"}, {storage:"legitermoose:world_browser", nbt:"temp.world.owner", color:green}, "\n", {text:"Votes: ", color:gray}, {storage:"legitermoose:world_browser", nbt:"temp.world.votes", color:"green"}, "\n", {text: "Visits: ", color:"gray"}, {storage:"legitermoose:world_browser", nbt: "temp.world.visits", color:green}, "\n", {text: "World Id: ", color:gray}, {storage:"legitermoose:world_browser", nbt:"temp.world.world_id", color:green}]
+item replace entity @s player.cursor with air
+inventory @s close

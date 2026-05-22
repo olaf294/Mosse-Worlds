@@ -1,0 +1,221 @@
+[
+    {
+        "function": "set_lore",
+        "lore": [
+            {
+                "text": "Most Players",
+                "color": "gray",
+                "italic": false
+            }
+        ],
+        "mode": "append",
+        "conditions": [
+            {
+                "condition": "inverted",
+                "term": {
+                    "condition": "entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "filter": 1
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "function": "set_lore",
+        "lore": [
+            {
+                "text": "Most Players",
+                "color": "green",
+                "italic": false
+            }
+        ],
+        "mode": "append",
+        "conditions": [
+            {
+                "condition": "entity_scores",
+                "entity": "this",
+                "scores": {
+                    "filter": 1
+                }
+            }
+        ]
+    },
+
+    {
+        "function": "set_lore",
+        "lore": [
+            {
+                "text": "World Id",
+                "color": "gray",
+                "italic": false
+            }
+        ],
+        "mode": "append",
+        "conditions": [
+            {
+                "condition": "inverted",
+                "term": {
+                    "condition": "entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "filter": 2
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "function": "set_lore",
+        "lore": [
+            {
+                "text": "World Id",
+                "color": "green",
+                "italic": false
+            }
+        ],
+        "mode": "append",
+        "conditions": [
+            {
+                "condition": "entity_scores",
+                "entity": "this",
+                "scores": {
+                    "filter": 2
+                }
+            }
+        ]
+    },
+    
+    {
+        "function": "set_lore",
+        "lore": [
+            {
+                "text": "Most Votes",
+                "color": "gray",
+                "italic": false
+            }
+        ],
+        "mode": "append",
+        "conditions": [
+            {
+                "condition": "inverted",
+                "term": {
+                    "condition": "entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "filter": 3
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "function": "set_lore",
+        "lore": [
+            {
+                "text": "Most Votes",
+                "color": "green",
+                "italic": false
+            }
+        ],
+        "mode": "append",
+        "conditions": [
+            {
+                "condition": "entity_scores",
+                "entity": "this",
+                "scores": {
+                    "filter": 3
+                }
+            }
+        ]
+    },
+    
+    {
+        "function": "set_lore",
+        "lore": [
+            {
+                "text": "Most Visits",
+                "color": "gray",
+                "italic": false
+            }
+        ],
+        "mode": "append",
+        "conditions": [
+            {
+                "condition": "inverted",
+                "term": {
+                    "condition": "entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "filter": 4
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "function": "set_lore",
+        "lore": [
+            {
+                "text": "Most Visits",
+                "color": "green",
+                "italic": false
+            }
+        ],
+        "mode": "append",
+        "conditions": [
+            {
+                "condition": "entity_scores",
+                "entity": "this",
+                "scores": {
+                    "filter": 4
+                }
+            }
+        ]
+    },
+    
+    {
+        "function": "set_lore",
+        "lore": [
+            {
+                "text": "Featured",
+                "color": "gray",
+                "italic": false
+            }
+        ],
+        "mode": "append",
+        "conditions": [
+            {
+                "condition": "inverted",
+                "term": {
+                    "condition": "entity_scores",
+                    "entity": "this",
+                    "scores": {
+                        "filter": 5
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "function": "set_lore",
+        "lore": [
+            {
+                "text": "Featured",
+                "color": "green",
+                "italic": false
+            }
+        ],
+        "mode": "append",
+        "conditions": [
+            {
+                "condition": "entity_scores",
+                "entity": "this",
+                "scores": {
+                    "filter": 5
+                }
+            }
+        ]
+    }
+]

@@ -1,1 +1,0 @@
-$data remove storage legitermoose:world_browser unsorted_worlds[{world_id:$(world_id)}]

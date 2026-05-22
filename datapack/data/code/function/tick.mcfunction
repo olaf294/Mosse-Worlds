@@ -23,13 +23,13 @@ execute unless loaded 0 64 0 run return fail
 execute if score .globaltimer misc matches 600 run function code:live_vote_count/init
 
 # Random World Button
-execute positioned 0 65 5 if block ~ ~ ~ stone_button[powered=true] run http callback code:random_world/init store api random send "https://api.legiti.dev/world/random" GET
+execute if block 0 65 5 stone_button[powered=true] run http callback code:random_world/init store api random send "https://api.legiti.dev/world/random" GET
 
 # Good World Button
-execute positioned -2 65 5 if block ~ ~ ~ polished_blackstone_button[powered=true] run function code:good_world/init
+execute if block -2 65 5 polished_blackstone_button[powered=true] run function code:good_world/init
 
 # Version Info Button
-execute positioned 2 65 5 if block ~ ~ ~ stone_button[powered=true] run http callback code:api_version/init store api version send "https://api.legiti.dev/" GET
+execute if block 2 65 5 stone_button[powered=true] run http callback code:api_version/init store api version send "https://api.legiti.dev/" GET
 
 # Toggle Info 
 scoreboard players enable @a toggle_info

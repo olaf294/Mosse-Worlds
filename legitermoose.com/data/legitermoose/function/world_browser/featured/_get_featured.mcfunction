@@ -1,0 +1,1 @@
+$data modify storage legitermoose:world_browser temp.world_id set from storage legitermoose:world_browser featured[$(offset)].world_id

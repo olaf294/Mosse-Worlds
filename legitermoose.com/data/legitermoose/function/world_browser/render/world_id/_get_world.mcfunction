@@ -1,0 +1,1 @@
+$data modify storage legitermoose:world_browser temp.world set from storage legitermoose:worlds worlds[$(offset)]

@@ -1,5 +1,5 @@
 data remove storage legitermoose:temp search.found_world
-scoreboard players reset @s playersearch
+scoreboard players reset @s visit
 $data modify storage legitermoose:temp search.found_world set from storage legitermoose:worlds worlds[{owner_id:$(player_id)}]
 
 # if there is no world

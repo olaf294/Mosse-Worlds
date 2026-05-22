@@ -41,10 +41,10 @@ scoreboard objectives add toggle_info trigger
 setworldspawn 0 64 0 0 8
 
 team add player
-team modify player friendlyFire false
+team modify player friendlyFire true
 team modify player collisionRule never
 
-tellraw @a { "color": "gold", "text": "Tʜᴇ Mᴏꜱꜱᴇ ɪꜱ Wᴏʀʟᴅ"}
+tellraw @a {color:gold,text:"Tʜᴇ Mᴏꜱꜱᴇ ɪꜱ Wᴏʀʟᴅ"}
 
 execute unless loaded 9 64 -19 run return fail
 
