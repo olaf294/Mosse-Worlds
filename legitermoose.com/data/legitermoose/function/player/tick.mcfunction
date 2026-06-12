@@ -23,3 +23,7 @@ stopsound @s * block.end_portal.spawn
 execute if items entity @s player.cursor paper[custom_data~{rename_world:1b},custom_name] run function legitermoose:world/feat/worldsettings/world_name/prep_setting_name
 execute if items entity @s container.* paper[custom_data~{rename_world:1b}] run clear @s paper[custom_data~{rename_world:1b}]
 execute if items entity @s weapon.offhand paper[custom_data~{rename_world:1b}] run clear @s paper[custom_data~{rename_world:1b}]
+
+execute if items entity @s player.cursor paper[custom_data~{reicon_world:1b},custom_name] run function legitermoose:world/feat/worldsettings/world_icon/prep_setting_icon
+execute if items entity @s container.* paper[custom_data~{reicon_world:1b}] run clear @s paper[custom_data~{reicon_world:1b}]
+execute if items entity @s weapon.offhand paper[custom_data~{reicon_world:1b}] run clear @s paper[custom_data~{reicon_world:1b}]

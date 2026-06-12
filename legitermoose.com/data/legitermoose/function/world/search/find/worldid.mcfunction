@@ -4,7 +4,7 @@ $data modify storage legitermoose:temp search.found_world set from storage legit
 
 # if there is no world
 execute unless data storage legitermoose:temp search.found_world run tellraw @s [{text:"No world could be found with this World ID.",color:red}]
-execute unless data storage legitermoose:temp search.found_world at @s run return run playsound block.note_block.bass ui @s ~ ~ ~ 1 .5
+execute unless data storage legitermoose:temp search.found_world at @s run return run playsound block.note_block.bass ui @s ~ ~ ~ 1 0
 
 execute if data storage legitermoose:temp search.found_world run tellraw @s [{text:"Found World: ",color:green},{storage:"legitermoose:temp",nbt:"search.found_world.name",interpret:1b}]
 execute if data storage legitermoose:temp search.found_world at @s run playsound block.note_block.pling ui @s ~ ~ ~ 1 2

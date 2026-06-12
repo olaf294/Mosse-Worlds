@@ -1,12 +1,8 @@
 # args:
 #   reason  (str)   : reason to be displayed as ban reason
 
-# Remove all tags
-tag @s remove legitermoose.lobby_gmc
-tag @s remove legitermoose.lobby_gma
-tag @s remove legitermoose.lobby_gms
-tag @s remove legitermoose.lobby_gmsp
-tag @s remove legitermoose.is_playing 
+# Remove tag
+tag @s remove legitermoose.is_playing
 
 tag @s add legitermoose.global_banned
 

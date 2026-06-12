@@ -28,6 +28,10 @@ execute as @a[x=0,y=64,z=-45.0,dx=0,dy=1,dz=0,tag=is_admin] at @s run tp @s 0 64
 
 execute if score .globaltimer misc matches 600 run function code:live_vote_count/init
 
+# Mosse Joining
+execute if block 0 65 4 polished_blackstone_button[powered=true] positioned 0 65 4 as @p run function legitermoose:lobby/join_server/pre_check with entity @s
+
+
 # Random World Button
 execute if block 0 65 5 stone_button[powered=true] run http callback code:random_world/init store api random send "https://api.legiti.dev/world/random" GET
 
@@ -40,14 +44,7 @@ execute if block 2 65 5 stone_button[powered=true] run http callback code:api_ve
 # Jam World
 execute if block -19 65 -7 polished_blackstone_button[powered=true] run function code:jam/init
 
-
 execute as @a[tag=!legitermoose.is_playing] run function code:browser/tick
-
-# Toggle Info 
-scoreboard players enable @a toggle_info
-execute as @a[scores={toggle_info=1..}] at @s run function code:toggle_info/toggle
-scoreboard players reset @a[scores={toggle_info=1..}] toggle_info
-scoreboard players reset @a[tag=legitermoose.is_playing] toggle_info
 
 # Timeout
 scoreboard players add @a timeout 0

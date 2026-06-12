@@ -41,13 +41,13 @@ execute as @s[scores={find=1..}] run function legitermoose:triggers/find/find wi
 scoreboard players enable @s[scores={legitermoose.rank=10}] code
 scoreboard players enable @a[tag=is_dev] code
 execute unless score @s[tag=!is_dev] legitermoose.rank matches 10 run scoreboard players reset @s code
-execute as @s[scores={code=1..}] run function legitermoose:triggers/code/get
+execute as @s[scores={code=1..}] run function legitermoose:triggers/code/trigger
 
 # Reload
 scoreboard players enable @s[scores={legitermoose.rank=10}] reload
 scoreboard players enable @s[tag=is_dev] reload
 execute unless score @s[tag=!is_dev] legitermoose.rank matches 10 run scoreboard players reset @s reload
-execute as @s[scores={reload=1..}] run function legitermoose:world/feat/reload/run
+execute as @s[scores={reload=1..}] run function legitermoose:triggers/reload/trigger
  
 # Searching
 scoreboard players enable @s world

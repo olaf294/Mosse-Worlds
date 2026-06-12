@@ -6,8 +6,8 @@ $execute store result score @s legitermoose.gamemode run data get storage legite
 # $execute if data storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].gamemode store result score @s legitermoose.gamemode run data get storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].gamemode  
 
 # if you have an exception then set gamemode
-$execute store result score @s legitermoose.gamemode run data get storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].gamemode
- 
+$execute if data storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(UUID)}] store result score @s legitermoose.gamemode run data get storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].gamemode
+
 
 # Get Rank
 $execute store result score @s legitermoose.rank run data get storage legitermoose:ranks worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].rank

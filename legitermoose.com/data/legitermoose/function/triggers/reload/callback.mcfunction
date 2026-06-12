@@ -1,0 +1,3 @@
+execute if data storage legitermoose:http ingoing{status_code:401} run return run tellraw @a[tag=is_dev] {storage:"legitermoose:http", nbt:"ingoing.response.error", color: red}
+execute unless data storage legitermoose:http ingoing{status_code:200} run return run tellraw @a[tag=is_dev] [{text:"[!] ", color:red}, {text:"Failed to reach backend code server", color:yellow}]
+tellraw @a[tag=is_dev] {storage:"legitermoose:http", nbt:"ingoing.response"}

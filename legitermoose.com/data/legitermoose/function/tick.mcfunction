@@ -1,5 +1,4 @@
 # Welcome to Legitermoose.com Datapack. This is a terrible recreation of Legitimoose on Legitimoose.
-
 # Player Count (only Lobby)
 execute store result score .players legitermoose.misc if entity @a[tag=legitermoose.is_playing]
 
@@ -61,5 +60,3 @@ execute as @a at @s run function legitermoose:player/tick
 execute as @a[scores={worldid=0}] run function legitermoose:world_browser/ensure_compass
 
 execute as @e[type=ender_pearl] run function legitermoose:util/ender_pearls
-
-execute if block 0 65 4 polished_blackstone_button[powered=true] positioned 0 65 4 as @p run function legitermoose:lobby/join_server/pre_check with entity @s
