@@ -1,6 +1,3 @@
-# return if not whitelisted
-    #execute unless entity @s[tag=legitermoose.is_whitelisted] run return fail
-
 tag @s remove legitermoose.lobby.gmc
 tag @s remove legitermoose.lobby.gms
 tag @s remove legitermoose.lobby.gma

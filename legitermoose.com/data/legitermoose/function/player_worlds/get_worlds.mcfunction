@@ -1,0 +1,2 @@
+data modify storage legitermoose:world_browser player_worlds set value []
+$data modify storage legitermoose:world_browser player_worlds append from storage legitermoose:worlds worlds[{owner_id:$(id)}].world_id

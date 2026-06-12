@@ -1,0 +1,2 @@
+http callback code:jam/get store api jam_world send 'https://api.legiti.dev/world/random' GET
+#http callback code:jam/get store api jam_world send 'https://api.legiti.dev/world/random?project="votes,visits,raw_name,raw_name,version,world_uuid"' GET

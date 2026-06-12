@@ -1,0 +1,78 @@
+[
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"minecraft:item_model": "minecraft:player_head",
+			"minecraft:tooltip_display": {
+				"hide_tooltip": false,
+				"hidden_components": [
+					"minecraft:profile"
+				]
+			}
+		}
+	},
+	{
+		"function": "minecraft:set_item",
+		"item": "minecraft:player_head"
+	},
+	{
+		"function": "minecraft:fill_player_head",
+		"entity": "this"
+	},
+	{
+		"function": "minecraft:set_name",
+		"entity": "this",
+		"name": {
+			"storage": "legitermoose:temp",
+			"nbt": "playername",
+			"color": "aqua",
+			"italic": false
+		},
+		"target": "custom_name"
+	},
+	{
+		"function": "minecraft:set_lore",
+		"entity": "this",
+		"lore": [
+			[
+				{
+					"text": "Wᴏʀʟᴅ ID: ",
+					"color": "yellow",
+					"italic": false
+				},
+				{
+					"score": {
+						"objective": "worldid",
+						"name": "@s"
+					},
+					"color": "green",
+					"italic": false
+				}
+			],
+			[
+				{
+					"text": "Pʟᴀʏᴇʀ ID: ",
+					"color": "yellow",
+					"italic": false
+				},
+				{
+					"score": {
+						"objective": "id",
+						"name": "@s"
+					},
+					"color": "green",
+					"italic": false
+				}
+			]
+		],
+		"mode": "replace_all"
+	},
+	{
+		"function": "minecraft:set_lore",
+		"entity": "this",
+		"lore": [
+			""
+		],
+		"mode": "append"
+	}
+]

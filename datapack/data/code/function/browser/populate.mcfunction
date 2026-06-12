@@ -9,7 +9,7 @@ execute if data storage a a.error run return run http callback code:browser/popu
 execute if data storage a {a:{status_code:200}} run tellraw @a[tag=is_admin,tag=!ignore] [{text:"(API) Rᴇꜱᴘᴏɴꜱᴇ: ",color:gray},{storage:a,nbt:"a.status_code",color:dark_green}]
 execute unless data storage a {a:{status_code:200}} run tellraw @a[tag=is_admin,tag=!ignore] [{text:"(API) Rᴇꜱᴘᴏɴꜱᴇ: ",color:gray},{storage:a,nbt:"a.status_code",color:yellow}]
 
-tellraw @a[tag=is_admin,tag=!ignore] {text:"Populating Worlds...",color:"#333388"}
+tellraw @a[tag=is_admin,tag=!ignore] {text:"Pᴏᴘᴜʟᴀᴛɪɴɢ Wᴏʀʟᴅꜱ...",color:"#333388"}
 
 # cleanup aka setting an example structure because /data is dumb
 data remove storage a temp.a

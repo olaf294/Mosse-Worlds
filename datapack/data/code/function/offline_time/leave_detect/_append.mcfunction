@@ -1,12 +1,5 @@
-# Store ID 
-execute store result storage playerlist tick_tomerge.id int 1 run scoreboard players get @s id
-
-# Store Name
+execute store result storage playerlist temp.id int 1 run scoreboard players get @s id
 function legitermoose:util/get_name
-data modify storage playerlist tick_tomerge.name set from storage legitermoose:temp playername
-
-# Append to tick
-data modify storage playerlist tick append from storage playerlist tick_tomerge
-
-# Remove
-data remove storage playerlist tick_tomerge
+data modify storage playerlist temp.name set from storage legitermoose:temp playername
+data modify storage playerlist tick append from storage playerlist temp
+data remove storage playerlist temp

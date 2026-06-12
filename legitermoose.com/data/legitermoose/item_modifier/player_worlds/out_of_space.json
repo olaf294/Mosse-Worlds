@@ -24,7 +24,10 @@
                 },
                 [
                     {
-                        "text": "0",
+                        "score": {
+                            "objective": "page",
+                            "name": "$tmp"
+                        },
                         "color": "gray"
                     },
                     {
@@ -45,7 +48,7 @@
                     "italic": false
                 },
                 {
-                    "text": "mosse.legiti.dev/store",
+                    "text": "mosse.legiti.dev/redeem",
                     "color": "gold"
                 },
                 {

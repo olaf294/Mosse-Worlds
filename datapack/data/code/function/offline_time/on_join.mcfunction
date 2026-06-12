@@ -1,3 +1,4 @@
+execute store result score .time time run data get entity @s bukkit.lastPlayed .001
 scoreboard players operation @s last_played -= .time time
 scoreboard players operation @s last_played *= -1 numbers
 
@@ -10,7 +11,6 @@ scoreboard players operation .minutes last_played %= 60 numbers
 
 scoreboard players operation .seconds last_played = @s last_played
 scoreboard players operation .seconds last_played %= 60 numbers 
-
 
 
 execute unless score .hours last_played matches 0..9 unless score .minutes last_played matches 0..9 unless score .seconds last_played matches 0..9 run return run tellraw @s [{text:"Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴏꜰꜰʟɪɴᴇ ꜰᴏʀ ",color:yellow},\

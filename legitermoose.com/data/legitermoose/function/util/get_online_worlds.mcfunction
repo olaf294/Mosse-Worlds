@@ -1,0 +1,2 @@
+execute store result storage legitermoose:temp online_worlds.temp.id int 1 run scoreboard players get @s worldid
+function legitermoose:util/z/_get_online_worlds with storage legitermoose:temp online_worlds.temp

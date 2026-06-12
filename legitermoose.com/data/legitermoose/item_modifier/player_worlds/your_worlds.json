@@ -1,0 +1,14 @@
+[
+    {
+        "function": "fill_player_head",
+        "entity": "this"
+    },
+    {
+        "function": "set_name",
+        "name": {
+            "text": "Yᴏᴜʀ Wᴏʀʟᴅꜱ",
+            "color": "green",
+            "italic": false
+        }
+    }
+]

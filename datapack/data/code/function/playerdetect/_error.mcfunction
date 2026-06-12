@@ -1,0 +1,1 @@
+tellraw @a[distance=..12] [{text:"\n⚠ Aɴ API ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ!\nEʀʀᴏʀ: ",color:red},{storage:player_detect,nbt:a.error.message}]

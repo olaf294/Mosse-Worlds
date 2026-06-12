@@ -1,4 +1,5 @@
 execute if items entity @s player.cursor *[custom_data~{filter:1b}] run return run function legitermoose:world_browser/click/filter
+execute if items entity @s player.cursor *[custom_data~{your_worlds:1b}] run return run function legitermoose:world_browser/click/your_worlds
 
 execute store result score $pages page run data get storage legitermoose:worlds worlds
 execute if score @s filter matches 5 store result score $pages page run data get storage legitermoose:world_browser featured
@@ -15,3 +16,4 @@ execute unless items entity @s player.cursor *[custom_data~{world:1b}] run retur
 item replace entity @s enderchest.0 from entity @s player.cursor
 execute store result score @s page run data get entity @s EnderItems[{Slot:0b}].components.minecraft:custom_data.world_id
 function legitermoose:world_view/open
+playsound block.wooden_button.click_on

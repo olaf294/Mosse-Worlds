@@ -15,7 +15,7 @@ scoreboard players add .global_id legitermoose.misc 1
 function legitermoose:util/get_name
 data modify storage legitermoose:temp temp.owner set from storage legitermoose:temp playername
 data modify storage legitermoose:temp temp.uuid set from entity @s UUID
-data modify storage legitermoose:temp temp.temp.created_at set from entity @s bukkit.lastPlayed
+data modify storage legitermoose:temp temp.created_at set from entity @s bukkit.lastPlayed
 #execute store result storage legitermoose:temp temp.created_at long 1000 run scoreboard players get .time time
 data modify storage legitermoose:temp temp.name[0].text set from storage legitermoose:temp playername
 execute store result storage legitermoose:temp temp.world_id int 1 run scoreboard players get .global_id legitermoose.misc

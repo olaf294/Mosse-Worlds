@@ -1,7 +1,7 @@
 [
     {
         "function": "set_item",
-        "item": "redstone_block"
+        "item": "emerald_block"
     },
 
     {
@@ -18,13 +18,17 @@
         "lore": [
             [ 
                 {
-                    "text": "You're out of slots! ",
-                    "color": "red",
+                    "text": "Click to create a new world ",
+                    "color": "green",
                     "italic": false
                 },
                 [
+                    
                     {
-                        "text": "0",
+                        "score": {
+                            "objective": "page",
+                            "name": "$tmp"
+                        },
                         "color": "gray"
                     },
                     {
@@ -45,7 +49,7 @@
                     "italic": false
                 },
                 {
-                    "text": "mosse.legiti.dev/store",
+                    "text": "mosse.legiti.dev/redeem",
                     "color": "gold"
                 },
                 {

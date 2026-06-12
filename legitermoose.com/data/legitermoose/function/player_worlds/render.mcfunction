@@ -1,2 +1,32 @@
-item replace entity @s enderchest.0 with dirt[custom_data={custom_ui:1b}]
-item modify entity @s enderchest.0 legitermoose:player_worlds/out_of_space
+item replace entity @s enderchest.0 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.1 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.2 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.3 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.4 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.5 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.6 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.7 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.8 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.9 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.10 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.11 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.12 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.13 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.14 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.15 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.16 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.17 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.18 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.19 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.20 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.21 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.22 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.23 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.24 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.25 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+item replace entity @s enderchest.26 with light_gray_stained_glass_pane[custom_data={custom_ui:1b}, tooltip_display={hide_tooltip:true}, item_model="air", max_stack_size=1]
+
+execute store result storage legitermoose:world_browser temp.id int 1 run scoreboard players get @s page
+function legitermoose:player_worlds/get_worlds with storage legitermoose:world_browser temp
+
+function legitermoose:player_worlds/render/_render_items

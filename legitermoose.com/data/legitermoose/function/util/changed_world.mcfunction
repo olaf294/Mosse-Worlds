@@ -14,9 +14,10 @@ data modify storage legitermoose:code code.player_id set value -1
 
 function legitermoose:world_browser/sort/players/start
 
-# merge data
+
+# merge fly data
 function legitermoose:util/perm/world_gm
-execute if score @s legitermoose.rank matches 10 run return run data merge entity @s {abilities:{mayfly:1b}}
+execute if score @s legitermoose.rank matches 5..10 run return run data merge entity @s {abilities:{mayfly:1b}}
 execute if entity @s[tag=is_admin] run return fail
 
 data merge entity @s {abilities:{mayfly:0b,flying:0b}}

@@ -1,4 +1,4 @@
-execute positioned 1000 64 0 unless entity @s[distance=..250] run return fail
+execute positioned 1000 64 0 unless entity @s[distance=..300] run return fail
 scoreboard players remove @s legitermoose.gmc_time 1
 
 # get seconds

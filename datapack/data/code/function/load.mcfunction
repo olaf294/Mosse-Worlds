@@ -10,16 +10,8 @@ gamerule randomTickSpeed 100
 gamerule tntExplodes false
 
 time set 23582
-
-scoreboard objectives add id dummy
-scoreboard objectives add misc dummy
-scoreboard objectives add time dummy
-scoreboard objectives add hour dummy
-scoreboard objectives add hour2 dummy
-scoreboard objectives add timeout dummy
-scoreboard objectives add requests dummy
-scoreboard objectives add last_played dummy
-scoreboard objectives add playerdetect dummy
+setworldspawn 0 64 0 0 8
+tellraw @a {color:gold,text:"Tʜᴇ Mᴏꜱꜱᴇ ɪꜱ Wᴏʀʟᴅ"}
 
 scoreboard objectives add numbers dummy
 scoreboard players set -24 numbers -24
@@ -31,26 +23,36 @@ scoreboard players set 20 numbers 20
 scoreboard players set 24 numbers 24
 scoreboard players set 60 numbers 60
 scoreboard players set 100 numbers 100
+scoreboard players set 200 numbers 200
 scoreboard players set 3600 numbers 3600
 scoreboard players set 10000 numbers 10000
 scoreboard players set 86400 numbers 86400
 
+scoreboard objectives add id dummy
+scoreboard objectives add misc dummy
+scoreboard objectives add time dummy
+scoreboard objectives add hour dummy
+scoreboard objectives add hour2 dummy
+scoreboard objectives add timeout dummy
+scoreboard objectives add requests dummy
+scoreboard objectives add last_played dummy
+scoreboard objectives add playerdetect dummy
+
 scoreboard objectives add offset trigger
 scoreboard objectives add toggle_info trigger
-
-setworldspawn 0 64 0 0 8
 
 team add player
 team modify player friendlyFire true
 team modify player collisionRule never
 
-tellraw @a {color:gold,text:"Tʜᴇ Mᴏꜱꜱᴇ ɪꜱ Wᴏʀʟᴅ"}
+team add z_spawn
+team modify z_spawn friendlyFire false
+team modify z_spawn collisionRule never
+team modify z_spawn color dark_gray
 
 execute unless loaded 9 64 -19 run return fail
 
-kill @e[tag=time]
-summon text_display 13.90 69.0 0.5 {text:[{text:"Cᴜʀʀᴇɴᴛ Tɪᴍᴇ (UTC ",color:gold},{score:{name:".offset",objective:time},color:red},{text:")\n",color:gold},{text:"hh",color:green},{text:":",color:dark_gray},{text:"mm",color:green},{text:":",color:dark_gray},{text:"ss",color:green}],Tags:["time_utc","time"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [2.0f, 2.0f, 2.0f], translation: [0.0f, 0.0f, 0.0f]}}
-summon text_display 13.90 68.1 0.5 {text:[{text:"Cᴜʀʀᴇɴᴛ Dᴀᴛᴇ (UTC 0)\n",color:light_purple},{text:"dd",color:yellow},{text:".",color:dark_gray},{text:"mm",color:yellow},{text:".",color:dark_gray},{text:"yyyy",color:yellow}],Tags:["date_utc","time"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.5f, 1.5f, 1.5f], translation: [0.0f, 0.0f, 0.0f]}}
+function code:realtime/reset_time
 
 kill @e[tag=moss]
 summon text_display 11.9 66.9 -14.5 {text:[{player:Legitermoose},{text:" Lᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ Sᴛᴀᴛᴜꜱ: ",color:light_purple},{text:"ᴜɴᴋɴᴏᴡɴ",color:yellow}],Tags:["moss","moss_status"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.6f, 1.6f, 1.6f], translation: [0.0f, 0.0f, 0.0f]}}
@@ -87,7 +89,14 @@ summon text_display 52.9 71.9 -11.5 {text:[{player:T0rston},{text:" T0ʀꜱᴛ�
 summon text_display 52.9 71.5 -11.5 {text:{text:"Cʜᴇᴄᴋ ᴛᴏ ꜱᴇᴇ ɪꜰ T0ʀꜱᴛᴏɴ ɪꜱ ᴏɴʟɪɴᴇ.",color:gray},Tags:["torston"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
 summon text_display 52.9 71.1 -11.5 {text:[{text:"Wᴏʀʟᴅ ᴡɪʟʟ ᴅɪꜱᴘʟᴀʏ ",color:gray,extra:[{text:"ʜᴇʀᴇ",color:dark_gray}]},{text:".",color:gray}],Tags:["torston","torston_world"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
 
+kill @e[tag=live_counts]
+summon text_display 0.5 69.125 9.875 {text:[{text:'"Lɪᴠᴇ" Vᴏᴛᴇ Cᴏᴜɴᴛ: ',color:green},{score:{name:".mosse_votes",objective:misc},color:aqua,underlined:1b}],Rotation:[180,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [3.0f, 3.0f, 3.0f], translation: [0.0f, 0.0f, 0.0f]},Tags:["vote_count","live_counts"]}
+summon text_display 0.5 68.125 9.875 {text:[{text:'"Lɪᴠᴇ" Vɪꜱɪᴛ Cᴏᴜɴᴛ: ',color:gold},{score:{name:".mosse_visits",objective:misc},color:yellow,underlined:1b}],Rotation:[180,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [3.0f, 3.0f, 3.0f], translation: [0.0f, 0.0f, 0.0f]},Tags:["visit_count","live_counts"]}
 
+kill @e[tag=jam_random]
+summon text_display -18.5 68.25 -6.9 {text:[{text:"Tᴀʀɢᴇᴛ Jᴀᴍ ID: ",color:green},{text:"ᴀʟʟ ᴊᴀᴍꜱ",color:yellow}],Tags:["jam_random"],Rotation:[0,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f],right_rotation:[0.0f, 0.0f, 0.0f, 1.0f],scale: [2.0f, 2.0f, 2.0f], translation: [0.0f, 0.0f, 0.0f]}}
+scoreboard players set .req_jam_id misc 4
+scoreboard players set .max_jam misc 4
 
 kill @e[tag=discord_join]
 summon interaction 5.5 64.5 10.5 {width:2,height:2,Tags:["discord_join"]}

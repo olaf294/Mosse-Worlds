@@ -1,4 +1,4 @@
-scoreboard objectives add legitermoose.gmc_time dummy {text:"GMC Time",color:gray}
+    # scoreboard objectives add legitermoose.gmc_time dummy {text:"GMC Time",color:gray}
 scoreboard objectives add legitermoose.misc dummy
 scoreboard objectives add legitermoose.temp dummy
 scoreboard objectives add legitermoose.tp_cd dummy
@@ -25,12 +25,15 @@ scoreboard objectives add lobby trigger
 scoreboard objectives add fly trigger
 scoreboard objectives add worldsettings trigger
 scoreboard objectives add find trigger
+scoreboard objectives add listall trigger
 
 scoreboard objectives add code trigger
 scoreboard objectives add reload trigger
 
 scoreboard objectives add world trigger
 scoreboard objectives add visit trigger
+
+scoreboard objectives add gamemode trigger
 
 forceload add 990 10
 execute if loaded 1000 64 0 run function legitermoose:load/spawn
@@ -51,9 +54,13 @@ team modify M_mood prefix [{text:"ᴍᴏᴏᴅ",color:"#1fff0f"},{text:" | ",col
 tellraw @a[tag=is_admin] [{text:"ʟᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ.ᴄᴏᴍ ʟᴏᴀᴅᴇᴅ!",color:gray}]
 
 
+scoreboard objectives add wait dummy
 
+function legitermoose:bossbar/load
 
 #   edit name <gradient:gold:yellow><shadow:#ff00007f>M<shadow:#ff0f007f>o<shadow:#ff1f007f>s<shadow:#ff2e007f>s<shadow:#ff3e007f>e <shadow:#ff5d007f>W<shadow:#ff6c007f>o<shadow:#ff7c007f>r<shadow:#ff8b007f>l<shadow:#ff9b007f>d<yellow><shadow:gold:.5>s
 
 #   edit description <green>Jᴏɪɴ </green><u><#3366ff>ʟᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ.ᴄᴏᴍ</u><green> ᴛᴏᴅᴀʏ! </green><br><green>ᴍᴇꜱꜱɪɴɢ ᴡɪᴛʜ <u><gold>/ʜᴛᴛᴘ</u> & ᴍᴏʀᴇ!
 #   edit description <gradient:#00cc00:green>Jᴏɪɴ </gradient><u><gradient:#3366ff:blue:#3311dd>ʟᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ.ᴄᴏᴍ</u><gradient:green:#00cc00> ᴛᴏᴅᴀʏ! </gradient><br><green>ᴍᴇꜱꜱɪɴɢ ᴡɪᴛʜ <u><gold>/ʜᴛᴛᴘ</u> & ᴍᴏʀᴇ!
+
+#   edit description <shadow:dark_green:.25><gradient:green:dark_green:green>ɴᴇᴡ ᴊᴀᴍ ʙʀᴏᴡꜱᴇʀ!</gradient></shadow><br><yellow>⚠ <gradient:gold:red:gold>ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ</gradient> <yellow>⚠
