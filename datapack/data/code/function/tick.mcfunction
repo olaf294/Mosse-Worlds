@@ -1,3 +1,7 @@
+# Total Player Count
+scoreboard players operation .players_prev misc = .players misc
+execute store result score .players misc if entity @a
+
 team join player @a[team=]
 effect give @a saturation 100 1 true
 
