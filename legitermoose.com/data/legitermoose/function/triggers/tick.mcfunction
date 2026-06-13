@@ -32,8 +32,8 @@ execute as @s[scores={play=1..}] run function legitermoose:world_browser/open
 scoreboard players reset @s[scores={play=1..}] play 
 
 # Find
-execute if score .lobby_enabled legitermoose.misc matches 1 run scoreboard players enable @s find
-execute unless score .lobby_enabled legitermoose.misc matches 1 run scoreboard players reset @s find
+scoreboard players enable @s find
+execute unless score .lobby_enabled legitermoose.misc matches 1 run scoreboard players reset @s[tag=!is_admin] find
 execute as @s[scores={find=1..}] store result storage legitermoose:temp find_player.id int 1 run scoreboard players get @s find
 execute as @s[scores={find=1..}] run function legitermoose:triggers/find/find with storage legitermoose:temp find_player
 
