@@ -12,6 +12,10 @@ execute store result storage api math float 0.0001 run scoreboard players operat
 # Jam-specific display
 tellraw @a[distance=..10] [{text:"ᴊᴀᴍ ɪᴅ: ",color:green},{storage:api,nbt:"jam_world.response.jam.id",color:aqua}]
 
+$execute unless data storage api {jam_world:{response:{version:"1.21.10"}}} run return run tellraw @a[tag=info,distance=..10] [{text:" - - - - - - - - - - - - - - - - ",color:gray},{text:"\nRᴀɴᴅᴏᴍ ᴊᴀᴍ Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:green},{text:"[HERE]",color:gold,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:" ᴛᴏ ᴘʟᴀʏ.",color:green},\
+"\n  ",{storage:api,nbt:"jam_world.response.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"jam_world.response.version",color:yellow},"\n  ",\
+{score:{name:".votes",objective:misc},color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{score:{name:".visits",objective:misc},color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green},{text:")",color:gray}]
+
 $tellraw @a[tag=info,distance=..10] [{text:" - - - - - - - - - - - - - - - - ",color:gray},{text:"\nRᴀɴᴅᴏᴍ ᴊᴀᴍ Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:green},{text:"[HERE]",color:gold,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:" ᴛᴏ ᴘʟᴀʏ.",color:green},\
-"\n  ",{storage:api,nbt:"jam_world.response.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"jam_world.response.version",interpret:1b,color:gray},"\n  ",\
+"\n  ",{storage:api,nbt:"jam_world.response.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"jam_world.response.version",color:green},"\n  ",\
 {score:{name:".votes",objective:misc},color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{score:{name:".visits",objective:misc},color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green},{text:")",color:gray}]

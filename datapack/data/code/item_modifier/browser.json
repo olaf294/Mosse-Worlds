@@ -1,0 +1,151 @@
+[
+	{
+		"function": "minecraft:set_components",
+		"components": {
+			"!minecraft:food": {},
+			"!minecraft:consumable": {}
+		},
+		"conditions": []
+	},
+	{
+		"function": "minecraft:set_name",
+		"entity": "this",
+		"name": {
+			"storage": "a",
+			"nbt": "temp.raw_name",
+			"interpret": true
+		},
+		"target": "custom_name"
+	},
+	{
+		"function": "minecraft:set_lore",
+		"entity": "this",
+		"lore": [
+			""
+		],
+		"mode": "append"
+	},
+	{
+		"function": "minecraft:set_lore",
+		"entity": "this",
+		"lore": [
+			[
+				{
+					"storage": "a",
+					"nbt": "temp.player_count",
+					"color": "green",
+					"italic": false
+				},
+				{
+					"text": "/",
+					"color": "green",
+					"italic": false
+				},
+				{
+					"storage": "a",
+					"nbt": "temp.max_players",
+					"color": "green",
+					"italic": false
+				},
+				{
+					"text": " playing",
+					"color": "gray",
+					"italic": false
+				}
+			]
+		],
+		"mode": "append",
+		"conditions": [
+			{
+				"condition": "minecraft:value_check",
+				"value": {
+					"type": "minecraft:storage",
+					"storage": "a",
+					"path": "temp.locked"
+				},
+				"range": 1
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_lore",
+		"entity": "this",
+		"lore": [
+			[
+				{
+					"text": "World offline",
+					"color": "gray",
+					"italic": false
+				}
+			]
+		],
+		"mode": "append",
+		"conditions": [
+			{
+				"condition": "minecraft:value_check",
+				"value": {
+					"type": "minecraft:storage",
+					"storage": "a",
+					"path": "temp.locked"
+				},
+				"range": 0
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_lore",
+		"entity": "this",
+		"lore": [
+			[
+				{
+					"storage": "a",
+					"nbt": "temp.votes",
+					"color": "green",
+					"italic": false
+				},
+				{
+					"text": " votes, ",
+					"color": "gray",
+					"italic": false
+				},
+				{
+					"storage": "a",
+					"nbt": "temp.visits",
+					"color": "green",
+					"italic": false
+				},
+				{
+					"text": " visits",
+					"color": "gray",
+					"italic": false
+				}
+			]
+		],
+		"mode": "append"
+	},
+	{
+		"function": "minecraft:set_lore",
+		"entity": "this",
+		"lore": [
+			[
+				{
+					"text": "by ",
+					"color": "gray",
+					"italic": false
+				},
+				{
+					"nbt": "temp.owner_name",
+					"storage": "a"
+				}
+			]
+		],
+		"mode": "append"
+	},
+	{
+		"function": "minecraft:set_custom_data",
+		"tag": {
+			"navigator.world": true
+		},
+		"conditions": []
+	}
+]

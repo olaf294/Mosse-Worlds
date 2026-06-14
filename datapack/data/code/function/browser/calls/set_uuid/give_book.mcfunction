@@ -1,0 +1,2 @@
+tellraw @s {text:"ꜱɪɢɴ ᴀ ʙᴏᴏᴋ ᴡɪᴛʜ ᴛʜᴇ ᴡᴏʀʟᴅ'ꜱ ᴜᴜɪᴅ ɪɴ ɪᴛ ᴛᴏ ʀᴇǫᴜᴇꜱᴛ ᴀ ᴡᴏʀʟᴅ",color:red}
+item replace entity @s weapon.offhand with writable_book[custom_data={noclear:1b},custom_name={italic:0b,text:"Sɪɢɴ ᴍᴇ ᴡɪᴛʜ ᴡᴏʀʟᴅ ᴜᴜɪᴅ!",color:aqua}]

@@ -63,4 +63,4 @@ function legitermoose:bossbar/load
 #   edit description <green>Jᴏɪɴ </green><u><#3366ff>ʟᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ.ᴄᴏᴍ</u><green> ᴛᴏᴅᴀʏ! </green><br><green>ᴍᴇꜱꜱɪɴɢ ᴡɪᴛʜ <u><gold>/ʜᴛᴛᴘ</u> & ᴍᴏʀᴇ!
 #   edit description <gradient:#00cc00:green>Jᴏɪɴ </gradient><u><gradient:#3366ff:blue:#3311dd>ʟᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ.ᴄᴏᴍ</u><gradient:green:#00cc00> ᴛᴏᴅᴀʏ! </gradient><br><green>ᴍᴇꜱꜱɪɴɢ ᴡɪᴛʜ <u><gold>/ʜᴛᴛᴘ</u> & ᴍᴏʀᴇ!
 
-#   edit description <shadow:dark_green:.25><gradient:green:dark_green:green>ɴᴇᴡ ᴊᴀᴍ ʙʀᴏᴡꜱᴇʀ!</gradient></shadow><br><yellow>⚠ <gradient:gold:red:gold>ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ</gradient> <yellow>⚠
+#   edit description <shadow:dark_green:.25><gradient:green:dark_green:green>ɴᴇᴡ ᴊᴀᴍ & ᴡᴏʀʟᴅ ʙʀᴏᴡꜱᴇʀ!</gradient></shadow><br><yellow>⚠ <gradient:gold:red:gold>ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ</gradient> <yellow>⚠

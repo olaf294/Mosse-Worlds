@@ -33,7 +33,6 @@ scoreboard objectives add misc dummy
 scoreboard objectives add time dummy
 scoreboard objectives add hour dummy
 scoreboard objectives add hour2 dummy
-scoreboard objectives add timeout dummy
 scoreboard objectives add requests dummy
 scoreboard objectives add last_played dummy
 scoreboard objectives add playerdetect dummy
@@ -83,12 +82,14 @@ summon text_display 42.9 71.9 -11.5 {text:[{player:T0rston},{text:" T0ʀꜱᴛ�
 summon text_display 42.9 71.5 -11.5 {text:{text:"Cʜᴇᴄᴋ ᴛᴏ ꜱᴇᴇ ɪꜰ T0ʀꜱᴛᴏɴ ɪꜱ ᴏɴʟɪɴᴇ.",color:gray},Tags:["display"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
 summon text_display 42.9 71.1 -11.5 {text:[{text:"Wᴏʀʟᴅ ᴡɪʟʟ ᴅɪꜱᴘʟᴀʏ ",color:gray,extra:[{text:"ʜᴇʀᴇ",color:dark_gray}]},{text:".",color:gray}],Tags:["display","torston_world"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
 
-summon text_display 0.5 69.125 9.875 {text:[{text:'"Lɪᴠᴇ" Vᴏᴛᴇ Cᴏᴜɴᴛ: ',color:green},{score:{name:".mosse_votes",objective:misc},color:aqua,underlined:1b}],Rotation:[180,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [3.0f, 3.0f, 3.0f], translation: [0.0f, 0.0f, 0.0f]},Tags:["counts"],UUID:[I;15,2,0,0]}
-summon text_display 0.5 68.125 9.875 {text:[{text:'"Lɪᴠᴇ" Vɪꜱɪᴛ Cᴏᴜɴᴛ: ',color:gold},{score:{name:".mosse_visits",objective:misc},color:yellow,underlined:1b}],Rotation:[180,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [3.0f, 3.0f, 3.0f], translation: [0.0f, 0.0f, 0.0f]},Tags:["counts"],UUID:[I;15,2,0,1]}
+summon text_display 0.5 69.125 9.9 {text:[{text:'"Lɪᴠᴇ" Vᴏᴛᴇ Cᴏᴜɴᴛ: ',color:green},{score:{name:".mosse_votes",objective:misc},color:aqua,underlined:1b}],Rotation:[180,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [3.0f, 3.0f, 3.0f], translation: [0.0f, 0.0f, 0.0f]},Tags:["display","counts"],UUID:[I;15,2,0,0]}
+summon text_display 0.5 68.125 9.9 {text:[{text:'"Lɪᴠᴇ" Vɪꜱɪᴛ Cᴏᴜɴᴛ: ',color:gold},{score:{name:".mosse_visits",objective:misc},color:yellow,underlined:1b}],Rotation:[180,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [3.0f, 3.0f, 3.0f], translation: [0.0f, 0.0f, 0.0f]},Tags:["display","counts"],UUID:[I;15,2,0,1]}
+
+summon text_display -4.0 65.3 16.9 {text:{text:'ᴡᴏʀʟᴅ ʙʀᴏᴡꜱᴇʀ',color:yellow},Rotation:[180,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.4f, 1.4f, 1.4f], translation: [0.0f, 0.0f, 0.0f]},Tags:["display"]}
 
 kill @e[tag=jam_random]
 summon text_display -18.5 68.25 -6.9 {text:[{text:"Tᴀʀɢᴇᴛ Jᴀᴍ ID: ",color:green},{text:"ᴀʟʟ ᴊᴀᴍꜱ",color:yellow}],Tags:["jam_random"],Rotation:[0,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f],right_rotation:[0.0f, 0.0f, 0.0f, 1.0f],scale: [2.0f, 2.0f, 2.0f], translation: [0.0f, 0.0f, 0.0f]}}
-scoreboard players set .req_jam_id misc 4
+scoreboard players set .req_jam_id misc 0
 scoreboard players set .max_jam misc 4
 
 kill @e[tag=discord_join]

@@ -1,5 +1,5 @@
 # Put back in chest
-$item replace block -5 64 9 container.$(slot) from entity @s player.cursor 
+$item replace block -4 64 16 container.$(slot) from entity @s player.cursor 
 
 # Clear Cursor
 item replace entity @s player.cursor with air
