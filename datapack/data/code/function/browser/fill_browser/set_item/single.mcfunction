@@ -1,3 +1,3 @@
 $item replace block -4 64 16 container.0 with poisonous_potato[item_model="$(icon)",lore=$(raw_description),custom_data={id:"$(world_uuid)",slot:0},profile="$(owner_name)",tooltip_display={hidden_components:["profile"]}]
-
 execute as @p run item modify block -4 64 16 container.0 code:browser
+execute as @p unless data storage a temp{version:"1.21.10"} run item modify block -4 64 16 container.0 code:outdated

@@ -1,0 +1,61 @@
+[
+	{
+		"function": "minecraft:set_lore",
+		"lore": [
+			{
+				"text": "Whitelisted!",
+				"color": "red",
+				"italic": false
+			}
+		],
+		"mode": "append",
+		"conditions": [
+			{
+				"condition": "minecraft:value_check",
+				"value": {
+					"type": "minecraft:storage",
+					"storage": "a",
+					"path": "temp.whitelist_on_version_change"
+				},
+				"range": 1
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_lore",
+		"entity": "this",
+		"lore": [
+			"",
+			{
+				"text": "This world was made",
+				"color": "red",
+				"italic": false
+			},
+			[
+				{
+					"text": "in ",
+					"color": "red",
+					"italic": false
+				},
+				{
+					"nbt": "temp.version",
+					"storage": "a",
+					"color": "red",
+					"italic": false
+				},
+				{
+					"text": " and may",
+					"color": "red",
+					"italic": false
+				}
+			],
+			{
+				"text": "not work in 1.21.10.",
+				"color": "red",
+				"italic": false
+			}
+		],
+		"mode": "append",
+		"conditions": []
+	}
+]

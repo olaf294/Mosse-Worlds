@@ -8,6 +8,13 @@
 		"conditions": []
 	},
 	{
+		"function": "minecraft:set_custom_data",
+		"tag": {
+			"navigator.world": true
+		},
+		"conditions": []
+	},
+	{
 		"function": "minecraft:set_name",
 		"entity": "this",
 		"name": {
@@ -142,10 +149,26 @@
 		"mode": "append"
 	},
 	{
-		"function": "minecraft:set_custom_data",
-		"tag": {
-			"navigator.world": true
-		},
-		"conditions": []
+		"function": "minecraft:set_lore",
+		"entity": "this",
+		"lore": [
+			{
+				"text": "Whitelisted!",
+				"color": "red",
+				"italic": false
+			}
+		],
+		"mode": "append",
+		"conditions": [
+			{
+				"condition": "minecraft:value_check",
+				"value": {
+					"type": "minecraft:storage",
+					"storage": "a",
+					"path": "temp.enforce_whitelist"
+				},
+				"range": 1
+			}
+		]
 	}
 ]
