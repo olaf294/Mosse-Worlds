@@ -8,7 +8,6 @@ data modify storage a multi.desc set from storage a temp.raw_description
 data modify storage a multi.id set from storage a temp.world_uuid
 
 function code:browser/fill_browser/set_item/multi with storage a multi
-
 data remove storage a a.response[0]
 
 execute if score .browser_items misc matches 0 run return run tellraw @a[tag=is_admin,tag=!ignore] {text:"Wᴏʀʟᴅꜱ ꜰɪʟʟᴇᴅ.",color:"#333388"}
