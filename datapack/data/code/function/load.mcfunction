@@ -18,6 +18,7 @@ scoreboard players set -24 numbers -24
 scoreboard players set -1 numbers -1
 scoreboard players set 4 numbers 4
 scoreboard players set 10 numbers 10
+scoreboard players set 16 numbers 16
 scoreboard players set 18 numbers 18
 scoreboard players set 20 numbers 20
 scoreboard players set 24 numbers 24

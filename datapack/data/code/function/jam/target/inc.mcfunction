@@ -6,4 +6,5 @@ execute unless score .req_jam_id misc matches 0 run tellraw @a[distance=..11] [{
 
 execute store result storage api jam.req_id int 1 run scoreboard players get .req_jam_id misc
 execute unless score .req_jam_id misc matches 0 run return run data modify entity @n[type=text_display] text.extra[0].text set string storage api jam.req_id
-execute if score .req_jam_id misc matches 0 run return run data modify entity @n[type=text_display] text.extra[0].text set value "ᴀʟʟ ᴊᴀᴍꜱ"
+
+data modify entity @n[type=text_display] text.extra[0].text set value "ᴀʟʟ ᴊᴀᴍꜱ"

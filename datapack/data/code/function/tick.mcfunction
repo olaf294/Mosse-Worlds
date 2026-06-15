@@ -1,4 +1,3 @@
-team join player @a[team=]
 effect give @a saturation 100 1 true
 
 execute as @a unless score @s id matches -2147483648..2147483647 run function code:_id

@@ -2,14 +2,11 @@
 $execute unless data storage legitermoose:gm worlds[{id:$(world_id)}].default run data modify storage legitermoose:gm worlds[{id:$(world_id)}].default set value 2
 $execute store result score @s legitermoose.gamemode run data get storage legitermoose:gm worlds[{id:$(world_id)}].default
 
-# If you are the world owner
-# $execute if data storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].gamemode store result score @s legitermoose.gamemode run data get storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].gamemode  
-
 # if you have an exception then set gamemode
 $execute if data storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(UUID)}] store result score @s legitermoose.gamemode run data get storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].gamemode
 
 
-# Get Rank
+# Get Rank (defaults to 0)
 $execute store result score @s legitermoose.rank run data get storage legitermoose:ranks worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].rank
 
 # If you are in lobby with Lobby GMC

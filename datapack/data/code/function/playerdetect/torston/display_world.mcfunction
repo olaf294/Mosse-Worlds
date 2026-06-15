@@ -8,11 +8,11 @@ execute if data storage player_detect temp.a.world.error run return fail
 execute if data storage player_detect {temp:{a:{world:{status_code:200}}}} run tellraw @a[tag=is_admin,tag=!ignore] [{text:"(API) Rᴇꜱᴘᴏɴꜱᴇ: ",color:gray},{storage:player_detect,nbt:"temp.a.world.status_code",color:dark_green}]
 execute unless data storage player_detect {temp:{a:{world:{status_code:200}}}} run tellraw @a[tag=is_admin,tag=!ignore] [{text:"(API) Rᴇꜱᴘᴏɴꜱᴇ: ",color:gray},{storage:player_detect,nbt:"temp.a.world.status_code",color:yellow}]
 
-execute as @e[type=text_display,tag=torston_world] run data modify entity @s text.text set value "T0rston is in \""
-execute as @e[type=text_display,tag=torston_world] run data modify entity @s text.extra[0] set from storage player_detect temp.a.world.response.raw_name
-execute as @e[type=text_display,tag=torston_world] if data storage player_detect temp.a{uuid:"lobby"} run data modify entity @s text.extra[0] set value {text:"Lobby",color:gold}
+data modify entity @n[type=text_display,tag=torston_world] text.text set value "T0rston is in \""
+data modify entity @n[type=text_display,tag=torston_world] text.extra[0] set from storage player_detect temp.a.world.response.raw_name
+execute if data storage player_detect temp.a{uuid:"lobby"} run data modify entity @n[type=text_display,tag=torston_world] text.extra[0] set value {text:"Lobby",color:gold}
 
-execute as @e[type=text_display,tag=torston_world] run data modify entity @s text.extra[1] set value "\"."
+data modify entity @n[type=text_display,tag=torston_world] text.extra[1] set value "\"."
 
 
 function code:playerdetect/torston/display_world_macro with storage player_detect temp.a.world.response

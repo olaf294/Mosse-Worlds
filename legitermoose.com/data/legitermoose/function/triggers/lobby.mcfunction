@@ -18,4 +18,6 @@ clear @s *
 effect clear @s
 item replace entity @s player.cursor with air
 
+team join player @s[team=z_spawn]
+
 inventory @s close

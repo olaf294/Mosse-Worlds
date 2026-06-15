@@ -2,7 +2,7 @@
 scoreboard players enable @s vote
 scoreboard players reset @s[scores={worldid=-1..0}] vote
 scoreboard players enable @s[tag=!legitermoose.has_voted_lobby,scores={worldid=0}] vote 
-execute as @a[scores={vote=1..}] run function legitermoose:vote/vote
+execute as @s[scores={vote=1..}] run function legitermoose:vote/vote
 scoreboard players reset @s[scores={vote=1..}] vote
 
 # Lobby
@@ -39,7 +39,7 @@ execute as @s[scores={find=1..}] run function legitermoose:triggers/find/find wi
 
 # Code
 scoreboard players enable @s[scores={legitermoose.rank=10}] code
-scoreboard players enable @a[tag=is_dev] code
+scoreboard players enable @s[tag=is_dev] code
 execute unless score @s[tag=!is_dev] legitermoose.rank matches 10 run scoreboard players reset @s code
 execute as @s[scores={code=1..}] run function legitermoose:triggers/code/trigger
 
@@ -64,6 +64,7 @@ scoreboard players reset @s[scores={listall=1..}] listall
 
 # gamemode
 scoreboard players enable @s[scores={legitermoose.rank=10}] gamemode
+scoreboard players reset @s[scores={legitermoose.rank=0}] gamemode
 execute as @s[scores={gamemode=0..3}] run function legitermoose:triggers/gamemode/trigger
 
 # Disable when banned

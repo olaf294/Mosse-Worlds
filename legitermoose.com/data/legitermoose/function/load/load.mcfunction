@@ -2,13 +2,15 @@
 scoreboard objectives add legitermoose.misc dummy
 scoreboard objectives add legitermoose.temp dummy
 scoreboard objectives add legitermoose.tp_cd dummy
-scoreboard objectives add worldid dummy
-scoreboard objectives add previd dummy
 scoreboard objectives add legitermoose.rank dummy
 scoreboard objectives add legitermoose.gamemode dummy
 scoreboard objectives add legitermoose.world_slots dummy
+scoreboard objectives add legitermoose.mosse_points dummy [{text:"‹",color:gray},{text:"Ⓜ",color:gold},{text:"›",color:gray},{text:" Mᴏꜱꜱᴇ Pᴏɪɴᴛꜱ ",color:white,bold:1b},{text:"‹",color:gray},{text:"Ⓜ",color:gold},{text:"›",color:gray}]
+scoreboard objectives modify legitermoose.mosse_points numberformat styled {color:"#ff7700"}
+scoreboard objectives add worldid dummy
+scoreboard objectives add previd dummy
 scoreboard objectives add id dummy
-
+scoreboard objectives add numbers dummy
 scoreboard objectives add join custom:leave_game
 scoreboard objectives add leave custom:leave_game
 
@@ -18,7 +20,6 @@ scoreboard objectives add page dummy
 scoreboard objectives add time_since_open dummy
 scoreboard objectives add ui dummy
 
-scoreboard objectives add numbers dummy
 scoreboard objectives add play trigger
 scoreboard objectives add vote trigger
 scoreboard objectives add lobby trigger
