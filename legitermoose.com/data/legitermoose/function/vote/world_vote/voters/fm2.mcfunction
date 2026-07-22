@@ -1,3 +1,4 @@
 scoreboard players add .world_vote legitermoose.misc 4
+$data modify storage legitermoose:votes votes[{id:$(id)}].uuids[0].count set value 4
 $tellraw @s [{text:"Yᴏᴜ ʜᴀᴠᴇ ᴠᴏᴛᴇᴅ ꜰᴏʀ ᴡᴏʀʟᴅ ɪᴅ ",color:dark_green},{text:"$(id)",color:green},{text:".\n",color:dark_green},{text:"Iᴛ ɴᴏᴡ ʜᴀꜱ ",color:yellow},{score:{name:".world_vote",objective:legitermoose.misc},color:yellow},{text:" ᴠᴏᴛᴇꜱ! (+4)",color:yellow}]
 $tellraw @a[scores={worldid=$(id)}] [{storage:"legitermoose:temp",nbt:playername,color:green},{text:" ʜᴀꜱ ᴠᴏᴛᴇᴅ ꜰᴏʀ ᴛʜɪꜱ ᴡᴏʀʟᴅ.\n",color:dark_green},{text:"Iᴛ ɴᴏᴡ ʜᴀꜱ ",color:yellow},{score:{name:".world_vote",objective:legitermoose.misc},color:yellow},{text:" ᴠᴏᴛᴇꜱ! (+4)",color:yellow}]

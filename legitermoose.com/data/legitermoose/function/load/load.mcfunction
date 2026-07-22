@@ -1,7 +1,6 @@
     # scoreboard objectives add legitermoose.gmc_time dummy {text:"GMC Time",color:gray}
 scoreboard objectives add legitermoose.misc dummy
 scoreboard objectives add legitermoose.temp dummy
-scoreboard objectives add legitermoose.tp_cd dummy
 scoreboard objectives add legitermoose.rank dummy
 scoreboard objectives add legitermoose.gamemode dummy
 scoreboard objectives add legitermoose.world_slots dummy

@@ -1,3 +1,5 @@
+execute as @s[scores={worldid=0}] run function legitermoose:world_browser/ensure_compass
+
 # world slots 
 execute unless score @s legitermoose.world_slots matches -2147483648..2147483647 run scoreboard players set @s legitermoose.world_slots 1
 

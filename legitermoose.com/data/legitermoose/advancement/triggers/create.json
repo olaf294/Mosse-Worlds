@@ -1,0 +1,39 @@
+{
+	"criteria": {
+		"a": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": {
+					"type": "interaction",
+					"nbt": {
+						"Tags": [
+							"legitermoose.spawn.interact_create"
+						]
+					}
+				}
+			}
+		},
+		"b": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": {
+					"type": "interaction",
+					"nbt": {
+						"Tags": [
+							"legitermoose.spawn.interact_create"
+						]
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"a",
+			"b"
+		]
+	],
+	"rewards": {
+		"function": "legitermoose:misc/interaction/create"
+	}
+}

@@ -1,9 +1,7 @@
 # Voting
 scoreboard players enable @s vote
-scoreboard players reset @s[scores={worldid=-1..0}] vote
-scoreboard players enable @s[tag=!legitermoose.has_voted_lobby,scores={worldid=0}] vote 
+scoreboard players reset @s[scores={worldid=-1}] vote
 execute as @s[scores={vote=1..}] run function legitermoose:vote/vote
-scoreboard players reset @s[scores={vote=1..}] vote
 
 # Lobby
 scoreboard players enable @s lobby
@@ -12,8 +10,8 @@ scoreboard players reset @s[scores={lobby=1..}] lobby
 
 # Fly
 execute positioned 1000 64 0 run scoreboard players enable @s[distance=..300,tag=is_am] fly
-execute positioned 1000 64 0 run scoreboard players reset @s[distance=301..] fly
 execute positioned 1000 64 0 run scoreboard players reset @s[distance=..300,tag=!is_am] fly
+execute positioned 1000 64 0 unless score @s fly matches 1.. run scoreboard players reset @s[distance=301..] fly
 scoreboard players enable @s[scores={legitermoose.rank=10}] fly
 execute if score @s fly matches 1.. run function legitermoose:lobby/toggle_fly
 scoreboard players reset @s[scores={fly=1..}] fly
@@ -65,6 +63,7 @@ scoreboard players reset @s[scores={listall=1..}] listall
 # gamemode
 scoreboard players enable @s[scores={legitermoose.rank=10}] gamemode
 scoreboard players reset @s[scores={legitermoose.rank=0}] gamemode
+scoreboard players set @s[scores={legitermoose.rank=0}] gamemode -2
 execute as @s[scores={gamemode=0..3}] run function legitermoose:triggers/gamemode/trigger
 
 # Disable when banned

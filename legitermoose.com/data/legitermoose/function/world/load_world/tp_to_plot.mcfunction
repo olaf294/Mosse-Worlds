@@ -1,3 +1,1 @@
 $execute positioned $(x) $(y) $(z) run function legitermoose:world/load_world/tp_here
-
-tag @s add legitermoose.teleported

@@ -6,4 +6,4 @@ execute if items entity @s weapon.offhand *[custom_data~{navigator.world:1b}] ru
 clear @a *[custom_data~{navigator.world:1b}]
 
 # only allow noclear in offhand
-execute if items entity @s container.* *[custom_data~{noclear:1b}] run clear @s
+execute if items entity @s container.* *[custom_data~{noclear:1b}] run clear @s *[custom_data~{noclear:1b}]

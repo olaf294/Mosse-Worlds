@@ -1,0 +1,2 @@
+execute store result storage legitermoose:temp worldsettings.wc.id int 1 run scoreboard players get @s worldid
+function legitermoose:world/feat/worldsettings/wc/list with storage legitermoose:temp worldsettings.wc

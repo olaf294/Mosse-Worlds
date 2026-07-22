@@ -1,5 +1,5 @@
 # Store Vote in Storage
-$data modify storage legitermoose:votes votes[{id:$(id)}].uuids prepend value {uuid:[],name:"unknown",id:-1}
+$data modify storage legitermoose:votes votes[{id:$(id)}].uuids prepend value {uuid:[],name:"unknown",id:-1,count:-1}
 $data modify storage legitermoose:votes votes[{id:$(id)}].uuids[0].uuid set from entity @s UUID
 $execute store result storage legitermoose:votes votes[{id:$(id)}].uuids[0].id int 1 run scoreboard players get @s id
 function legitermoose:util/get_name

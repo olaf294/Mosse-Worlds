@@ -1,10 +1,10 @@
 # Time
 execute if score .seconds time matches 0..9 run data modify storage time t.s set value "0"
 execute if score .minutes time matches 0..9 run data modify storage time t.m set value "0"
-execute if score @s hour matches 0..9 run data modify storage time t.h set value "0"
+execute if score .hours time matches 0..9 run data modify storage time t.h set value "0"
 execute unless score .seconds time matches 0..9 run data modify storage time t.s set value ""
 execute unless score .minutes time matches 0..9 run data modify storage time t.m set value ""
-execute unless score @s hour matches 0..9 run data modify storage time t.h set value ""
+execute unless score .hours time matches 0..9 run data modify storage time t.h set value ""
 
 # Actionbar
 data modify entity @n[type=text_display,tag=time_utc] text set value \
@@ -12,6 +12,8 @@ data modify entity @n[type=text_display,tag=time_utc] text set value \
 {storage:time,nbt:t.h,color:green},{score:{name:".hours",objective:time},color:green},{text:":",color:gray},\
 {storage:time,nbt:t.m,color:green},{score:{name:".minutes",objective:time},color:green},{text:":",color:gray},\
 {storage:time,nbt:t.s,color:green},{score:{name:".seconds",objective:time},color:green}]
+
+
 
 execute as @a[tag=!legitermoose.disable_global_time] run function code:realtime/display/actionbar
 

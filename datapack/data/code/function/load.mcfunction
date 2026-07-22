@@ -6,8 +6,8 @@ gamerule fallDamage false
 gamerule keepInventory true
 gamerule mobGriefing false
 gamerule locatorBar false
-gamerule randomTickSpeed 100
 gamerule tntExplodes false
+gamerule randomTickSpeed 0
 
 time set 23582
 setworldspawn 0 64 0 0 8
@@ -17,6 +17,7 @@ scoreboard objectives add numbers dummy
 scoreboard players set -24 numbers -24
 scoreboard players set -1 numbers -1
 scoreboard players set 4 numbers 4
+scoreboard players set 5 numbers 5
 scoreboard players set 10 numbers 10
 scoreboard players set 16 numbers 16
 scoreboard players set 18 numbers 18
@@ -52,8 +53,6 @@ team modify z_spawn color dark_gray
 
 execute unless loaded 9 64 -19 run return fail
 
-function code:realtime/reset_time
-
 kill @e[type=text_display,tag=display]
 summon text_display 11.9 66.9 -14.5 {text:[{player:Legitermoose},{text:" Lᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ Sᴛᴀᴛᴜꜱ: ",color:light_purple},{text:"ᴜɴᴋɴᴏᴡɴ",color:yellow}],Tags:["display","moss_status"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.6f, 1.6f, 1.6f], translation: [0.0f, 0.0f, 0.0f]}}
 summon text_display 11.9 66.5 -14.5 {text:{text:"Cʜᴇᴄᴋ ᴛᴏ ꜱᴇᴇ ɪꜰ Lᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ ɪꜱ ᴏɴʟɪɴᴇ.",color:gray},Tags:["display"],Rotation:[90,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.0f, 1.0f, 1.0f], translation: [0.0f, 0.0f, 0.0f]},line_width:500}
@@ -88,14 +87,15 @@ summon text_display 0.5 68.125 9.9 {text:[{text:'"Lɪᴠᴇ" Vɪꜱɪᴛ Cᴏᴜ
 
 summon text_display -4.0 65.3 16.9 {text:{text:'ᴡᴏʀʟᴅ ʙʀᴏᴡꜱᴇʀ',color:yellow},Rotation:[180,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [1.4f, 1.4f, 1.4f], translation: [0.0f, 0.0f, 0.0f]},Tags:["display"]}
 
-kill @e[tag=jam_random]
-summon text_display -18.5 68.25 -6.9 {text:[{text:"Tᴀʀɢᴇᴛ Jᴀᴍ ID: ",color:green},{text:"ᴀʟʟ ᴊᴀᴍꜱ",color:yellow}],Tags:["jam_random"],Rotation:[0,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f],right_rotation:[0.0f, 0.0f, 0.0f, 1.0f],scale: [2.0f, 2.0f, 2.0f], translation: [0.0f, 0.0f, 0.0f]}}
+summon text_display -18.5 68.25 -6.9 {text:[{text:"Tᴀʀɢᴇᴛ Jᴀᴍ ID: ",color:green},{text:"ᴀʟʟ ᴊᴀᴍꜱ",color:yellow}],Tags:["jam_random","display"],Rotation:[0,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f],right_rotation:[0.0f, 0.0f, 0.0f, 1.0f],scale: [2.0f, 2.0f, 2.0f], translation: [0.0f, 0.0f, 0.0f]}}
 scoreboard players set .req_jam_id misc 0
 scoreboard players set .max_jam misc 4
 
 kill @e[tag=discord_join]
 summon interaction 5.5 64.5 10.5 {width:2,height:2,Tags:["discord_join"],UUID:[I;15,3,0,1]}
-summon text_display 5.5 66.2 9.9 {text:{text:"Cʟɪᴄᴋ ᴛᴏ ᴊᴏɪɴ ᴛʜᴇ Dɪꜱᴄᴏʀᴅ!",color:blue},Tags:["discord_join"],Rotation:[180,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.875f, 0.875f, 0.875f], translation: [0.0f, 0.0f, 0.0f]}}
+summon text_display 5.5 66.2 9.9 {text:{text:"Cʟɪᴄᴋ ᴛᴏ ᴊᴏɪɴ ᴛʜᴇ Dɪꜱᴄᴏʀᴅ!",color:blue},Tags:["discord_join","display"],Rotation:[180,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.875f, 0.875f, 0.875f], translation: [0.0f, 0.0f, 0.0f]}}
 
 scoreboard players set .globaltimer misc 0
-execute positioned 10 63 -12 run function code:playerdetect/init
+    # schedule function code:playerdetect/init 1s replace
+
+execute positioned 15 65 -4 run function code:realtime/reset_time

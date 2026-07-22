@@ -1,5 +1,6 @@
 clear @s
 effect clear @s
+inventory @s close
 
 # add more handling
 execute if entity @s[gamemode=spectator] run return run tp @s 1000 64 0

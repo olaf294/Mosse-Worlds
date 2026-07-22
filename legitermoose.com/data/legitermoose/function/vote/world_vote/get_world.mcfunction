@@ -2,7 +2,7 @@
 $execute store result score .world_vote legitermoose.misc run data get storage legitermoose:worlds worlds[{world_id:$(id)}].votes 1
 
 execute if score @s worldid > .global_id legitermoose.misc run return run tellraw @s {text:"Yᴏᴜ ᴄᴀɴɴᴏᴛ ᴠᴏᴛᴇ ᴀ ɴᴏɴ-ᴇxɪꜱᴛᴀɴᴛ ᴡᴏʀʟᴅ!",color:dark_red}
-execute if score @s worldid matches ..-9 run return run tellraw @s {text:"Yᴏᴜ ᴄᴀɴɴᴏᴛ ᴠᴏᴛᴇ ᴀ ɴᴏɴ-ᴇxɪꜱᴛᴀɴᴛ ᴡᴏʀʟᴅ!",color:dark_red}
+execute if score @s worldid matches ..-1 run return run tellraw @s {text:"Yᴏᴜ ᴄᴀɴɴᴏᴛ ᴠᴏᴛᴇ ᴀ ɴᴏɴ-ᴇxɪꜱᴛᴀɴᴛ ᴡᴏʀʟᴅ!",color:dark_red}
 
 # Check if you own this world
 scoreboard players set .owns_world legitermoose.temp 0

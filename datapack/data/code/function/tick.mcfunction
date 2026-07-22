@@ -9,7 +9,7 @@ function code:offline_time/leave_detect/tick
 
 # /http timer
 scoreboard players add .globaltimer misc 1
-execute if score .globaltimer misc matches 1200 run function code:playerdetect/init
+    # execute if score .globaltimer misc matches 1200 run function code:playerdetect/init
 execute if score .globaltimer misc matches 1300.. run scoreboard players set .globaltimer misc 0
 
 # Optimize if not loaded

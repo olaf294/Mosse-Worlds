@@ -3,7 +3,7 @@ summon marker ~ ~ ~ {Tags:["wc.pos2.temp"]}
 execute store result score @s wc.pos2_x run data get entity @n[type=marker,tag=wc.pos2.temp] Pos[0]
 execute store result score @s wc.pos2_y run data get entity @n[type=marker,tag=wc.pos2.temp] Pos[1]
 execute store result score @s wc.pos2_z run data get entity @n[type=marker,tag=wc.pos2.temp] Pos[2]
-kill @e[tag=wc.pos2.temp]
+kill @e[type=marker,tag=wc.pos2.temp]
 
 kill @e[type=block_display,tag=wc.pos2.marker]
 execute align xyz positioned ~.5 ~.5 ~.5 run summon block_display ~ ~ ~ {Tags:["wc.pos2.marker"],block_state:{Name:"red_stained_glass"},transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f],right_rotation:[0.0f, 0.0f, 0.0f, 1.0f],translation:[-0.55f, -0.55f, -0.55f],scale:[1.1f, 1.1f, 1.1f]},brightness:{block:15,sky:15}}

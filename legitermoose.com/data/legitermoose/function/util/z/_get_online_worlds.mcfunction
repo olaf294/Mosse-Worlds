@@ -1,1 +1,1 @@
-$data modify storage legitermoose:temp online_worlds.worlds[{id:$(id)}].online set value 1b
+$data modify storage legitermoose:temp online_worlds.worlds[{id:$(id)}].id set value $(id)

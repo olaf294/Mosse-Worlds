@@ -13,6 +13,6 @@ data modify storage legitermoose:temp switch_gm.UUID set from entity @s UUID
 execute store result storage legitermoose:temp switch_gm.id int 1 run scoreboard players get @s worldid
 execute store result storage legitermoose:temp switch_gm.gm int 1 run scoreboard players get @s gamemode
 
-scoreboard players set @s gamemode -1
+scoreboard players set @s gamemode -2
 
 function legitermoose:triggers/gamemode/change_gamemode with storage legitermoose:temp switch_gm

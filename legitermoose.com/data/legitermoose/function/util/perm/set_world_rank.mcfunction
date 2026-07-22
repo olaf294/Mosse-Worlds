@@ -1,2 +1,1 @@
-
 $data modify storage legitermoose:ranks worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].rank set value $(rank)
