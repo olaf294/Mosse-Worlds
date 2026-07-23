@@ -1,0 +1,2 @@
+tellraw @a [ {text:"Lᴏɢʙᴏɢ ɪꜱ ᴏɴʟɪɴᴇ!!!\n",color:green,bold:1b},{text:"Wᴏʀʟᴅ: ",color:gray},{storage:player_detect,nbt:'a[{players:["Logbog"]}].world',interpret:1b,color:green}]
+execute at @a run playsound ui.toast.challenge_complete master @a ~ ~ ~ 100 1

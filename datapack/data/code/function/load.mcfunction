@@ -96,6 +96,6 @@ summon interaction 5.5 64.5 10.5 {width:2,height:2,Tags:["discord_join"],UUID:[I
 summon text_display 5.5 66.2 9.9 {text:{text:"Cʟɪᴄᴋ ᴛᴏ ᴊᴏɪɴ ᴛʜᴇ Dɪꜱᴄᴏʀᴅ!",color:blue},Tags:["discord_join","display"],Rotation:[180,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.875f, 0.875f, 0.875f], translation: [0.0f, 0.0f, 0.0f]}}
 
 scoreboard players set .globaltimer misc 0
-    # schedule function code:playerdetect/init 1s replace
+schedule function code:new_playerdetect/init 1s replace
 
 execute positioned 15 65 -4 run function code:realtime/reset_time

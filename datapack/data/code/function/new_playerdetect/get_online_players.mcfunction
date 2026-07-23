@@ -1,3 +1,5 @@
+scoreboard players set .globaltimer misc 0
+
 execute unless data storage player_detect {a:{status_code:200}} run return run function code:playerdetect/_admin_error
 execute if data storage player_detect {a:{status_code:200}} run tellraw @a[tag=is_admin,tag=!ignore] [{text:"(API) Rᴇꜱᴘᴏɴꜱᴇ: ",color:gray,hover_event:{action:show_text,value:"API - Dᴇᴛᴇᴄᴛ Pʟᴀʏᴇʀꜱ"}},{storage:player_detect,nbt:"a.status_code",color:dark_green}]
 
@@ -25,3 +27,4 @@ execute unless data storage player_detect a[{players:["T0rston"]}] run function 
 execute if data storage player_detect a[{players:["T0rston"]}] run scoreboard players set .torston_online playerdetect 1
 
 function code:new_playerdetect/send_webhooks
+function code:new_playerdetect/notify_online
