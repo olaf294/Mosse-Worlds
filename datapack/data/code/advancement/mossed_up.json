@@ -4,15 +4,15 @@
 			"id": "podzol"
 		},
 		"title": "Mossed Up!",
-		"description": "Join the server!",
+		"description": "Join the server!\n\nExplore all our /http functionality or go join Legitermoose!\n\nDon't forget to /vote!",
 		"background": "block/podzol_top",
 		"frame": "task",
-		"show_toast": false,
-		"announce_to_chat": false
+		"show_toast": true,
+		"announce_to_chat": true
 	},
 	"criteria": {
 		"a": {
-			"trigger": "minecraft:tick"
+			"trigger": "tick"
 		}
 	}
 }

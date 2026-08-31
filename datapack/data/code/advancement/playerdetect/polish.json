@@ -1,0 +1,21 @@
+{
+	"parent": "code:playerdetect",
+	"display": {
+		"icon": {
+			"id": "player_head",
+            "components": {
+                "profile": "PolishKrowa"
+            }
+		},
+		"title": "Polish is online!",
+		"description": "Be online while PolishKrowa is on the server.",
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"a": {
+			"trigger": "impossible"
+		}
+	}
+}

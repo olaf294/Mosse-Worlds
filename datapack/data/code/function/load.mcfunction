@@ -1,13 +1,13 @@
-gamerule announceAdvancements false
-gamerule doMobSpawning false
-gamerule doFireTick false
-gamerule doImmediateRespawn true
-gamerule fallDamage false
-gamerule keepInventory true
-gamerule mobGriefing false
-gamerule locatorBar false
-gamerule tntExplodes false
-gamerule randomTickSpeed 0
+gamerule fire_spread_radius_around_player 0
+gamerule show_advancement_messages true
+gamerule immediate_respawn true
+gamerule keep_inventory true
+gamerule random_tick_speed 0
+gamerule mob_griefing false
+gamerule tnt_explodes false
+gamerule fall_damage false
+gamerule locator_bar false
+gamerule spawn_mobs false
 
 time set 23582
 setworldspawn 0 64 0 0 8
@@ -19,6 +19,7 @@ scoreboard players set -1 numbers -1
 scoreboard players set 4 numbers 4
 scoreboard players set 5 numbers 5
 scoreboard players set 10 numbers 10
+scoreboard players set 15 numbers 15
 scoreboard players set 16 numbers 16
 scoreboard players set 18 numbers 18
 scoreboard players set 20 numbers 20
@@ -33,14 +34,18 @@ scoreboard players set 86400 numbers 86400
 scoreboard objectives add id dummy
 scoreboard objectives add misc dummy
 scoreboard objectives add time dummy
-scoreboard objectives add hour dummy
-scoreboard objectives add hour2 dummy
 scoreboard objectives add requests dummy
 scoreboard objectives add last_played dummy
 scoreboard objectives add playerdetect dummy
 
-scoreboard objectives add offset trigger
 scoreboard objectives add toggle_info trigger
+scoreboard objectives add minimal_lobby trigger
+
+scoreboard objectives add offset trigger
+scoreboard objectives add p_offset_h dummy
+scoreboard objectives add p_offset_m dummy
+scoreboard objectives add p_hour dummy
+scoreboard objectives add p_min dummy
 
 team add player
 team modify player friendlyFire true
@@ -89,13 +94,13 @@ summon text_display -4.0 65.3 16.9 {text:{text:'ᴡᴏʀʟᴅ ʙʀᴏᴡꜱᴇʀ
 
 summon text_display -18.5 68.25 -6.9 {text:[{text:"Tᴀʀɢᴇᴛ Jᴀᴍ ID: ",color:green},{text:"ᴀʟʟ ᴊᴀᴍꜱ",color:yellow}],Tags:["jam_random","display"],Rotation:[0,0],transformation:{left_rotation:[0.0f, 0.0f, 0.0f, 1.0f],right_rotation:[0.0f, 0.0f, 0.0f, 1.0f],scale: [2.0f, 2.0f, 2.0f], translation: [0.0f, 0.0f, 0.0f]}}
 scoreboard players set .req_jam_id misc 0
-scoreboard players set .max_jam misc 4
+scoreboard players set .max_jam misc 5
 
 kill @e[tag=discord_join]
 summon interaction 5.5 64.5 10.5 {width:2,height:2,Tags:["discord_join"],UUID:[I;15,3,0,1]}
 summon text_display 5.5 66.2 9.9 {text:{text:"Cʟɪᴄᴋ ᴛᴏ ᴊᴏɪɴ ᴛʜᴇ Dɪꜱᴄᴏʀᴅ!",color:blue},Tags:["discord_join","display"],Rotation:[180,0],transformation: {left_rotation: [0.0f, 0.0f, 0.0f, 1.0f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.875f, 0.875f, 0.875f], translation: [0.0f, 0.0f, 0.0f]}}
 
 scoreboard players set .globaltimer misc 0
-schedule function code:new_playerdetect/init 1s replace
+schedule function code:playerdetect/init 10 replace
 
 execute positioned 15 65 -4 run function code:realtime/reset_time

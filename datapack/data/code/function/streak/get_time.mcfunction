@@ -8,4 +8,4 @@ scoreboard players operation .day ds.realtime /= #div_ratio ds.realtime
 execute store result score .yesterday ds.realtime run scoreboard players remove .day ds.realtime 1
 scoreboard players add .day ds.realtime 1
 
-function code:streak/check_day
+execute as @a unless score @s ds.prev_day = .day ds.realtime run function code:streak/check_day

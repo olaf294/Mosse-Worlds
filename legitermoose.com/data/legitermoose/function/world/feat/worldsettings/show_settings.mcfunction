@@ -8,7 +8,7 @@ $execute if data storage legitermoose:worlds worlds[{world_id:$(world_id)}].sett
 tellraw @s [{text:"Cʜᴀɴɢᴇ Wᴏʀʟᴅ Nᴀᴍᴇ: ",color:gray,underlined:0b},{text:"ᴄʟɪᴄᴋ ʜᴇʀᴇ",color:green,underlined:1b,click_event:{action:run_command,command:"/trigger worldsettings set 4"}}]
 tellraw @s [{text:"Cʜᴀɴɢᴇ Wᴏʀʟᴅ Iᴄᴏɴ: ",color:gray,underlined:0b},{text:"ᴄʟɪᴄᴋ ʜᴇʀᴇ",color:green,underlined:1b,click_event:{action:run_command,command:"/trigger worldsettings set 5"}}]
 
-tellraw @s [{text:"Mᴀɴᴀɢᴇ [whitelisted players]: ",color:gray,underlined:0b},{text:"ᴄʟɪᴄᴋ ʜᴇʀᴇ",color:green,underlined:1b,click_event:{action:run_command,command:"/trigger worldsettings set 6"}}]
-tellraw @s [{text:"Mᴀɴᴀɢᴇ [world editors]: ",color:gray,underlined:0b},{text:"ᴄʟɪᴄᴋ ʜᴇʀᴇ",color:green,underlined:1b,click_event:{action:run_command,command:"/trigger worldsettings set 7"}}]
+tellraw @s [{text:"Mᴀɴᴀɢᴇ ᴡʜɪᴛᴇʟɪꜱᴛᴇᴅ ᴘʟᴀʏᴇʀꜱ: ",color:gray,underlined:0b},{text:"ᴄʟɪᴄᴋ ʜᴇʀᴇ",color:green,underlined:1b,click_event:{action:run_command,command:"/trigger worldsettings set 6"}}]
+tellraw @s [{text:"Mᴀɴᴀɢᴇ ᴡᴏʀʟᴅ ᴇᴅɪᴛᴏʀꜱ: ",color:gray,underlined:0b},{text:"ᴄʟɪᴄᴋ ʜᴇʀᴇ",color:green,underlined:1b,click_event:{action:run_command,command:"/trigger worldsettings set 7"}}]
 tellraw @s [{text:"Mᴀɴᴀɢᴇ Aᴅᴍɪɴꜱ: ",color:gray,underlined:0b},{text:"ᴄʟɪᴄᴋ ʜᴇʀᴇ",color:green,underlined:1b,click_event:{action:run_command,command:"/trigger worldsettings set 8"}}]
 tellraw @s [{text:"Mᴀɴᴀɢᴇ Dᴇᴠꜱ: ",color:gray,underlined:0b},{text:"ᴄʟɪᴄᴋ ʜᴇʀᴇ",color:green,underlined:1b,click_event:{action:run_command,command:"/trigger worldsettings set 9"}}]

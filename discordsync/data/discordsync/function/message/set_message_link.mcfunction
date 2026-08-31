@@ -1,0 +1,1 @@
+$data modify storage discordsync:data cm.att.click_event.url set value "https://discord.com/channels/$(gid)/$(id)/$(prev_id)"

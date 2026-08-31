@@ -1,13 +1,14 @@
 {
     "pack": {
-        "pack_format": 88,
-        "description": "Mosse Worlds Datapack to drive core functionality in this peak world."
+        "description": "Mosse Worlds Datapack to drive core functionality in this peak world.",
+        "min_format": [107,1],
+        "max_format":  107
     },
     "filter": {
         "block": [
             {
                 "namespace": "minecraft",
-                "path": "advancement"
+                "path": "^(advancement|recipe|loot_table)"
             }
         ]
     }

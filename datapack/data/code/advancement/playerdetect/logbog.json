@@ -1,0 +1,21 @@
+{
+	"parent": "code:playerdetect",
+	"display": {
+		"icon": {
+			"id": "player_head",
+            "components": {
+                "profile": "Logbog"
+            }
+		},
+		"title": "Logbog is online!",
+		"description": "Be online while Logbog is on the server.\n\nThis advancement is probably imposible.",
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"a": {
+			"trigger": "impossible"
+		}
+	}
+}

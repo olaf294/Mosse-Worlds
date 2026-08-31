@@ -1,1 +1,0 @@
-execute positioned 40 69 -12 run tellraw @a[distance=..12] [ {text:"T0ʀꜱᴛᴏɴ ɪꜱ ᴏɴʟɪɴᴇ.\n",color:green},{text:"Wᴏʀʟᴅ: ",color:gray},{storage:player_detect,nbt:'a[{players:["T0rston"]}].world',interpret:1b,color:green}]

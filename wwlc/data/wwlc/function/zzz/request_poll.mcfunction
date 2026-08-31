@@ -1,0 +1,1 @@
+$http callback wwlc:zzz/after_poll store wwlc:http_response PollResponse send "https://wwlc.legiti.dev/api/transaction/poll/$(id)?job=$(job_id)&job_token=$(job_token)&world_token=$(world_token)"

@@ -4,13 +4,16 @@ execute as @a unless score @s id matches -2147483648..2147483647 run function co
 
 function code:realtime/set
 execute as @a run function code:misc/triggers
-execute as @a run function code:streak/tick
 function code:offline_time/leave_detect/tick
 
 # /http timer
 scoreboard players add .globaltimer misc 1
-execute if score .globaltimer misc matches 1200 run function code:new_playerdetect/init
+execute if score .globaltimer misc matches 1200 run function code:playerdetect/init
 execute if score .globaltimer misc matches 1300.. run scoreboard players set .globaltimer misc 0
+
+scoreboard players add .time_add time 1
+execute if score .time_add time matches 20 run scoreboard players add .time time 1
+execute if score .time_add time matches 20 run scoreboard players set .time_add time 0
 
 # Optimize if not loaded
 execute unless loaded 0 64 0 run return fail

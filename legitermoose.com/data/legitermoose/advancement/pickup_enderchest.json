@@ -1,22 +1,17 @@
 {
 	"criteria": {
-		"e": {
-			"trigger": "minecraft:inventory_changed",
+		"": {
+			"trigger": "inventory_changed",
 			"conditions": {
 				"player": {},
 				"items": [
 					{
-						"items": "minecraft:ender_chest"
+						"items": "ender_chest"
 					}
 				]
 			}
 		}
 	},
-	"requirements": [
-		[
-			"e"
-		]
-	],
 	"rewards": {
 		"function": "legitermoose:items/clear_items"
 	}

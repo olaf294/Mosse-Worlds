@@ -10,11 +10,12 @@ execute store result score .visits misc run data get storage api good_world.resp
 execute store result score .votes2 misc run data get storage api good_world.response.votes
 scoreboard players operation .votes2 misc *= 10000 numbers
 execute store result storage api math float 0.0001 run scoreboard players operation .votes2 misc /= .visits misc
+data modify storage api math set string storage api math 0 -1
 
-$execute unless data storage api {good_world:{response:{version:"1.21.10"}}} run return run tellraw @a[tag=info,distance=..10] [{text:" - - - - - - - - - - - - - - - - ",color:gray},{text:"\nRᴀɴᴅᴏᴍ GOOD Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:green},{text:"[HERE]",color:gold,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:" ᴛᴏ ᴘʟᴀʏ.",color:green},\
-"\n  ",{storage:api,nbt:"good_world.response.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"good_world.response.version",color:yellow},"\n  ",\
-{score:{name:".votes",objective:misc},color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{score:{name:".visits",objective:misc},color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green},{text:")",color:gray}]
+$execute unless data storage api {good_world:{response:{version:"26.2"}}} run return run tellraw @a[tag=info,distance=..10] [{text:" - - - - - - - - - - - - - - - - ",color:gray},{text:"\nRᴀɴᴅᴏᴍ GOOD Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:green},{text:"[HERE]",color:gold,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:" ᴛᴏ ᴘʟᴀʏ.",color:green},\
+"\n  ",{storage:api,nbt:"good_world.response.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"good_world.response.version",color:yellow,interpret:1b},"\n  ",\
+{score:{name:".votes",objective:misc},color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{score:{name:".visits",objective:misc},color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green,interpret:1b},{text:")",color:gray}]
 
 $tellraw @a[tag=info,distance=..10] [{text:" - - - - - - - - - - - - - - - - ",color:gray},{text:"\nRᴀɴᴅᴏᴍ GOOD Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:green},{text:"[HERE]",color:gold,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:" ᴛᴏ ᴘʟᴀʏ.",color:green},\
-"\n  ",{storage:api,nbt:"good_world.response.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"good_world.response.version",color:green},"\n  ",\
-{score:{name:".votes",objective:misc},color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{score:{name:".visits",objective:misc},color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green},{text:")",color:gray}]
+"\n  ",{storage:api,nbt:"good_world.response.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"good_world.response.version",color:green,interpret:1b},"\n  ",\
+{score:{name:".votes",objective:misc},color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{score:{name:".visits",objective:misc},color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green,interpret:1b},{text:")",color:gray}]

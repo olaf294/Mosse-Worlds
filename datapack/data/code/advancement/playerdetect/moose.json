@@ -1,0 +1,21 @@
+{
+	"parent": "code:playerdetect",
+	"display": {
+		"icon": {
+			"id": "player_head",
+            "components": {
+                "profile": "Legitermoose"
+            }
+		},
+		"title": "Moose is online!",
+		"description": "Be online while Legitermoose is on the server.",
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"a": {
+			"trigger": "impossible"
+		}
+	}
+}

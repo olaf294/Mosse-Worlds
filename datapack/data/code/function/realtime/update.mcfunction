@@ -9,9 +9,9 @@ execute unless score .hours time matches 0..9 run data modify storage time t.h s
 # Actionbar
 data modify entity @n[type=text_display,tag=time_utc] text set value \
 [{text:"Cᴜʀʀᴇɴᴛ Tɪᴍᴇ (UTC ",color:gold},{score:{name:".offset",objective:time},color:red},{text:")\n",color:gold},\
-{storage:time,nbt:t.h,color:green},{score:{name:".hours",objective:time},color:green},{text:":",color:gray},\
-{storage:time,nbt:t.m,color:green},{score:{name:".minutes",objective:time},color:green},{text:":",color:gray},\
-{storage:time,nbt:t.s,color:green},{score:{name:".seconds",objective:time},color:green}]
+{storage:time,nbt:t.h,color:green,interpret:1b},{score:{name:".hours",objective:time},color:green},{text:":",color:gray},\
+{storage:time,nbt:t.m,color:green,interpret:1b},{score:{name:".minutes",objective:time},color:green},{text:":",color:gray},\
+{storage:time,nbt:t.s,color:green,interpret:1b},{score:{name:".seconds",objective:time},color:green}]
 
 
 

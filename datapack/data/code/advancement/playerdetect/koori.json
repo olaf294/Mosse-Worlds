@@ -1,0 +1,21 @@
+{
+	"parent": "code:playerdetect",
+	"display": {
+		"icon": {
+			"id": "player_head",
+            "components": {
+                "profile": "KooriKitsune38"
+            }
+		},
+		"title": "Koori is online!",
+		"description": "Be online while KooriKitsune38 is on the server.",
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true
+	},
+	"criteria": {
+		"a": {
+			"trigger": "impossible"
+		}
+	}
+}

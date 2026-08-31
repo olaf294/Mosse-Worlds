@@ -1,0 +1,24 @@
+{
+	"criteria": {
+		"click": {
+			"trigger": "minecraft:using_item",
+			"conditions": {
+				"item": {
+					"predicates": {
+						"minecraft:custom_data": {
+							"wc.wand": true
+						}
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"click"
+		]
+	],
+	"rewards": {
+		"function": "wc:wand/private/right_click/register"
+	}
+}

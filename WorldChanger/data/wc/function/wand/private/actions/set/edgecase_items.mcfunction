@@ -1,0 +1,5 @@
+execute if items entity @s weapon.offhand redstone run return run data modify storage wc:blocks set.block set value "redstone_wire"
+execute if items entity @s weapon.offhand string run return run data modify storage wc:blocks set.block set value "tripwire"
+execute if items entity @s weapon.offhand water_bucket run return run data modify storage wc:blocks set.block set value "water"
+execute if items entity @s weapon.offhand lava_bucket run return run data modify storage wc:blocks set.block set value "lava"
+execute if items entity @s weapon.offhand powder_snow_bucket run return run data modify storage wc:blocks set.block set value "powder_snow"

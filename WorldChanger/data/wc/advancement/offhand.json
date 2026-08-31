@@ -1,0 +1,23 @@
+{
+	"criteria": {
+		"a": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": {
+					"equipment": {
+						"offhand": {
+							"predicates": {
+								"minecraft:custom_data": {
+									"wc.wand": true
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "wc:wand/offhand"
+	}
+}

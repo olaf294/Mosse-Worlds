@@ -10,8 +10,8 @@ execute unless score .mosse_visits_new misc = .mosse_visits misc run tellraw @a[
 scoreboard players operation .mosse_votes misc = .mosse_votes_new misc
 scoreboard players operation .mosse_visits misc = .mosse_visits_new misc
 
-execute if data storage api {vote_count:{status_code:200}} run tellraw @a[tag=is_admin,tag=!ignore] [{text:"(API) Rᴇꜱᴘᴏɴꜱᴇ: ",color:gray},{storage:api,nbt:"vote_count.status_code",color:dark_green}]
-execute unless data storage api {vote_count:{status_code:200}} run tellraw @a[tag=is_admin,tag=!ignore] [{text:"(API) Rᴇꜱᴘᴏɴꜱᴇ: ",color:gray},{storage:api,nbt:"vote_count.status_code",color:yellow}]
+execute if data storage api {vote_count:{status_code:200}} run tellraw @a[tag=is_admin,tag=!ignore] [{text:"(API) Rᴇꜱᴘᴏɴꜱᴇ: ",color:gray},{storage:api,nbt:"vote_count.status_code",plain:1b,color:dark_green}]
+execute unless data storage api {vote_count:{status_code:200}} run tellraw @a[tag=is_admin,tag=!ignore] [{text:"(API) Rᴇꜱᴘᴏɴꜱᴇ: ",color:gray},{storage:api,nbt:"vote_count.status_code",plain:1b,color:yellow}]
 
 data merge entity f-0-2-0-0 {text:[{text:'"Lɪᴠᴇ" Vᴏᴛᴇ Cᴏᴜɴᴛ: ',color:green},{score:{name:".mosse_votes",objective:misc},color:aqua,underlined:1b}]}
 data merge entity f-0-2-0-1 {text:[{text:'"Lɪᴠᴇ" Vɪꜱɪᴛ Cᴏᴜɴᴛ: ',color:gold},{score:{name:".mosse_visits",objective:misc},color:yellow,underlined:1b}]}

@@ -1,0 +1,1 @@
+$data modify storage discordsync:data data.msg set value "There are $(count) players online.\\\\nPlayers: <idk lol not today>"

@@ -1,6 +1,7 @@
 {
     "pack": {
-        "pack_format": 88,
-        "description": "Legiter Moose - A new server inside a server."
+        "description": "Legiter Moose - A new server inside a server.",
+        "min_format": [107,1],
+        "max_format":  107
     }
 }

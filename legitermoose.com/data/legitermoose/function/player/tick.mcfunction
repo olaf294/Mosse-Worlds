@@ -8,6 +8,7 @@ function legitermoose:triggers/tick
 execute positioned 1000 64 0 as @s[distance=..300] run function legitermoose:util/no_gma_blocks
 
 function legitermoose:util/perm/world_gm
+function legitermoose:world/load_world/tick
 
 # function legitermoose:bossbar/tick
 

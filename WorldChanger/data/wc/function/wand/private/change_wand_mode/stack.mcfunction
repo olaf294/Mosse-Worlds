@@ -1,0 +1,3 @@
+item modify entity @s weapon.mainhand [{function:set_custom_data,tag:{wc.wand_mode:1}},{function:set_name,entity:this,name:[{text:"Wᴀɴᴅ",color:blue,underlined:1b},{text:" (ꜱᴛᴀᴄᴋ ᴍᴏᴅᴇ)",color:aqua,underlined:0b}],target:item_name}]
+
+tellraw @s [{text:"W",color:gold},{text:"C",color:yellow},{text:" » ",color:gray},{text:"Cʜᴀɴɢᴇᴅ ᴛᴏ ",color:blue},{text:"ꜱᴛᴀᴄᴋ",color:aqua},{text:" ᴍᴏᴅᴇ.",color:blue}]

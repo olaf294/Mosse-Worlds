@@ -6,6 +6,7 @@ execute store result score .tempid misc run data get storage playerlist current_
 execute as @a if score @s id = .tempid misc run return run function code:offline_time/leave_detect/recurse
 
 # HERE for code ON leave (not on rejoin)
+execute store result storage playerlist current_player.player_count int 1 if entity @a
 function code:offline_time/leave_detect/left/macro with storage playerlist current_player
 
 function code:offline_time/leave_detect/recurse

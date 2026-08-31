@@ -41,7 +41,8 @@
 					"storage": "a",
 					"nbt": "temp.player_count",
 					"color": "green",
-					"italic": false
+					"italic": false,
+					"plain": true
 				},
 				{
 					"text": "/",
@@ -52,7 +53,8 @@
 					"storage": "a",
 					"nbt": "temp.max_players",
 					"color": "green",
-					"italic": false
+					"italic": false,
+					"plain": true
 				},
 				{
 					"text": " playing",
@@ -108,7 +110,8 @@
 					"storage": "a",
 					"nbt": "temp.votes",
 					"color": "green",
-					"italic": false
+					"italic": false,
+					"plain": true
 				},
 				{
 					"text": " votes, ",
@@ -119,7 +122,8 @@
 					"storage": "a",
 					"nbt": "temp.visits",
 					"color": "green",
-					"italic": false
+					"italic": false,
+					"plain": true
 				},
 				{
 					"text": " visits",
@@ -142,7 +146,8 @@
 				},
 				{
 					"nbt": "temp.owner_name",
-					"storage": "a"
+					"storage": "a",
+					"interpret": true
 				}
 			]
 		],

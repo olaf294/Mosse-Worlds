@@ -1,1 +1,0 @@
-function worldchanger:wand/private/actions/set/prepare

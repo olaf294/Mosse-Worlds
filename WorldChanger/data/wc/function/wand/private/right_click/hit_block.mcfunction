@@ -1,0 +1,1 @@
+function wc:wand/private/get_pos/2

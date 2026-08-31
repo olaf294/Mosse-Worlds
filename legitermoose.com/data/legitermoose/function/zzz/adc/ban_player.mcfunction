@@ -11,7 +11,7 @@ data modify storage legitermoose:bans global[-1].id set from entity @s UUID
 $data modify storage legitermoose:bans global[-1].reason set value "$(reason)"
 
 function legitermoose:util/get_name
-$tellraw @a [{storage:"legitermoose:temp",nbt:playername,color:yellow},{text:" ʜᴀꜱ ʙᴇᴇɴ ʙᴀɴɴᴇᴅ. Rᴇᴀꜱᴏɴ: '",color:gold},{text:"$(reason)",color:yellow},{text:"'.",color:gold}]
+$tellraw @a [{storage:"legitermoose:temp",nbt:playername,interpret:1b,color:yellow},{text:" ʜᴀꜱ ʙᴇᴇɴ ʙᴀɴɴᴇᴅ. Rᴇᴀꜱᴏɴ: '",color:gold},{text:"$(reason)",color:yellow},{text:"'.",color:gold}]
 
 tp @s 0 64 0 0 8
 gamemode adventure @s

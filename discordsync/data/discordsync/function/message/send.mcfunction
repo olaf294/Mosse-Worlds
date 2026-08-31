@@ -1,0 +1,1 @@
+$http headers value {Content-Type: "application/json", Authorization: "Bot $(token)"} body value '{"content":"$(msg)"$(extra)}' send "https://discord.com/api/v10/channels/$(id)/messages" POST

@@ -1,0 +1,8 @@
+
+execute if score .logbog_online playerdetect matches 1 if score .logbog_seen playerdetect matches 0 run return run function code:playerdetect/logbog/send with storage player_detect http
+execute if score .moose_online playerdetect matches 1 if score .moose_seen playerdetect matches 0 run return run function code:playerdetect/moose/send with storage player_detect http
+execute if score .polish_online playerdetect matches 1 if score .polish_seen playerdetect matches 0 run return run function code:playerdetect/polish/send with storage player_detect http
+execute if score .arvelyx_online playerdetect matches 1 if score .arvelyx_seen playerdetect matches 0 run return run function code:playerdetect/arvelyx/send with storage player_detect http
+execute if score .max_online playerdetect matches 1 if score .max_seen playerdetect matches 0 run return run function code:playerdetect/max/send with storage player_detect http
+execute if score .koori_online playerdetect matches 1 if score .koori_seen playerdetect matches 0 run return run function code:playerdetect/koori/send with storage player_detect http
+execute if score .torston_online playerdetect matches 1 if score .torston_seen playerdetect matches 0 run return run function code:playerdetect/torston/send with storage player_detect http

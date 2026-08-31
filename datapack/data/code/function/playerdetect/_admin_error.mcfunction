@@ -1,3 +1,3 @@
-tellraw @a[tag=is_admin,tag=!ignore] [{text:"(API) Rᴇꜱᴘᴏɴꜱᴇ: ",color:gray,hover_event:{action:show_text,value:"API - Detect Players"}},{storage:player_detect,nbt:"a.status_code",color:yellow}]
-tellraw @a[tag=is_admin,tag=!ignore] [{text:"\n⚠ Aɴ API ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ!\nEʀʀᴏʀ: ",color:red},{storage:player_detect,nbt:a.error.message}]
-tellraw @a[tag=is_admin,tag=!ignore] [{text:"\n⚠ Iɴꜰᴏ: ",color:"#ff8800"},{storage:player_detect,nbt:a.response.message}]
+tellraw @a[tag=is_admin,tag=!ignore,tag=!ignore_error] [{text:"(API) Rᴇꜱᴘᴏɴꜱᴇ: ",color:gray,hover_event:{action:show_text,value:"API - Detect Players"}},{storage:player_detect,nbt:a.status_code,plain:1b,color:yellow}]
+tellraw @a[tag=is_admin,tag=!ignore,tag=!ignore_error] [{text:"\n⚠ Aɴ API ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ!\nEʀʀᴏʀ: ",color:red},{storage:player_detect,nbt:a.error.message,interpret:1b}]
+tellraw @a[tag=is_admin,tag=!ignore,tag=!ignore_error] [{text:"\n⚠ Iɴꜰᴏ: ",color:"#ff8800"},{storage:player_detect,nbt:a.response.message,interpret:1b}]

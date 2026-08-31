@@ -4,5 +4,5 @@ $execute store result score legitermoose.temp .coowner_count if data storage leg
 scoreboard players operation .admin_count legitermoose.temp += .coowner_count legitermoose.temp
 scoreboard players operation .admin_count legitermoose.temp += .dev_count legitermoose.temp
 
-execute unless score .admin_count legitermoose.temp matches 1 run return run tellraw @s [{text:"You have ",color:green},{score:{name:".admin_count",objective:legitermoose.temp},color:gold},{text:" devs.",color:green}]
+execute unless score .admin_count legitermoose.temp matches 1 run return run tellraw @s [{text:"You have ",color:green},{score:{name:".admin_count",objective:legitermoose.temp},color:gold},{text:" admins.",color:green}]
 tellraw @s [{text:"You have ",color:green},{text:"1",color:gold},{text:" admin.",color:green}]

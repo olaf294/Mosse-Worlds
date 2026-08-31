@@ -41,7 +41,8 @@
 					"nbt": "temp.version",
 					"storage": "a",
 					"color": "red",
-					"italic": false
+					"italic": false,
+					"interpret": true
 				},
 				{
 					"text": " and may",
@@ -50,7 +51,7 @@
 				}
 			],
 			{
-				"text": "not work in 1.21.10.",
+				"text": "not work in 26.2.",
 				"color": "red",
 				"italic": false
 			}

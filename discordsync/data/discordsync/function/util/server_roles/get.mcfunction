@@ -1,0 +1,1 @@
+$http callback discordsync:util/server_roles/callback headers value {Content-Type: "application/json", Authorization: "Bot $(token)"} store discordsync:data user send "https://discord.com/api/v10/guilds/$(gid)/members/$(mid)"

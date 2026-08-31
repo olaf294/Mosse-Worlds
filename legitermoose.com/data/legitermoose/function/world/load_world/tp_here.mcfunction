@@ -1,6 +1,6 @@
 tp @s ~ ~ ~ 0 0
 spawnpoint @s ~ ~ ~
-setblock ~ ~-3 ~ test_block[mode=start]
+setblock ~ 61 ~ test_block[mode=start]
 
 # Get world rank and gamemode
 data modify storage legitermoose:temp plot_position.uuid set from entity @s UUID

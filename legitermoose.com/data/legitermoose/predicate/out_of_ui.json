@@ -5,8 +5,7 @@
             "condition": "entity_properties",
             "entity": "this",
             "predicate": {
-                "type_specific": {
-                    "type": "player",
+                "type_specific/player": {
                     "input": {
                         "backward": true
                     }
@@ -17,8 +16,7 @@
             "condition": "entity_properties",
             "entity": "this",
             "predicate": {
-                "type_specific": {
-                    "type": "player",
+                "type_specific/player": {
                     "input": {
                         "forward": true
                     }
@@ -29,8 +27,7 @@
             "condition": "entity_properties",
             "entity": "this",
             "predicate": {
-                "type_specific": {
-                    "type": "player",
+                "type_specific/player": {
                     "input": {
                         "left": true
                     }
@@ -41,8 +38,7 @@
             "condition": "entity_properties",
             "entity": "this",
             "predicate": {
-                "type_specific": {
-                    "type": "player",
+                "type_specific/player": {
                     "input": {
                         "right": true
                     }
@@ -53,8 +49,7 @@
             "condition": "entity_properties",
             "entity": "this",
             "predicate": {
-                "type_specific": {
-                    "type": "player",
+                "type_specific/player": {
                     "input": {
                         "sneak": true
                     }
@@ -65,8 +60,7 @@
             "condition": "entity_properties",
             "entity": "this",
             "predicate": {
-                "type_specific": {
-                    "type": "player",
+                "type_specific/player": {
                     "input": {
                         "sprint": true
                     }
@@ -77,8 +71,7 @@
             "condition": "entity_properties",
             "entity": "this",
             "predicate": {
-                "type_specific": {
-                    "type": "player",
+                "type_specific/player": {
                     "input": {
                         "jump": true
                     }

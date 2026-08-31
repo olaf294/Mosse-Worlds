@@ -1,12 +1,12 @@
 {
 	"criteria": {
 		"a": {
-			"trigger": "minecraft:player_interacted_with_entity",
+			"trigger": "player_interacted_with_entity",
 			"conditions": {
 				"entity": {
-					"type": "interaction",
-					"nbt": {
-						"Tags": [
+					"entity_type": "interaction",
+					"entity_tags": {
+						"any_of": [
 							"legitermoose.spawn.interact_create"
 						]
 					}
@@ -14,12 +14,12 @@
 			}
 		},
 		"b": {
-			"trigger": "minecraft:player_hurt_entity",
+			"trigger": "player_hurt_entity",
 			"conditions": {
 				"entity": {
-					"type": "interaction",
-					"nbt": {
-						"Tags": [
+					"entity_type": "interaction",
+					"entity_tags": {
+						"any_of": [
 							"legitermoose.spawn.interact_create"
 						]
 					}

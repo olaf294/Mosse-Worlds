@@ -1,0 +1,38 @@
+{
+	"parent": "code:browser",
+	"display": {
+		"icon": {
+			"id": "golden_dandelion"
+		},
+		"title": "So calm!",
+		"description": "Enter the calm down room.",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"a": {
+			"trigger": "location",
+			"conditions": {
+				"player": {
+					"location": {
+						"position": {
+							"x": {
+								"min": -23,
+								"max": -15
+							},
+							"y": {
+								"min": 63,
+								"max": 66
+							},
+							"z": {
+								"min": 10,
+								"max": 18
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

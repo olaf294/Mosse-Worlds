@@ -1,0 +1,67 @@
+{
+	"parent": "code:mossed_up",
+	"display": {
+		"icon": {
+			"id": "player_head",
+            "components": {
+                "profile": "Legitermoose"
+            }
+		},
+		"title": "Are mods online?",
+		"description": "Take a look at the player detect.",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"polish_moose": {
+			"trigger": "location",
+			"conditions": {
+				"player": {
+                    "location": {
+                        "position": {
+							"x": {
+								"min": 7,
+								"max": 11
+							},
+							"y": {
+								"min": 64,
+								"max": 66
+							},
+							"z": {
+								"min": -27,
+								"max": -11
+							}
+						}
+					}
+				}
+			}
+		},
+        "other": {
+			"trigger": "location",
+			"conditions": {
+				"player": {
+					"location": {
+						"position": {
+							"x": {
+								"min": 38,
+								"max": 42
+							},
+							"y": {
+								"min": 69,
+								"max": 71
+							},
+							"z": {
+								"min": -48,
+								"max": -8
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+    "requirements": [
+        ["polish_moose", "other"]
+    ]
+}

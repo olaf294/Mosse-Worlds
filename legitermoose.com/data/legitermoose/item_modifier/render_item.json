@@ -54,7 +54,8 @@
                     "storage": "legitermoose:world_browser",
                     "nbt": "temp.world.online",
                     "color": "green",
-                    "italic": false
+                    "italic": false,
+                    "plain": true
                 },
                 {
                     "text": "/8",
@@ -97,7 +98,8 @@
                     "storage": "legitermoose:world_browser",
                     "nbt": "temp.world.votes",
                     "color": "green",
-                    "italic": false
+                    "italic": false,
+                    "plain": true
                 },
                 {
                     "text": " votes, ",
@@ -108,7 +110,8 @@
                     "storage": "legitermoose:world_browser",
                     "nbt": "temp.world.visits",
                     "color": "green",
-                    "italic": false
+                    "italic": false,
+                    "plain": true
                 },
                 {
                     "text": " visits",
@@ -175,7 +178,8 @@
                     "storage": "legitermoose:world_browser",
                     "nbt": "temp.world.featured",
                     "color": "dark_gray",
-                    "italic": false
+                    "italic": false,
+                    "interpret": true
                 }
             ]
         ],

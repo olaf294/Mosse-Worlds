@@ -1,0 +1,46 @@
+{
+	"parent": "code:mossed_up",
+	"display": {
+		"icon": {
+			"id": "stone_button"
+		},
+		"title": "Roll the worlds!",
+		"description": "Use the random world button.",
+		"frame": "task",
+		"show_toast": true,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"a": {
+			"trigger": "default_block_use",
+			"conditions": {
+				"location": [
+					{
+						"condition": "location_check",
+						"predicate": {
+							"block": {
+								"blocks": [
+									"stone_button"
+								]
+							},
+							"position": {
+								"x": {
+									"min": -1,
+									"max": 1
+								},
+								"y": {
+									"min": 64,
+									"max": 66
+								},
+								"z": {
+									"min": 4,
+									"max": 6
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	}
+}

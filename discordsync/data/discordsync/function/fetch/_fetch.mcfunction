@@ -1,0 +1,1 @@
+$http store discordsync:data messages headers value {Content-Type: "application/json", Authorization: "Bot $(token)"} callback discordsync:receive send "https://discord.com/api/v10/channels/$(id)/messages?$(limit)after=$(prev_id)" GET

@@ -3,7 +3,7 @@ execute if items entity @s player.cursor *[custom_data~{navigator.world:1b}] run
 execute if items entity @s container.* *[custom_data~{navigator.world:1b}] run return run function code:browser/action/slow_down
 execute if items entity @s weapon.offhand *[custom_data~{navigator.world:1b}] run return run function code:browser/action/slow_down
 
-clear @a *[custom_data~{navigator.world:1b}]
+clear @s *[custom_data~{navigator.world:1b}]
 
 # only allow noclear in offhand
 execute if items entity @s container.* *[custom_data~{noclear:1b}] run clear @s *[custom_data~{noclear:1b}]

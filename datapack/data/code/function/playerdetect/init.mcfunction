@@ -1,2 +1,2 @@
 tellraw @a[tag=is_admin,tag=!ignore] {text:"Cᴀʟʟɪɴɢ API... (Mᴏᴏꜱᴇ / PᴏʟɪꜱʜKʀᴏᴡᴀ Dᴇᴛᴇᴄᴛ)",color:"#333388"}
-http store player_detect a callback code:playerdetect/detect send "https://api.legiti.dev/player" GET
+http store player_detect a callback code:playerdetect/get_online_players send "https://api.legiti.dev/players" GET
