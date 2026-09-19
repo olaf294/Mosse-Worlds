@@ -1,6 +1,5 @@
 # leave detect
-scoreboard players operation .players_last_frame misc = .players misc 
-execute store result score .players misc if entity @a
+function code:offline_time/leave_detect/get_player_count
 
 execute if score .players misc < .players_last_frame misc run function code:offline_time/leave_detect/find_missing_player
 

@@ -9,10 +9,6 @@ $execute if data storage legitermoose:gm worlds[{id:$(world_id)}].uuids[{id:$(UU
 # Get Rank (defaults to 0)
 $execute store result score @s legitermoose.rank run data get storage legitermoose:ranks worlds[{id:$(world_id)}].uuids[{id:$(UUID)}].rank
 
-# If you are in lobby with Lobby GMC
-execute positioned 1000 64 0 if entity @s[tag=legitermoose.is_playing,tag=legitermoose.lobby.gmc,tag=!is_admin,distance=..300] run scoreboard players set @s legitermoose.gamemode 1
-
-
 # Set gamemode
 gamemode survival @s[tag=!is_admin,scores={legitermoose.gamemode=0}]
 gamemode creative @s[tag=!is_admin,scores={legitermoose.gamemode=1}]

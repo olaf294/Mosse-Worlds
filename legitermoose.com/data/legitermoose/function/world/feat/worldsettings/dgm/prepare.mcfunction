@@ -1,0 +1,2 @@
+execute store result storage legitermoose:temp worldsettings.dgm.id int 1 run scoreboard players get @s worldid
+function legitermoose:world/feat/worldsettings/dgm/change with storage legitermoose:temp worldsettings.dgm

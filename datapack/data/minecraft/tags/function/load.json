@@ -1,6 +1,7 @@
 {
 	"values": [
 	"code:load",
+	"code:sidebar/load",
 	"code:streak/load"
 	]
 }

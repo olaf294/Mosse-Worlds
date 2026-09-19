@@ -31,7 +31,6 @@ scoreboard players reset @s[scores={play=1..}] play
 
 # Find
 scoreboard players enable @s find
-execute unless score .lobby_enabled legitermoose.misc matches 1 run scoreboard players reset @s[tag=!is_admin] find
 execute as @s[scores={find=1..}] store result storage legitermoose:temp find_player.id int 1 run scoreboard players get @s find
 execute as @s[scores={find=1..}] run function legitermoose:triggers/find/find with storage legitermoose:temp find_player
 
@@ -61,17 +60,17 @@ execute as @s[scores={listall=1..}] run function legitermoose:triggers/listall/s
 scoreboard players reset @s[scores={listall=1..}] listall
 
 # gamemode
-scoreboard players enable @s[scores={legitermoose.rank=10}] gamemode
-scoreboard players reset @s[scores={legitermoose.rank=0}] gamemode
-scoreboard players set @s[scores={legitermoose.rank=0}] gamemode -2
-execute as @s[scores={gamemode=0..3}] run function legitermoose:triggers/gamemode/trigger
+scoreboard players enable @s[scores={legitermoose.rank=3..10}] gamemode
+scoreboard players reset @s[scores={legitermoose.rank=0..2}] gamemode
+scoreboard players set @s[scores={legitermoose.rank=0..2}] gamemode -2
+scoreboard players set @s[scores={gamemode=4..}] gamemode -1
+execute as @s[scores={gamemode=-1..3}] run function legitermoose:triggers/gamemode/trigger
 
 # Disable when banned
-scoreboard players reset @s[tag=legitermoose.global_banned] lobby
-scoreboard players reset @s[tag=legitermoose.global_banned] play
+execute as @s[tag=legitermoose.global_banned,tag=!is_admin] run function legitermoose:triggers/reset/banned
 
 # Disable if lobby disabled
-execute unless score .lobby_enabled legitermoose.misc matches 1 run function legitermoose:triggers/reset/banned
+execute unless score .lobby_enabled legitermoose.misc matches 1 as @s[tag=!is_admin] run function legitermoose:triggers/reset/banned
 
 # Disable at spawn
 execute positioned 0 64 0 run scoreboard players reset @s[distance=..300] play

@@ -1,16 +1,16 @@
-execute as @s[scores={worldid=0}] run function legitermoose:world_browser/ensure_compass
-
 # world slots 
 execute unless score @s legitermoose.world_slots matches -2147483648..2147483647 run scoreboard players set @s legitermoose.world_slots 1
 
 # trigger tick
 function legitermoose:triggers/tick
-execute positioned 1000 64 0 as @s[distance=..300] run function legitermoose:util/no_gma_blocks
+execute positioned 1000 64 0 as @s[distance=..300] run function legitermoose:items/no_gma_blocks
 
 function legitermoose:util/perm/world_gm
 function legitermoose:world/load_world/tick
 
-# function legitermoose:bossbar/tick
+execute as @s[tag=!is_admin] run function legitermoose:items/remove_banned_components
+
+function code:sidebar/list/update_list
 
 execute if score @s join matches 1.. run function legitermoose:player/join
 

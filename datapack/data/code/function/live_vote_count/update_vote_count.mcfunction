@@ -4,9 +4,23 @@ scoreboard players add .live_vote_count requests 1
 execute store result score .mosse_votes_new misc run data get storage api vote_count.response.votes
 execute store result score .mosse_visits_new misc run data get storage api vote_count.response.visits
 
-execute unless score .mosse_votes_new misc = .mosse_votes misc run tellraw @a[tag=is_admin,tag=!ignore] {text:"ⓘ Vᴏᴛᴇ ᴄᴏᴜɴᴛ ᴄʜᴀɴɢᴇᴅ!",color:"#0099ff"}
-execute unless score .mosse_visits_new misc = .mosse_visits misc run tellraw @a[tag=is_admin,tag=!ignore] {text:"ⓘ Vɪꜱɪᴛ ᴄᴏᴜɴᴛ ᴄʜᴀɴɢᴇᴅ!",color:"#0099ff"}
+# Calculate differences
+scoreboard players operation .diff_mosse_votes misc = .mosse_votes_new misc
+scoreboard players operation .diff_mosse_votes misc -= .mosse_votes misc
 
+scoreboard players operation .diff_mosse_visits misc = .mosse_visits_new misc
+scoreboard players operation .diff_mosse_visits misc -= .mosse_visits misc
+
+# Admin message
+execute unless score .mosse_votes_new misc = .mosse_votes misc run tellraw @a[tag=is_admin] [{text:"ⓘ Vᴏᴛᴇ ᴄᴏᴜɴᴛ ᴄʜᴀɴɢᴇᴅ!\n  ",color:"#0099ff"},\
+    {score:{name:".mosse_votes",objective:misc},color:yellow},{text:" → ",color:"#0099ff"},\
+    {score:{name:".mosse_votes_new",objective:misc},color:green},{text:" (",color:gray},{text:"+",color:green},{score:{name:".diff_mosse_votes",objective:misc},color:green},{text:")",color:gray}]
+
+execute unless score .mosse_visits_new misc = .mosse_visits misc run tellraw @a[tag=is_admin] [{text:"ⓘ Vɪꜱɪᴛ ᴄᴏᴜɴᴛ ᴄʜᴀɴɢᴇᴅ!\n  ",color:"#0099ff"},\
+    {score:{name:".mosse_visits",objective:misc},color:yellow},{text:" → ",color:"#0099ff"},\
+    {score:{name:".mosse_visits_new",objective:misc},color:green},{text:" (",color:gray},{text:"+",color:green},{score:{name:".diff_mosse_visits",objective:misc},color:green},{text:")",color:gray}]
+
+# Update current counts
 scoreboard players operation .mosse_votes misc = .mosse_votes_new misc
 scoreboard players operation .mosse_visits misc = .mosse_visits_new misc
 

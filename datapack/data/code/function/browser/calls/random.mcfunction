@@ -1,4 +1,4 @@
-tellraw @a[distance=..6] {text:"Rᴀɴᴅᴏᴍ ᴡᴏʀʟᴅ ʀᴇǫᴜᴇꜱᴛᴇᴅ.",color:yellow}
+tellraw @a[distance=..8] {text:"Rᴀɴᴅᴏᴍ ᴡᴏʀʟᴅ ʀᴇǫᴜᴇꜱᴛᴇᴅ.",color:yellow}
 
 tellraw @a[tag=is_admin,tag=!ignore] {text:"Cᴀʟʟɪɴɢ API... (World Browser, Random)",color:"#333388"}
 

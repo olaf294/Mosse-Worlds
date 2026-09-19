@@ -17,3 +17,4 @@ team join z_spawn @s[team=player]
 
 scoreboard players reset @s leave
 
+function code:sidebar/tps/update_sidebar

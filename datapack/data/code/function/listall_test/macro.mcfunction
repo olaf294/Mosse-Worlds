@@ -1,0 +1,1 @@
+$data modify storage listall:temp players2 prepend value "__**There are $(count) players online:**__ "

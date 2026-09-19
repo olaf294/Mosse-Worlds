@@ -7,10 +7,10 @@ tellraw @s [{text:"Wᴇʟᴄᴏᴍᴇ ᴛᴏ ",color:gold},{text:"ʟᴇɢɪᴛ�
 
 execute unless entity @s[tag=legitermoose.is_playing] run function legitermoose:lobby/join/rank_join
 
-execute if entity @s[tag=legitermoose.lobby.gmsp] run gamemode spectator @s
-execute if entity @s[tag=legitermoose.lobby.gmc] run gamemode creative @s
-execute if entity @s[tag=legitermoose.lobby.gms] run gamemode survival @s
-execute if entity @s[tag=legitermoose.lobby.gma] run gamemode adventure @s
+#execute if entity @s[tag=legitermoose.lobby.gmsp] run gamemode spectator @s
+#execute if entity @s[tag=legitermoose.lobby.gmc] run gamemode creative @s
+#execute if entity @s[tag=legitermoose.lobby.gms] run gamemode survival @s
+#execute if entity @s[tag=legitermoose.lobby.gma] run gamemode adventure @s
 
 scoreboard players add .visits legitermoose.misc 1
 

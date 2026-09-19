@@ -13,3 +13,5 @@ execute if score @s worldsettings matches 6 run return run function legitermoose
 execute if score @s worldsettings matches 7 run return run function legitermoose:world/feat/worldsettings/wc/prepare
 execute if score @s worldsettings matches 8 run return run function legitermoose:world/feat/worldsettings/admin/prepare
 execute if score @s worldsettings matches 9 run return run function legitermoose:world/feat/worldsettings/dev/prepare
+
+execute if score @s worldsettings matches 10 run return run function legitermoose:world/feat/worldsettings/dgm/prepare

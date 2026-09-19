@@ -1,5 +1,3 @@
-effect give @a saturation 100 1 true
-
 execute as @a unless score @s id matches -2147483648..2147483647 run function code:_id
 
 function code:realtime/set
@@ -42,4 +40,5 @@ execute if block -19 65 -7 polished_blackstone_button[powered=true] run function
 
 
 # discord interaction
-execute as f-0-3-0-1 on target run function code:misc/discord
+execute as f-0-3-0-1 on target run return run function code:misc/discord
+execute as f-0-3-0-1 on attacker run return run function code:misc/discord

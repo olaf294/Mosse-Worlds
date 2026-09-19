@@ -13,3 +13,7 @@ execute if score @s legitermoose.rank matches 10 run data merge entity @s[tag=!i
 # if loaded, do the fun stuff
 execute if loaded ~ ~ ~ run inventory @s close
 execute if loaded ~ ~ ~ run tellraw @s {text:"World loaded!",color:green}
+#execute if loaded ~ ~ ~ run scoreboard players reset @s legitermoose.tp
+execute if loaded ~ ~ ~ run setblock ~ 61 ~ test_block[mode=start]
+
+#execute unless loaded ~ ~ ~ run scoreboard players set @s legitermoose.tp 1

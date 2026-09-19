@@ -2,11 +2,6 @@
 # Player Count (only Lobby)
 execute store result score .players legitermoose.misc if entity @a[tag=legitermoose.is_playing]
 
-# Spawn Stuff
-execute positioned 1000 64 0 as @a[distance=..300] run function legitermoose:lobby/lobby_tick
-execute positioned 0 64 0 as @a[distance=300..] run function legitermoose:mosse/not_spawn
-execute positioned 0 64 0 as @a[distance=..300] run function legitermoose:mosse/spawn
-
 # Leave Server
 execute as @a[predicate=code:is_y_below_40,tag=legitermoose.is_playing] run function legitermoose:lobby/join/rank_leave
 tp @a[predicate=code:is_y_below_40] 0 64 0 0 8
@@ -31,7 +26,6 @@ execute as @e[type=item] if items entity @s contents *[custom_data~{world_browse
 execute as @e[type=item] if items entity @s contents #legitermoose:forbidden_items run kill @s
 execute positioned 1000 64 0 as @e[type=item,distance=..300] if items entity @s contents #legitermoose:lobby_forbidden_items run kill @s
 
-
 # Teleporting - THIS IS BROKEN, NEED TO REPLACE. (bug: world browser tps to incorrect world)
     #execute as @a[tag=legitermoose.teleported,scores={legitermoose.tp_cd=..20}] run function legitermoose:world/load_world/tp_to_plot with storage legitermoose:temp plot_position
 
@@ -40,5 +34,10 @@ execute as @a[scores={leave=1..}] run function legitermoose:util/leave
 
 # Player Tick
 execute as @a at @s run function legitermoose:player/tick
+
+# Spawn Tick stuff
+execute positioned 1000 64 0 as @a[distance=..300] run function legitermoose:lobby/lobby_tick
+execute positioned 0 64 0 as @a[distance=300..] run function legitermoose:mosse/not_spawn
+execute positioned 0 64 0 as @a[distance=..300] run function legitermoose:mosse/spawn
 
 execute as @e[type=ender_pearl] run function legitermoose:util/ender_pearls

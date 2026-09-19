@@ -1,12 +1,14 @@
-tellraw @s[scores={gamemode=0}] [{text:"» ",color:gray},{text:"ꜱᴇᴛ ᴏᴡɴ ɢᴀᴍᴇ ᴍᴏᴅᴇ ᴛᴏ ",color:green},{text:"ꜱᴜʀᴠɪᴠᴀʟ",color:gold},{text:" ᴍᴏᴅᴇ",color:green}]
-tellraw @s[scores={gamemode=1}] [{text:"» ",color:gray},{text:"ꜱᴇᴛ ᴏᴡɴ ɢᴀᴍᴇ ᴍᴏᴅᴇ ᴛᴏ ",color:green},{text:"ᴄʀᴇᴀᴛɪᴠᴇ",color:gold},{text:" ᴍᴏᴅᴇ",color:green}]
-tellraw @s[scores={gamemode=2}] [{text:"» ",color:gray},{text:"ꜱᴇᴛ ᴏᴡɴ ɢᴀᴍᴇ ᴍᴏᴅᴇ ᴛᴏ ",color:green},{text:"ᴀᴅᴠᴇɴᴛᴜʀᴇ",color:gold},{text:" ᴍᴏᴅᴇ",color:green}]
-tellraw @s[scores={gamemode=3}] [{text:"» ",color:gray},{text:"ꜱᴇᴛ ᴏᴡɴ ɢᴀᴍᴇ ᴍᴏᴅᴇ ᴛᴏ ",color:green},{text:"ꜱᴘᴇᴄᴛᴀᴛᴏʀ",color:gold},{text:" ᴍᴏᴅᴇ",color:green}]
+tellraw @s[scores={gamemode=-1}] [{text:"» ",color:gray},{text:"ɢᴀᴍᴇ ᴍᴏᴅᴇ ᴏᴠᴇʀᴠɪᴇᴡ:\n",color:green},{text:" 0 = ꜱᴜʀᴠɪᴠᴀʟ\n 1 = ᴄʀᴇᴀᴛɪᴠᴇ\n 2 = ᴀᴅᴠᴇɴᴛᴜʀᴇ\n 3 = ꜱᴘᴇᴄᴛᴀᴛᴏʀ",color:yellow}]
 
-execute as @s[scores={gamemode=0}] run gamemode survival @s
-execute as @s[scores={gamemode=1}] run gamemode creative @s
-execute as @s[scores={gamemode=2}] run gamemode adventure @s
-execute as @s[scores={gamemode=3}] run gamemode spectator @s
+tellraw @s[scores={gamemode=0}] [{text:"» ",color:gray},{text:"Sᴇᴛ ᴏᴡɴ ɢᴀᴍᴇ ᴍᴏᴅᴇ ᴛᴏ ",color:green},{text:"ꜱᴜʀᴠɪᴠᴀʟ",color:gold},{text:" ᴍᴏᴅᴇ",color:green}]
+tellraw @s[scores={gamemode=1}] [{text:"» ",color:gray},{text:"Sᴇᴛ ᴏᴡɴ ɢᴀᴍᴇ ᴍᴏᴅᴇ ᴛᴏ ",color:green},{text:"ᴄʀᴇᴀᴛɪᴠᴇ",color:gold},{text:" ᴍᴏᴅᴇ",color:green}]
+tellraw @s[scores={gamemode=2}] [{text:"» ",color:gray},{text:"Sᴇᴛ ᴏᴡɴ ɢᴀᴍᴇ ᴍᴏᴅᴇ ᴛᴏ ",color:green},{text:"ᴀᴅᴠᴇɴᴛᴜʀᴇ",color:gold},{text:" ᴍᴏᴅᴇ",color:green}]
+tellraw @s[scores={gamemode=3}] [{text:"» ",color:gray},{text:"Sᴇᴛ ᴏᴡɴ ɢᴀᴍᴇ ᴍᴏᴅᴇ ᴛᴏ ",color:green},{text:"ꜱᴘᴇᴄᴛᴀᴛᴏʀ",color:gold},{text:" ᴍᴏᴅᴇ",color:green}]
+
+gamemode survival @s[scores={gamemode=0}]
+gamemode creative @s[scores={gamemode=1}]
+gamemode adventure @s[scores={gamemode=2}]
+gamemode spectator @s[scores={gamemode=3}]
 
 
 data modify storage legitermoose:temp switch_gm.UUID set from entity @s UUID

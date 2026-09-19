@@ -25,7 +25,7 @@
 		"name": {
 			"storage": "legitermoose:temp",
 			"nbt": "playername",
-			"color": "aqua",
+			"color": "dark_aqua",
 			"italic": false,
 			"interpret": true
 		},
@@ -38,7 +38,7 @@
 			[
 				{
 					"text": "Wᴏʀʟᴅ ID: ",
-					"color": "yellow",
+					"color": "gray",
 					"italic": false
 				},
 				{
@@ -53,7 +53,7 @@
 			[
 				{
 					"text": "Pʟᴀʏᴇʀ ID: ",
-					"color": "yellow",
+					"color": "gray",
 					"italic": false
 				},
 				{
@@ -72,8 +72,80 @@
 		"function": "minecraft:set_lore",
 		"entity": "this",
 		"lore": [
-			""
+			[
+				{
+					"text": "Sᴛʀᴇᴀᴋ: ",
+					"color": "gray",
+					"italic": false
+				},
+				{
+					"score": {
+						"objective": "ds.streak",
+						"name": "@s"
+					},
+					"color": "green",
+					"italic": false
+				},
+				{
+					"text": " ᴅᴀʏ",
+					"color": "green",
+					"italic": false
+				}
+			]
 		],
-		"mode": "append"
+		"mode": "append",
+		"conditions": [
+			{
+				"condition": "minecraft:value_check",
+				"value": {
+					"type": "minecraft:score",
+					"target": "this",
+					"score": "ds.streak"
+				},
+				"range": {
+					"max": 1
+				}
+			}
+		]
+	},
+	{
+		"function": "minecraft:set_lore",
+		"entity": "this",
+		"lore": [
+			[
+				{
+					"text": "Sᴛʀᴇᴀᴋ: ",
+					"color": "gray",
+					"italic": false
+				},
+				{
+					"score": {
+						"objective": "ds.streak",
+						"name": "@s"
+					},
+					"color": "green",
+					"italic": false
+				},
+				{
+					"text": " ᴅᴀʏꜱ",
+					"color": "green",
+					"italic": false
+				}
+			]
+		],
+		"mode": "append",
+		"conditions": [
+			{
+				"condition": "minecraft:value_check",
+				"value": {
+					"type": "minecraft:score",
+					"target": "this",
+					"score": "ds.streak"
+				},
+				"range": {
+					"min": 2
+				}
+			}
+		]
 	}
 ]

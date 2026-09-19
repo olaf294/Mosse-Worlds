@@ -1,0 +1,11 @@
+{
+    "pack": {
+      "description": [
+        {"text":"LᴇɢɪᴛɪAᴅꜱ – Qᴜɪᴄᴋ, Eᴀꜱʏ ᴀɴᴅ Cᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ Lᴇɢɪᴛɪᴍᴏᴏꜱᴇ.ᴄᴏᴍ Aɴɴᴏᴜɴᴄᴇᴍᴇɴᴛ Dᴀᴛᴀᴘᴀᴄᴋ","color":"#ff8800"},
+        {"text":"\nMade by olaf_294","color":"dark_gray","italic":true},
+        {"text":" (v1.5.1)","color":"gold","italic":false}
+      ],
+      "min_format": [107,1],
+      "max_format":  107
+    }
+  }
