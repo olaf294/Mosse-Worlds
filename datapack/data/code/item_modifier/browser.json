@@ -1,21 +1,21 @@
-[
-	{
-		"function": "minecraft:set_components",
+{
+	"type": "sequence",
+	"functions": [
+		{
+		"type": "set_components",
 		"components": {
-			"!minecraft:food": {},
-			"!minecraft:consumable": {}
-		},
-		"conditions": []
+			"!food": {},
+			"!consumable": {}
+		}
 	},
 	{
-		"function": "minecraft:set_custom_data",
+		"type": "set_custom_data",
 		"tag": {
 			"navigator.world": true
-		},
-		"conditions": []
+		}
 	},
 	{
-		"function": "minecraft:set_name",
+		"type": "set_name",
 		"entity": "this",
 		"name": {
 			"storage": "a",
@@ -25,7 +25,7 @@
 		"target": "custom_name"
 	},
 	{
-		"function": "minecraft:set_lore",
+		"type": "set_lore",
 		"entity": "this",
 		"lore": [
 			""
@@ -33,7 +33,7 @@
 		"mode": "append"
 	},
 	{
-		"function": "minecraft:set_lore",
+		"type": "set_lore",
 		"entity": "this",
 		"lore": [
 			[
@@ -64,20 +64,18 @@
 			]
 		],
 		"mode": "append",
-		"conditions": [
-			{
-				"condition": "minecraft:value_check",
-				"value": {
-					"type": "minecraft:storage",
-					"storage": "a",
-					"path": "temp.locked"
-				},
-				"range": 1
-			}
-		]
+		"condition": {
+			"type": "int_value_check",
+			"value": {
+				"type": "storage",
+				"storage": "a",
+				"path": "temp.locked"
+			},
+			"test": 1
+		}
 	},
 	{
-		"function": "minecraft:set_lore",
+		"type": "set_lore",
 		"entity": "this",
 		"lore": [
 			[
@@ -89,20 +87,18 @@
 			]
 		],
 		"mode": "append",
-		"conditions": [
-			{
-				"condition": "minecraft:value_check",
-				"value": {
-					"type": "minecraft:storage",
-					"storage": "a",
-					"path": "temp.locked"
-				},
-				"range": 0
-			}
-		]
+		"condition": {
+			"type": "int_value_check",
+			"value": {
+				"type": "storage",
+				"storage": "a",
+				"path": "temp.locked"
+			},
+			"test": 0
+		}
 	},
 	{
-		"function": "minecraft:set_lore",
+		"type": "set_lore",
 		"entity": "this",
 		"lore": [
 			[
@@ -135,7 +131,7 @@
 		"mode": "append"
 	},
 	{
-		"function": "minecraft:set_lore",
+		"type": "set_lore",
 		"entity": "this",
 		"lore": [
 			[
@@ -154,7 +150,7 @@
 		"mode": "append"
 	},
 	{
-		"function": "minecraft:set_lore",
+		"type": "set_lore",
 		"entity": "this",
 		"lore": [
 			{
@@ -164,16 +160,15 @@
 			}
 		],
 		"mode": "append",
-		"conditions": [
-			{
-				"condition": "minecraft:value_check",
-				"value": {
-					"type": "minecraft:storage",
-					"storage": "a",
-					"path": "temp.enforce_whitelist"
-				},
-				"range": 1
-			}
-		]
+		"condition": {
+			"type": "int_value_check",
+			"value": {
+				"type": "storage",
+				"storage": "a",
+				"path": "temp.enforce_whitelist"
+			},
+			"test": 1
+		}
 	}
-]
+	]
+}

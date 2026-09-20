@@ -4,11 +4,14 @@
 			"trigger": "player_interacted_with_entity",
 			"conditions": {
 				"entity": {
-					"entity_type": "interaction",
-					"entity_tags": {
-						"any_of": [
-							"legitermoose.spawn.interact_play"
-						]
+					"type": "entity_properties",
+					"entity": "target_entity",
+					"predicate": {
+						"entity_tags": {
+							"any_of": [
+								"legitermoose.spawn.interact_play"
+							]
+						}
 					}
 				}
 			}
@@ -17,11 +20,14 @@
 			"trigger": "player_hurt_entity",
 			"conditions": {
 				"entity": {
-					"entity_type": "interaction",
-					"entity_tags": {
-						"any_of": [
-							"legitermoose.spawn.interact_play"
-						]
+					"type": "entity_properties",
+					"entity": "target_entity",
+					"predicate": {
+						"entity_tags": {
+							"any_of": [
+								"legitermoose.spawn.interact_play"
+							]
+						}
 					}
 				}
 			}

@@ -1,62 +1,65 @@
-[
-    {
-        "function": "set_item",
-        "item": "redstone_block"
-    },
-
-    {
-        "function": "set_name",
-        "name": {
-            "text": "Oᴜᴛ ᴏꜰ Sᴘᴀᴄᴇ!",
-            "color": "dark_red"
+{
+    "type": "sequence",
+    "functions": [
+        {
+            "type": "set_item",
+            "item": "redstone_block"
         },
-        "target": "item_name"
-    },
 
-    {
-        "function": "set_lore",
-        "lore": [
-            [ 
-                {
-                    "text": "You're out of slots! ",
-                    "color": "red",
-                    "italic": false
-                },
+        {
+            "type": "set_name",
+            "name": {
+                "text": "Oᴜᴛ ᴏꜰ Sᴘᴀᴄᴇ!",
+                "color": "dark_red"
+            },
+            "target": "item_name"
+        },
+
+        {
+            "type": "set_lore",
+            "lore": [
+                [ 
+                    {
+                        "text": "You're out of slots! ",
+                        "color": "red",
+                        "italic": false
+                    },
+                    [
+                        {
+                            "score": {
+                                "objective": "page",
+                                "name": "$tmp"
+                            },
+                            "color": "gray"
+                        },
+                        {
+                            "text": "/"
+                        },
+                        {
+                            "score": {
+                                "objective": "legitermoose.world_slots",
+                                "name": "@s"
+                            }
+                        }
+                    ]
+                ],
                 [
                     {
-                        "score": {
-                            "objective": "page",
-                            "name": "$tmp"
-                        },
-                        "color": "gray"
+                        "text": "Get more on ",
+                        "color": "green",
+                        "italic": false
                     },
                     {
-                        "text": "/"
+                        "text": "mosse.legiti.dev/redeem",
+                        "color": "gold"
                     },
                     {
-                        "score": {
-                            "objective": "legitermoose.world_slots",
-                            "name": "@s"
-                        }
+                        "text": "!"
                     }
                 ]
             ],
-            [
-                {
-                    "text": "Get more on ",
-                    "color": "green",
-                    "italic": false
-                },
-                {
-                    "text": "mosse.legiti.dev/redeem",
-                    "color": "gold"
-                },
-                {
-                    "text": "!"
-                }
-            ]
-        ],
-        "mode": "replace_all",
-        "entity": "this"
-    }
-]
+            "mode": "replace_all",
+            "entity": "this"
+        }
+    ]
+}

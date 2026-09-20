@@ -4,7 +4,7 @@
             {"text":"DiscordSync — Sync your discord channels to ingane chat!\n","color":"#7070ff"},
             {"text":"Made by olaf_294 with code help from sea4_18!","color":"aqua"}
         ],
-        "min_format": [107,1],
-        "max_format":  107
+        "min_format": [121,0],
+        "max_format":  121
     }
 }

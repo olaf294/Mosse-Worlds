@@ -5,7 +5,7 @@
         {"text":"\nMade by olaf_294","color":"dark_gray","italic":true},
         {"text":" (v1.5.1)","color":"gold","italic":false}
       ],
-      "min_format": [107,1],
-      "max_format":  107
+      "min_format": [121,0],
+      "max_format":  121
     }
   }

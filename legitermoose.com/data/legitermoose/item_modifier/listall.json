@@ -1,151 +1,150 @@
-[
-	{
-		"function": "minecraft:set_components",
-		"components": {
-			"minecraft:item_model": "minecraft:player_head",
-			"minecraft:tooltip_display": {
-				"hide_tooltip": false,
-				"hidden_components": [
-					"minecraft:profile"
-				]
+{
+    "type": "sequence",
+    "functions": [
+		{
+			"type": "set_components",
+			"components": {
+				"item_model": "player_head",
+				"tooltip_display": {
+					"hide_tooltip": false,
+					"hidden_components": [
+						"profile"
+					]
+				}
 			}
-		}
-	},
-	{
-		"function": "minecraft:set_item",
-		"item": "minecraft:player_head"
-	},
-	{
-		"function": "minecraft:fill_player_head",
-		"entity": "this"
-	},
-	{
-		"function": "minecraft:set_name",
-		"entity": "this",
-		"name": {
-			"storage": "legitermoose:temp",
-			"nbt": "playername",
-			"color": "dark_aqua",
-			"italic": false,
-			"interpret": true
 		},
-		"target": "custom_name"
-	},
-	{
-		"function": "minecraft:set_lore",
-		"entity": "this",
-		"lore": [
-			[
-				{
-					"text": "Wᴏʀʟᴅ ID: ",
-					"color": "gray",
-					"italic": false
-				},
-				{
-					"score": {
-						"objective": "worldid",
-						"name": "@s"
+		{
+			"type": "set_item",
+			"item": "player_head"
+		},
+		{
+			"type": "fill_player_head",
+			"entity": "this"
+		},
+		{
+			"type": "set_name",
+			"entity": "this",
+			"name": {
+				"storage": "legitermoose:temp",
+				"nbt": "playername",
+				"color": "dark_aqua",
+				"italic": false,
+				"interpret": true
+			},
+			"target": "custom_name"
+		},
+		{
+			"type": "set_lore",
+			"entity": "this",
+			"lore": [
+				[
+					{
+						"text": "Wᴏʀʟᴅ ID: ",
+						"color": "gray",
+						"italic": false
 					},
-					"color": "green",
-					"italic": false
-				}
+					{
+						"score": {
+							"objective": "worldid",
+							"name": "@s"
+						},
+						"color": "green",
+						"italic": false
+					}
+				],
+				[
+					{
+						"text": "Pʟᴀʏᴇʀ ID: ",
+						"color": "gray",
+						"italic": false
+					},
+					{
+						"score": {
+							"objective": "id",
+							"name": "@s"
+						},
+						"color": "green",
+						"italic": false
+					}
+				]
 			],
-			[
-				{
-					"text": "Pʟᴀʏᴇʀ ID: ",
-					"color": "gray",
-					"italic": false
-				},
-				{
-					"score": {
-						"objective": "id",
-						"name": "@s"
+			"mode": "replace_all"
+		},
+		{
+			"type": "set_lore",
+			"entity": "this",
+			"lore": [
+				[
+					{
+						"text": "Sᴛʀᴇᴀᴋ: ",
+						"color": "gray",
+						"italic": false
 					},
-					"color": "green",
-					"italic": false
-				}
-			]
-		],
-		"mode": "replace_all"
-	},
-	{
-		"function": "minecraft:set_lore",
-		"entity": "this",
-		"lore": [
-			[
-				{
-					"text": "Sᴛʀᴇᴀᴋ: ",
-					"color": "gray",
-					"italic": false
-				},
-				{
-					"score": {
-						"objective": "ds.streak",
-						"name": "@s"
+					{
+						"score": {
+							"objective": "ds.streak",
+							"name": "@s"
+						},
+						"color": "green",
+						"italic": false
 					},
-					"color": "green",
-					"italic": false
-				},
-				{
-					"text": " ᴅᴀʏ",
-					"color": "green",
-					"italic": false
-				}
-			]
-		],
-		"mode": "append",
-		"conditions": [
-			{
-				"condition": "minecraft:value_check",
-				"value": {
-					"type": "minecraft:score",
-					"target": "this",
-					"score": "ds.streak"
-				},
-				"range": {
-					"max": 1
-				}
-			}
-		]
-	},
-	{
-		"function": "minecraft:set_lore",
-		"entity": "this",
-		"lore": [
-			[
-				{
-					"text": "Sᴛʀᴇᴀᴋ: ",
-					"color": "gray",
-					"italic": false
-				},
-				{
-					"score": {
-						"objective": "ds.streak",
-						"name": "@s"
+					{
+						"text": " ᴅᴀʏ",
+						"color": "green",
+						"italic": false
+					}
+				]
+			],
+			"mode": "append",
+			"condition": {
+					"type": "int_value_check",
+					"value": {
+						"type": "score",
+						"target": "this",
+						"score": "ds.streak"
 					},
-					"color": "green",
-					"italic": false
-				},
-				{
-					"text": " ᴅᴀʏꜱ",
-					"color": "green",
-					"italic": false
+					"test": {
+						"max": 1
+					}
 				}
-			]
-		],
-		"mode": "append",
-		"conditions": [
-			{
-				"condition": "minecraft:value_check",
-				"value": {
-					"type": "minecraft:score",
-					"target": "this",
-					"score": "ds.streak"
-				},
-				"range": {
-					"min": 2
+		},
+		{
+			"type": "set_lore",
+			"entity": "this",
+			"lore": [
+				[
+					{
+						"text": "Sᴛʀᴇᴀᴋ: ",
+						"color": "gray",
+						"italic": false
+					},
+					{
+						"score": {
+							"objective": "ds.streak",
+							"name": "@s"
+						},
+						"color": "green",
+						"italic": false
+					},
+					{
+						"text": " ᴅᴀʏꜱ",
+						"color": "green",
+						"italic": false
+					}
+				]
+			],
+			"mode": "append",
+			"condition": {
+					"type": "int_value_check",
+					"value": {
+						"type": "score",
+						"target": "this",
+						"score": "ds.streak"
+					},
+					"test": {
+						"min": 2
+					}
 				}
-			}
-		]
-	}
-]
+		}
+	]
+}

@@ -1,5 +1,5 @@
 {
-    "function":"set_components",
+    "type":"set_components",
     "components": {
         "minecraft:consumable": {
             "sound": "minecraft:intentionally_empty"

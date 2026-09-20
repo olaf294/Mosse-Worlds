@@ -3,7 +3,6 @@
 		"": {
 			"trigger": "inventory_changed",
 			"conditions": {
-				"player": {},
 				"items": [
 					{
 						"items": "ender_chest"

@@ -14,32 +14,30 @@
 		"a": {
 			"trigger": "default_block_use",
 			"conditions": {
-				"location": [
-					{
-						"condition": "location_check",
-						"predicate": {
-							"block": {
-								"blocks": [
-									"chest"
-								]
+				"location": {
+					"type": "location_check",
+					"predicate": {
+						"block": {
+							"blocks": [
+								"chest"
+							]
+						},
+						"position": {
+							"x": {
+								"min": -6,
+								"max": -3
 							},
-							"position": {
-								"x": {
-									"min": -6,
-									"max": -3
-								},
-								"y": {
-									"min": 63,
-									"max": 65
-								},
-								"z": {
-									"min": 15,
-									"max": 17
-								}
+							"y": {
+								"min": 63,
+								"max": 65
+							},
+							"z": {
+								"min": 15,
+								"max": 17
 							}
 						}
 					}
-				]
+				}
 			}
 		}
 	}

@@ -1,63 +1,66 @@
-[
-    {
-        "function": "set_item",
-        "item": "emerald_block"
-    },
-
-    {
-        "function": "set_name",
-        "name": {
-            "text": "Cᴇᴀᴛᴇ Nᴇᴡ Wᴏʀʟᴅ",
-            "color": "green"
+{
+    "type": "sequence",
+    "functions": [
+        {
+            "type": "set_item",
+            "item": "emerald_block"
         },
-        "target": "item_name"
-    },
 
-    {
-        "function": "set_lore",
-        "lore": [
-            [ 
-                {
-                    "text": "Click to create a new world ",
-                    "color": "green",
-                    "italic": false
-                },
-                [
-                    
+        {
+            "type": "set_name",
+            "name": {
+                "text": "Cᴇᴀᴛᴇ Nᴇᴡ Wᴏʀʟᴅ",
+                "color": "green"
+            },
+            "target": "item_name"
+        },
+
+        {
+            "type": "set_lore",
+            "lore": [
+                [ 
                     {
-                        "score": {
-                            "objective": "page",
-                            "name": "$tmp"
+                        "text": "Click to create a new world ",
+                        "color": "green",
+                        "italic": false
+                    },
+                    [
+                        
+                        {
+                            "score": {
+                                "objective": "page",
+                                "name": "$tmp"
+                            },
+                            "color": "gray"
                         },
-                        "color": "gray"
-                    },
-                    {
-                        "text": "/"
-                    },
-                    {
-                        "score": {
-                            "objective": "legitermoose.world_slots",
-                            "name": "@s"
+                        {
+                            "text": "/"
+                        },
+                        {
+                            "score": {
+                                "objective": "legitermoose.world_slots",
+                                "name": "@s"
+                            }
                         }
+                    ]
+                ],
+                [
+                    {
+                        "text": "Get more on ",
+                        "color": "green",
+                        "italic": false
+                    },
+                    {
+                        "text": "mosse.legiti.dev/redeem",
+                        "color": "gold"
+                    },
+                    {
+                        "text": "!"
                     }
                 ]
             ],
-            [
-                {
-                    "text": "Get more on ",
-                    "color": "green",
-                    "italic": false
-                },
-                {
-                    "text": "mosse.legiti.dev/redeem",
-                    "color": "gold"
-                },
-                {
-                    "text": "!"
-                }
-            ]
-        ],
-        "mode": "replace_all",
-        "entity": "this"
-    }
-]
+            "mode": "replace_all",
+            "entity": "this"
+        }
+    ]
+}
