@@ -1,4 +1,4 @@
-execute store result score $tmp ui run clear @s *[custom_data~{world_browser:1b}] 0
+execute store result score $tmp ui if items entity @s container.* *[custom_data~{world_browser:1b}]
 execute unless score $tmp ui matches 0 run return 0
 
 item replace entity @s hotbar.4 with compass[lore = [{italic: 0b, text: "Explore worlds made", color: "gray"}, {italic: 0b, text: "by other players.", color: "gray"}, {italic: 0b, text: "", color: "gray"},\

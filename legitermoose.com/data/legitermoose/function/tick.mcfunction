@@ -8,11 +8,6 @@ tp @a[predicate=code:is_y_below_40] 0 64 0 0 8
 
 function legitermoose:code/tick/_
 
-# Playerlist
-playerlist @a[tag=!legitermoose.is_playing] footer set <gold>  Yᴏᴜ ᴀʀᴇ ᴘʟᴀʏɪɴɢ ᴏɴ: <gradient:gold:yellow><shadow:#ff00007f>M<shadow:#ff0f007f>o<shadow:#ff1f007f>s<shadow:#ff2e007f>s<shadow:#ff3e007f>e <shadow:#ff5d007f>W<shadow:#ff6c007f>o<shadow:#ff7c007f>r<shadow:#ff8b007f>l<shadow:#ff9b007f>d<yellow><shadow:gold:.5>s <b> </b>
-#playerlist @a[tag=!legitermoose.is_playing] footer set <gold>  Yᴏᴜ ᴀʀᴇ ᴘʟᴀʏɪɴɢ ᴏɴ: <reset>mosse worlds <b> </b>
-playerlist @a[tag=legitermoose.is_playing] footer set <gold>  Yᴏᴜ ᴀʀᴇ ᴘʟᴀʏɪɴɢ ᴏɴ: <#3366ff><u>ʟᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ.ᴄᴏᴍ</u> <b> </b>
-
 # Lobby Mannequinss
 execute as @e[type=mannequin,tag=legitermoose.spawn] at @s if entity @a[distance=..25] run rotate @s facing entity @p
 execute as @e[type=mannequin,tag=legitermoose.spawn] at @s unless entity @a[distance=..25] run rotate @s -90 0
@@ -38,6 +33,6 @@ execute as @a at @s run function legitermoose:player/tick
 # Spawn Tick stuff
 execute positioned 1000 64 0 as @a[distance=..300] run function legitermoose:lobby/lobby_tick
 execute positioned 0 64 0 as @a[distance=300..] run function legitermoose:mosse/not_spawn
-execute positioned 0 64 0 as @a[distance=..300] run function legitermoose:mosse/spawn
+#execute positioned 0 64 0 as @a[distance=..300] run function legitermoose:mosse/enter_spawn    # no longer needed — runs on falling out of the world or on join
 
 execute as @e[type=ender_pearl] run function legitermoose:util/ender_pearls

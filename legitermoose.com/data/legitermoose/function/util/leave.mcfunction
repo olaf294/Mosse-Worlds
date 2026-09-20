@@ -3,18 +3,17 @@ function legitermoose:util/get_name
 execute store result storage legitermoose:temp count int 1 if entity @a
 function discordsync:message/players/join with storage legitermoose:temp
 
-schedule function code:offline_time/get_time 20t
 
+function legitermoose:mosse/enter_spawn
 tag @s add temp_joined
-
 tellraw @s {text:"Wᴇʟᴄᴏᴍᴇ ʙᴀᴄᴋ!",color:blue}
-tag @s remove legitermoose.is_playing
-tp @s 0 64 0 0 8
-gamemode adventure @s[tag=!is_admin]
 clear @s
-scoreboard players set @s wait -1
-team join z_spawn @s[team=player]
+#scoreboard players set @s wait -1  # unused — prototype bossbar
 
+tp @s 0 64 0 0 8
 scoreboard players reset @s leave
 
+schedule function code:offline_time/get_time 20t
+
+# Sidebar
 function code:sidebar/tps/update_sidebar

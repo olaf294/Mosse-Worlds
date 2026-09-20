@@ -11,7 +11,7 @@ gamerule spawn_mobs false
 
 time set 23582
 setworldspawn 0 64 0 0 8
-tellraw @a {color:gold,text:"Tʜᴇ Mᴏꜱꜱᴇ ɪꜱ Wᴏʀʟᴅ"}
+tellraw @a {color:gold,text:"Tʜᴇ Mᴏꜱꜱᴇ ɪꜱ Wᴏʀʟᴅ",shadow_color:1722417152}
 
 scoreboard objectives add numbers dummy
 scoreboard players set -24 numbers -24

@@ -1,3 +1,6 @@
+# Playerlist
+function code:sidebar/list/update_tab_list
+
 scoreboard players reset @s fly
 scoreboard players reset @s world
 scoreboard players reset @s visit

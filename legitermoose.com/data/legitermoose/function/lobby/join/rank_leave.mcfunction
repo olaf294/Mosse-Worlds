@@ -1,3 +1,5 @@
+function legitermoose:mosse/enter_spawn
+
 # Get Name
 function legitermoose:util/get_name
 
