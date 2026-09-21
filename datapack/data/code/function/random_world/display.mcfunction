@@ -1,19 +1,9 @@
-$tellraw @a[tag=!info,distance=..10] [{text:" - - - - - - - - - - - - - - - - ",color:gray},{text:"\nRᴀɴᴅᴏᴍ Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:gray},{text:"[HERE]",color:gold,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:" ᴛᴏ ᴘʟᴀʏ.",color:gray},\
-"\n  ",{storage:api,nbt:"random.response.raw_name",interpret:1b}]
-
-execute store result score .votes misc run data get storage api random.response.votes
-execute store result score .visits misc run data get storage api random.response.visits
+$tellraw @a[tag=!info,distance=..10] [{text:"Rᴀɴᴅᴏᴍ Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:gray,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:"[HERE]",color:gold},{text:" ᴛᴏ ᴘʟᴀʏ.\n  ",color:gray},{storage:api,nbt:"random.response.raw_name",interpret:1b}]
 
 # Calculate Ratio
-execute store result score .votes2 misc run data get storage api random.response.votes
-scoreboard players operation .votes2 misc *= 10000 numbers
-execute store result storage api math float 0.0001 run scoreboard players operation .votes2 misc /= .visits misc
+data modify storage api math set compute default float {type:div,left:{type:storage,storage:api,path:"random.response.votes"},right:{type:storage,storage:api,path:"random.response.visits"}}
 data modify storage api math set string storage api math 0 -1
 
-$execute unless data storage api {random:{response:{version:"26.3"}}} run return run tellraw @a[tag=info,distance=..10] [{text:" - - - - - - - - - - - - - - - - ",color:gray},{text:"\nRᴀɴᴅᴏᴍ Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:gray},{text:"[HERE]",color:gold,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:" ᴛᴏ ᴘʟᴀʏ.",color:gray},\
-"\n  ",{storage:api,nbt:"random.response.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"random.response.version",color:yellow,interpret:1b},"\n  ",\
-{score:{name:".votes",objective:misc},color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{score:{name:".visits",objective:misc},color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green,interpret:1b},{text:")",color:gray}]
+$execute unless data storage api {random:{response:{version:"26.3"}}} run return run tellraw @a[tag=info,distance=..10] [{text:"Rᴀɴᴅᴏᴍ Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:gray,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:"[HERE]",color:gold},{text:" ᴛᴏ ᴘʟᴀʏ.\n  ",color:gray},{storage:api,nbt:"random.response.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"random.response.version",color:yellow,interpret:1b},"\n  ",{storage:api,nbt:"random.response.votes",plain:1b,color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{storage:api,nbt:"random.response.visits",plain:1b,color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green,interpret:1b},{text:")",color:gray}]
 
-$tellraw @a[tag=info,distance=..10] [{text:" - - - - - - - - - - - - - - - - ",color:gray},{text:"\nRᴀɴᴅᴏᴍ Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:gray},{text:"[HERE]",color:gold,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:" ᴛᴏ ᴘʟᴀʏ.",color:gray},\
-"\n  ",{storage:api,nbt:"random.response.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"random.response.version",color:green,interpret:1b},"\n  ",\
-{score:{name:".votes",objective:misc},color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{score:{name:".visits",objective:misc},color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green,interpret:1b},{text:")",color:gray}]
+$tellraw @a[tag=info,distance=..10] [{text:"Rᴀɴᴅᴏᴍ Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:gray,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:"[HERE]",color:gold},{text:" ᴛᴏ ᴘʟᴀʏ.\n  ",color:gray},{storage:api,nbt:"random.response.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"random.response.version",color:green,interpret:1b},"\n  ",{storage:api,nbt:"random.response.votes",plain:1b,color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{storage:api,nbt:"random.response.visits",plain:1b,color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green,interpret:1b},{text:")",color:gray}]

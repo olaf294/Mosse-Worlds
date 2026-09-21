@@ -3,6 +3,7 @@ gamerule show_advancement_messages true
 gamerule immediate_respawn true
 gamerule keep_inventory true
 gamerule random_tick_speed 0
+gamerule advance_time false
 gamerule mob_griefing false
 gamerule tnt_explodes false
 gamerule fall_damage false

@@ -3,8 +3,8 @@
 execute store result score .players legitermoose.misc if entity @a[tag=legitermoose.is_playing]
 
 # Leave Server
-execute as @a[predicate=code:is_y_below_40,tag=legitermoose.is_playing] run function legitermoose:lobby/join/rank_leave
-tp @a[predicate=code:is_y_below_40] 0 64 0 0 8
+execute as @a[predicate=code:low_y,tag=legitermoose.is_playing] run function legitermoose:lobby/join/rank_leave
+tp @a[predicate=code:low_y] 0 64 0 0 8
 
 function legitermoose:code/tick/_
 

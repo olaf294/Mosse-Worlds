@@ -4,7 +4,7 @@ execute as @s[scores={toggle_info=1..}] at @s run function code:toggle_info/togg
 scoreboard players reset @s[tag=legitermoose.is_playing] toggle_info
 
 scoreboard players enable @s offset
-execute as @s unless score @s offset matches 0 run function code:realtime/offset/display
+execute unless score @s offset matches 0 run function code:realtime/offset/display
 
 scoreboard players enable @s[scores={worldid=-1..0}] minimal_lobby
 execute as @s[scores={minimal_lobby=1..}] run function code:misc/toggle_lobby_type

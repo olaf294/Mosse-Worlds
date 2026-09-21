@@ -1,0 +1,1 @@
+http callback code:api_version/init store api version send "https://api.legiti.dev/" GET

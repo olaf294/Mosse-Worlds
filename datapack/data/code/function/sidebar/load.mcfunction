@@ -14,8 +14,8 @@ scoreboard objectives modify sidebar displayname \
 ["",{shadow_color:2147418112,extra:[{color:"gold",text:"M"},{shadow_color:2147421952,extra:[{color:"#FFB208",text:"o"},{shadow_color:2147426048,extra:[{color:"#FFB90F",text:"s"},{shadow_color:2147429888,extra:[{color:"#FFC117",text:"s"},{shadow_color:2147433984,extra:[{color:"#FFC91F",text:"e"},{color:"#FFD127",text:" "},{shadow_color:2147441920,extra:[{color:"#FFD82E",text:"W"},{shadow_color:2147445760,extra:[{color:"#FFE036",text:"o"},{shadow_color:2147449856,extra:[{color:"#FFE83E",text:"r"},{shadow_color:2147453696,extra:[{color:"#FFF046",text:"l"},{shadow_color:2147457792,extra:[{color:"#FFF74D",text:"d"},{color:"yellow",shadow_color:2147461632,text:"s"}],text:""}],text:""}],text:""}],text:""}],text:""}],text:""}],text:""}],text:""}],text:""}],text:""}]
 
 scoreboard players display name 1 sidebar ""
-scoreboard players display name 2 sidebar "    Fixed old bugs!"
-scoreboard players display name 3 sidebar "     DiscordSync!"
+scoreboard players display name 2 sidebar "   Updated to 26.3!"
+scoreboard players display name 3 sidebar "      DiscordSync!"
 scoreboard players display name 4 sidebar ""
 #scoreboard players display name 5 sidebar ""
 #scoreboard players display name 6 sidebar ""

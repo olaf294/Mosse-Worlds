@@ -21,23 +21,14 @@ execute as @a[x=0,y=64,z=-45.0,dx=0,dy=1,dz=0,tag=is_admin] at @s run tp @s 0 64
 execute as @a[tag=!legitermoose.is_playing] run function code:browser/tick
 execute if score .globaltimer misc matches 600 run function code:live_vote_count/init
 
-
 # Mosse Joining
-execute if block 0 65 4 polished_blackstone_button[powered=true] positioned 0 65 4 as @p run function legitermoose:lobby/join_server/pre_check with entity @s
+execute positioned 0 65 4 if block 0 65 4 polished_blackstone_button[powered=true] as @p run function legitermoose:lobby/join_server/pre_check with entity @s
 
-
-# Random World Button
+# Random World, Good World, API Version, Jam World Buttons
 execute if block 0 65 5 stone_button[powered=true] run function code:random_world/get
-
-# Good World Button
 execute if block -2 65 5 polished_blackstone_button[powered=true] run function code:good_world/init
-
-# Version Info Button
-execute if block 2 65 5 stone_button[powered=true] run http callback code:api_version/init store api version send "https://api.legiti.dev/" GET
-
-# Jam World
+execute if block 2 65 5 stone_button[powered=true] run function code:api_version/get
 execute if block -19 65 -7 polished_blackstone_button[powered=true] run function code:jam/init
-
 
 # discord interaction
 execute as f-0-3-0-1 on target run return run function code:misc/discord

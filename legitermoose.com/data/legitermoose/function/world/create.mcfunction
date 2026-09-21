@@ -1,12 +1,12 @@
 # Return if already owning a world 
-$execute if data storage legitermoose:worlds {worlds:[{uuid:$(UUID)}]} as @s run return run function legitermoose:world/get_own_world with entity @s
+$execute if data storage legitermoose:worlds {worlds:[{uuid:$(UUID)}]} run return run function legitermoose:world/get_own_world with entity @s
 
 tellraw @s {text:"Creating a new world.",color:green}
 
 # Set up storage
 data remove storage legitermoose:temp temp
 data merge storage legitermoose:temp \
-{temp:{raw_rank:[],owner:"unknown",rank:"unknown",uuid:[],world_id:0,created_at:0,votes:0,visits:0,name:[{text:"Player",color:white,italic:0b},{text:"'s world",color:white,italic:0b}],description:[{text:"This is the default description",color:gray,italic:0b},{text:"for worlds on legitermoose.com",color:gray,italic:0b}],settings:{whitelist:0b},custom_data:{ui:1b,"legitermoose.data":{plot_position:{x:0,y:64,z:0}}}}}
+{temp:{raw_rank:[],owner:"unknown",rank:"unknown",uuid:[],world_id:0,created_at:-1,votes:0,visits:0,name:[{text:"Player",color:white,italic:0b},{text:"'s world",color:white,italic:0b}],description:[{text:"This is the default description",color:gray,italic:0b},{text:"for worlds on legitermoose.com",color:gray,italic:0b}],settings:{whitelist:0b},custom_data:{ui:1b,"legitermoose.data":{plot_position:{x:0,y:64,z:0}}}}}
 
 # Increment World ID by 1
 scoreboard players add .global_id legitermoose.misc 1
@@ -15,7 +15,7 @@ scoreboard players add .global_id legitermoose.misc 1
 function legitermoose:util/get_name
 data modify storage legitermoose:temp temp.owner set from storage legitermoose:temp playername
 data modify storage legitermoose:temp temp.uuid set from entity @s UUID
-data modify storage legitermoose:temp temp.created_at set from entity @s bukkit.lastPlayed
+#data modify storage legitermoose:temp temp.created_at set from entity @s bukkit.lastPlayed
 #execute store result storage legitermoose:temp temp.created_at long 1000 run scoreboard players get .time time
 data modify storage legitermoose:temp temp.name[0].text set from storage legitermoose:temp playername
 execute store result storage legitermoose:temp temp.world_id int 1 run scoreboard players get .global_id legitermoose.misc
