@@ -16,42 +16,14 @@ scoreboard players operation .minutes last_played %= 60 numbers
 scoreboard players operation .seconds last_played = @s last_played
 scoreboard players operation .seconds last_played %= 60 numbers 
 
-execute unless score .hours last_played matches 0..9 unless score .minutes last_played matches 0..9 unless score .seconds last_played matches 0..9 run return run tellraw @s [{text:"Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴏꜰꜰʟɪɴᴇ ꜰᴏʀ ",color:yellow},\
-{score:{name:".hours",objective:last_played},color:green},{text:":",color:gray},\
-{score:{name:".minutes",objective:last_played},color:green},{text:":",color:gray},\
-{score:{name:".seconds",objective:last_played},color:green}]
+execute if score .seconds last_played matches 0..9 run data modify storage time t.s set value "0"
+execute if score .minutes last_played matches 0..9 run data modify storage time t.m set value "0"
+execute if score .hours last_played matches 0..9 run data modify storage time t.h set value "0"
+execute unless score .seconds last_played matches 0..9 run data modify storage time t.s set value ""
+execute unless score .minutes last_played matches 0..9 run data modify storage time t.m set value ""
+execute unless score .hours last_played matches 0..9 run data modify storage time t.h set value ""
 
-execute if score .hours last_played matches 0..9 unless score .minutes last_played matches 0..9 unless score .seconds last_played matches 0..9 run return run tellraw @s [{text:"Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴏꜰꜰʟɪɴᴇ ꜰᴏʀ ",color:yellow},\
-{text:"0",color:green},{score:{name:".hours",objective:last_played},color:green},{text:":",color:gray},\
-{score:{name:".minutes",objective:last_played},color:green},{text:":",color:gray},\
-{score:{name:".seconds",objective:last_played},color:green}]
-
-execute unless score .hours last_played matches 0..9 if score .minutes last_played matches 0..9 unless score .seconds last_played matches 0..9 run return run tellraw @s [{text:"Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴏꜰꜰʟɪɴᴇ ꜰᴏʀ ",color:yellow},\
-{score:{name:".hours",objective:last_played},color:green},{text:":",color:gray},\
-{text:"0",color:green},{score:{name:".minutes",objective:last_played},color:green},{text:":",color:gray},\
-{score:{name:".seconds",objective:last_played},color:green}]
-
-execute unless score .hours last_played matches 0..9 unless score .minutes last_played matches 0..9 if score .seconds last_played matches 0..9 run return run tellraw @s [{text:"Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴏꜰꜰʟɪɴᴇ ꜰᴏʀ ",color:yellow},\
-{score:{name:".hours",objective:last_played},color:green},{text:":",color:gray},\
-{score:{name:".minutes",objective:last_played},color:green},{text:":",color:gray},\
-{text:"0",color:green},{score:{name:".seconds",objective:last_played},color:green}]
-
-execute if score .hours last_played matches 0..9 if score .minutes last_played matches 0..9 unless score .seconds last_played matches 0..9 run return run tellraw @s [{text:"Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴏꜰꜰʟɪɴᴇ ꜰᴏʀ ",color:yellow},\
-{text:"0",color:green},{score:{name:".hours",objective:last_played},color:green},{text:":",color:gray},\
-{text:"0",color:green},{score:{name:".minutes",objective:last_played},color:green},{text:":",color:gray},\
-{score:{name:".seconds",objective:last_played},color:green}]
-
-execute if score .hours last_played matches 0..9 unless score .minutes last_played matches 0..9 if score .seconds last_played matches 0..9 run return run tellraw @s [{text:"Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴏꜰꜰʟɪɴᴇ ꜰᴏʀ ",color:yellow},\
-{text:"0",color:green},{score:{name:".hours",objective:last_played},color:green},{text:":",color:gray},\
-{score:{name:".minutes",objective:last_played},color:green},{text:":",color:gray},\
-{text:"0",color:green},{score:{name:".seconds",objective:last_played},color:green}]
-
-execute unless score .hours last_played matches 0..9 if score .minutes last_played matches 0..9 if score .seconds last_played matches 0..9 run return run tellraw @s [{text:"Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴏꜰꜰʟɪɴᴇ ꜰᴏʀ ",color:yellow},\
-{score:{name:".hours",objective:last_played},color:green},{text:":",color:gray},\
-{text:"0",color:green},{score:{name:".minutes",objective:last_played},color:green},{text:":",color:gray},\
-{text:"0",color:green},{score:{name:".seconds",objective:last_played},color:green}]
-
-execute if score .hours last_played matches 0..9 if score .minutes last_played matches 0..9 if score .seconds last_played matches 0..9 run return run tellraw @s [{text:"Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴏꜰꜰʟɪɴᴇ ꜰᴏʀ ",color:yellow},\
-{text:"0",color:green},{score:{name:".hours",objective:last_played},color:green},{text:":",color:gray},\
-{text:"0",color:green},{score:{name:".minutes",objective:last_played},color:green},{text:":",color:gray},\
-{text:"0",color:green},{score:{name:".seconds",objective:last_played},color:green}]
+tellraw @s [{text:"Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴏꜰꜰʟɪɴᴇ ꜰᴏʀ ",color:yellow},\
+{storage:time,nbt:"t.h",interpret:1b,color:green},{score:{name:".hours",objective:last_played},color:green},{text:":",color:gray},\
+{storage:time,nbt:"t.m",interpret:1b,color:green},{score:{name:".minutes",objective:last_played},color:green},{text:":",color:gray},\
+{storage:time,nbt:"t.s",interpret:1b,color:green},{score:{name:".seconds",objective:last_played},color:green}]

@@ -27,7 +27,7 @@ execute if block 0 65 4 polished_blackstone_button[powered=true] positioned 0 65
 
 
 # Random World Button
-execute if block 0 65 5 stone_button[powered=true] run http callback code:random_world/init store api random send "https://api.legiti.dev/world/random" GET
+execute if block 0 65 5 stone_button[powered=true] run function code:random_world/get
 
 # Good World Button
 execute if block -2 65 5 polished_blackstone_button[powered=true] run function code:good_world/init
