@@ -24,9 +24,6 @@ execute positioned 1000 64 0 as @e[type=item,distance=..300] if items entity @s 
 # Teleporting - THIS IS BROKEN, NEED TO REPLACE. (bug: world browser tps to incorrect world)
     #execute as @a[tag=legitermoose.teleported,scores={legitermoose.tp_cd=..20}] run function legitermoose:world/load_world/tp_to_plot with storage legitermoose:temp plot_position
 
-# rejoin detection
-execute as @a[scores={leave=1..}] run function legitermoose:util/leave
-
 # Player Tick
 execute as @a at @s run function legitermoose:player/tick
 
