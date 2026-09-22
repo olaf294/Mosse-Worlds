@@ -33,7 +33,7 @@ execute if block 0 65 5 stone_button[powered=true] run function code:random_worl
 execute if block -2 65 5 polished_blackstone_button[powered=true] run function code:good_world/init
 
 # Version Info Button
-execute if block 2 65 5 stone_button[powered=true] run http callback code:api_version/init store api version send "https://api.legiti.dev/" GET
+execute if block 2 65 5 stone_button[powered=true] run function code:api_version/get
 
 # Jam World
 execute if block -19 65 -7 polished_blackstone_button[powered=true] run function code:jam/init
