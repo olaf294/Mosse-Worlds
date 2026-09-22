@@ -1,2 +1,2 @@
 tp @s 0 64 0
-tag @s remove legitermoose.is_playing
+function legitermoose:mosse/enter_spawn

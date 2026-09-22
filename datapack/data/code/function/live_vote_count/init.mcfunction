@@ -1,3 +1,2 @@
 tellraw @a[tag=is_admin,tag=!ignore] {text:"Cᴀʟʟɪɴɢ API... (Lɪᴠᴇ Vᴏᴛᴇ / Vɪꜱɪᴛ Cᴏᴜɴᴛ)",color:"#333388"}
-http callback code:live_vote_count/update_vote_count store api vote_count send 'https://api.legiti.dev/world/f9407daa-81c5-4de5-a200-667667f09750'
-#http callback code:live_vote_count/update_vote_count store api vote_count send 'https://api.legiti.dev/world/f9407daa-81c5-4de5-a200-667667f09750?project="votes,visits"'
+http callback code:live_vote_count/update_vote_count store api vote_count send 'https://api.legiti.dev/v4/worlds/f9407daa-81c5-4de5-a200-667667f09750?project=votes,visits'

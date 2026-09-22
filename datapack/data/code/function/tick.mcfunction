@@ -27,7 +27,11 @@ execute positioned 0 65 4 if block 0 65 4 polished_blackstone_button[powered=tru
 # Random World, Good World, API Version, Jam World Buttons
 execute if block 0 65 5 stone_button[powered=true] run function code:random_world/get
 execute if block -2 65 5 polished_blackstone_button[powered=true] run function code:good_world/init
+
+# Version Info Button
 execute if block 2 65 5 stone_button[powered=true] run function code:api_version/get
+
+# Jam World
 execute if block -19 65 -7 polished_blackstone_button[powered=true] run function code:jam/init
 
 # discord interaction

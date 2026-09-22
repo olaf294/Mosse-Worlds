@@ -1,1 +1,1 @@
-http callback code:random_world/init store api random send "https://api.legiti.dev/world/random" GET
+http callback code:random_world/init store api random send "https://api.legiti.dev/v4/worlds/random?project=version,raw_name,world_uuid,votes,visitsname,visits" GET

@@ -1,8 +1,8 @@
 # Banned Worlds
-    #execute if data storage minecraft:api good_world.response{world_uuid:"<banned uuid>"} run return fail
+    #execute if data storage api {good_world:{world_uuid:"<banned uuid>"}} run return fail
 
 # Banned Players
-    #execute if data storage minecraft:api good_world.response{owner_uuid:"<banned uuid>"} run return fail
+    #execute if data storage api {good_world:{owner_uuid:"<banned uuid>"}} run return fail
 
 # Better Filters:
 # ----------------------
@@ -16,4 +16,4 @@ execute unless score .votes misc matches 20.. unless score .visits misc matches 
 execute unless score .votes misc matches 15.. unless score .visits misc matches 80.. run return run function code:good_world/init
 # ----------------------
 
-function code:good_world/display with storage api good_world.response
+function code:good_world/display with storage api good_world
