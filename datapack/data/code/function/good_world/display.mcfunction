@@ -1,21 +1,21 @@
 playsound entity.player.levelup block @a[distance=..10,tag=!ignore] 0 64 0 0.8 0.8
 
 $tellraw @a[tag=!info,distance=..10] [{text:" - - - - - - - - - - - - - - - - ",color:gray},{text:"\nRᴀɴᴅᴏᴍ GOOD Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:green},{text:"[HERE]",color:gold,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:" ᴛᴏ ᴘʟᴀʏ.",color:green},\
-"\n  ",{storage:api,nbt:"good_world.raw_name",interpret:1b}]
+"\n  ",{storage:api,nbt:"temp.raw_name",interpret:1b}]
 
-execute store result score .votes misc run data get storage api good_world.votes
-execute store result score .visits misc run data get storage api good_world.visits
+execute store result score .votes misc run data get storage api temp.votes
+execute store result score .visits misc run data get storage api temp.visits
 
 # Calculate Ratio
-execute store result score .votes2 misc run data get storage api good_world.votes
+execute store result score .votes2 misc run data get storage api temp.votes
 scoreboard players operation .votes2 misc *= 10000 numbers
 execute store result storage api math float 0.0001 run scoreboard players operation .votes2 misc /= .visits misc
 data modify storage api math set string storage api math 0 -1
 
 $execute unless data storage api {good_world:{response:{version:"26.2"}}} run return run tellraw @a[tag=info,distance=..10] [{text:" - - - - - - - - - - - - - - - - ",color:gray},{text:"\nRᴀɴᴅᴏᴍ GOOD Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:green},{text:"[HERE]",color:gold,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:" ᴛᴏ ᴘʟᴀʏ.",color:green},\
-"\n  ",{storage:api,nbt:"good_world.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"good_world.version",color:yellow,interpret:1b},"\n  ",\
+"\n  ",{storage:api,nbt:"temp.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"temp.version",color:yellow,interpret:1b},"\n  ",\
 {score:{name:".votes",objective:misc},color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{score:{name:".visits",objective:misc},color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green,interpret:1b},{text:")",color:gray}]
 
 $tellraw @a[tag=info,distance=..10] [{text:" - - - - - - - - - - - - - - - - ",color:gray},{text:"\nRᴀɴᴅᴏᴍ GOOD Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:green},{text:"[HERE]",color:gold,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:" ᴛᴏ ᴘʟᴀʏ.",color:green},\
-"\n  ",{storage:api,nbt:"good_world.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"good_world.version",color:green,interpret:1b},"\n  ",\
+"\n  ",{storage:api,nbt:"temp.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"temp.version",color:green,interpret:1b},"\n  ",\
 {score:{name:".votes",objective:misc},color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{score:{name:".visits",objective:misc},color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green,interpret:1b},{text:")",color:gray}]
