@@ -9,7 +9,7 @@ execute if score .req_jam_id misc matches 1.. unless score .req_jam_id misc = .j
 execute if score .req_jam_id misc matches 1.. unless score .req_jam_id misc = .jam_id misc if data storage api jam_world.response[0] run return run function code:jam/loop
 execute if score .req_jam_id misc matches 1.. unless score .req_jam_id misc = .jam_id misc run return 0
 
-execute positioned -19 64 -5 if data storage api temp.jam.id run function code:jam/display with storage api temp
+execute if data storage api temp.jam.id positioned -19 64 -5 run function code:jam/display with storage api temp
 
 data remove storage api jam_world.response[0]
 execute if data storage api jam_world.response[0] run function code:jam/loop

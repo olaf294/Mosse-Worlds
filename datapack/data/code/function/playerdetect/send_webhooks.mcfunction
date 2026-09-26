@@ -1,4 +1,3 @@
-
 execute if score .logbog_online playerdetect matches 1 if score .logbog_seen playerdetect matches 0 run return run function code:playerdetect/logbog/send with storage player_detect http
 execute if score .moose_online playerdetect matches 1 if score .moose_seen playerdetect matches 0 run return run function code:playerdetect/moose/send with storage player_detect http
 execute if score .polish_online playerdetect matches 1 if score .polish_seen playerdetect matches 0 run return run function code:playerdetect/polish/send with storage player_detect http

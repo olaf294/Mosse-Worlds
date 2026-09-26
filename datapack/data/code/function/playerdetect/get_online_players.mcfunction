@@ -34,6 +34,9 @@ execute if data storage player_detect a[{players:["KooriKitsune38"]}] run scoreb
 execute unless data storage player_detect a[{players:["T0rston"]}] run function code:playerdetect/torston/_not_online
 execute if data storage player_detect a[{players:["T0rston"]}] run scoreboard players set .torston_online playerdetect 1
 
+execute unless data storage player_detect a[{players:["Ragebird7200"]}] if loaded 41 70 -4 run setblock 41 70 -4 red_concrete
+execute if data storage player_detect a[{players:["Ragebird7200"]}] if loaded 41 70 -4 run setblock 41 70 -4 lime_concrete
+
 function code:playerdetect/grant_advancements
 function code:playerdetect/send_webhooks
 function code:playerdetect/notify_online

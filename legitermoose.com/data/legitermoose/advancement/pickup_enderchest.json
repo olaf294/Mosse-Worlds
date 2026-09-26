@@ -1,6 +1,6 @@
 {
 	"criteria": {
-		"": {
+		"a": {
 			"trigger": "inventory_changed",
 			"conditions": {
 				"items": [

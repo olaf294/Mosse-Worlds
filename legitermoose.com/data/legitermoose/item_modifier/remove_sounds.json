@@ -1,7 +1,7 @@
 {
     "type":"set_components",
     "components": {
-        "minecraft:consumable": {
+        "consumable": {
             "sound": "minecraft:intentionally_empty"
         }
     }

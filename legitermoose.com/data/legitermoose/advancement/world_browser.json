@@ -1,6 +1,6 @@
 {
     "criteria": {
-        "": {
+        "a": {
             "trigger": "using_item",
             "conditions": {
                 "item": {

@@ -16,7 +16,7 @@ execute if score .time_add time matches 20 run scoreboard players set .time_add 
 execute unless loaded 0 64 0 run return fail
 
 # the room below the stairs
-execute as @a[x=0,y=64,z=-45.0,dx=0,dy=1,dz=0,tag=is_admin] at @s run tp @s 0 64 -47
+execute as @a[tag=is_admin,x=0,y=64,z=-45.0,dx=0,dy=1,dz=0] at @s run tp @s 0 64 -47
 execute as @a[tag=!legitermoose.is_playing] run function code:browser/tick
 execute if score .globaltimer misc matches 600 run function code:live_vote_count/init
 
