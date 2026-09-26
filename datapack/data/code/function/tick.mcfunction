@@ -1,6 +1,5 @@
 execute as @a unless score @s id matches -2147483648..2147483647 run function code:_id
 
-function code:realtime/set
 execute as @a run function code:misc/triggers
 function code:offline_time/leave_detect/tick
 
@@ -10,7 +9,7 @@ execute if score .globaltimer misc matches 1200 run function code:playerdetect/i
 execute if score .globaltimer misc matches 1300.. run scoreboard players set .globaltimer misc 0
 
 scoreboard players add .time_add time 1
-execute if score .time_add time matches 20 run scoreboard players add .time time 1
+execute if score .time_add time matches 20 run function code:realtime/set
 execute if score .time_add time matches 20 run scoreboard players set .time_add time 0
 
 # Optimize if not loaded
@@ -27,11 +26,7 @@ execute positioned 0 65 4 if block 0 65 4 polished_blackstone_button[powered=tru
 # Random World, Good World, API Version, Jam World Buttons
 execute if block 0 65 5 stone_button[powered=true] run function code:random_world/get
 execute if block -2 65 5 polished_blackstone_button[powered=true] run function code:good_world/init
-
-# Version Info Button
 execute if block 2 65 5 stone_button[powered=true] run function code:api_version/get
-
-# Jam World
 execute if block -19 65 -7 polished_blackstone_button[powered=true] run function code:jam/init
 
 # discord interaction

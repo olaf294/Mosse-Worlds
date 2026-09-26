@@ -1,1 +1,1 @@
-http callback code:good_world/get store api good_world send 'https://api.legiti.dev/v4/worlds/random?project=votes,visits,raw_name,version,world_uuid&limit=5' GET
+http callback code:good_world/get store api good_world send 'https://api.legiti.dev/v4/worlds/random?project=votes,visits,raw_name,version,world_uuid&limit=15' GET

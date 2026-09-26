@@ -1,5 +1,7 @@
 # Get Time
 #execute as @p store result score .time time run data get entity @s bukkit.lastPlayed .001
+# Add 1 second
+scoreboard players add .time time 1
 
 # Get seconds from Midnight
 scoreboard players operation .seconds_midnight time = .time time

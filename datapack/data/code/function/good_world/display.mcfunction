@@ -5,6 +5,7 @@ $tellraw @a[tag=!info,distance=..10] [{text:"Rᴀɴᴅᴏᴍ GOOD Wᴏʀʟᴅ: C
 # Calculate Ratio
 data modify storage api math set compute default float {type:div,left:{type:storage,storage:api,path:"temp.votes"},right:{type:storage,storage:api,path:"temp.visits"}}
 data modify storage api math set string storage api math 0 -1
+data modify storage api math set string storage api math 0 6
 
 $execute unless data storage api {good_world:{version:"26.3"}} run return run tellraw @a[tag=info,distance=..10] [{text:"Rᴀɴᴅᴏᴍ GOOD Wᴏʀʟᴅ: Cʟɪᴄᴋ ",color:green,click_event:{action:"run_command",command:"/world $(world_uuid)"},hover_event:{action:"show_text",value:{text:"Wᴏʀʟᴅ UUID: $(world_uuid)",color:green}}},{text:"[HERE]",color:gold},{text:" ᴛᴏ ᴘʟᴀʏ.\n  ",color:green},{storage:api,nbt:"temp.raw_name",interpret:1b},{text:"\n  Vᴇʀꜱɪᴏɴ: ",color:"#888888"},{storage:api,nbt:"temp.version",color:yellow,interpret:1b},"\n  ",{storage:api,nbt:"temp.votes",plain:1b,color:green},{text:" ᴠᴏᴛᴇꜱ, ",color:gray},{storage:api,nbt:"temp.visits",plain:1b,color:green},{text:" ᴠɪꜱɪᴛꜱ",color:gray},{text:" (ʀᴀᴛɪᴏ: ",color:gray},{storage:"api",nbt:"math",color:green,interpret:1b},{text:")",color:gray}]
 

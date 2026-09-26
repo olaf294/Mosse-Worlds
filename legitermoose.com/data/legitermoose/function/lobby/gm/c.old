@@ -11,7 +11,7 @@ gamemode creative @s
 
 tellraw @s {translate:"gameMode.changed",with:[{translate:"gameMode.creative"}]}
 
-execute at @s run playsound minecraft:entity.wither.death master @s ~ ~ ~ 1 1
+execute at @s run playsound entity.wither.death master @s ~ ~ ~ 1 1
 
 scoreboard players reset @s legitermoose.gmc_time
 

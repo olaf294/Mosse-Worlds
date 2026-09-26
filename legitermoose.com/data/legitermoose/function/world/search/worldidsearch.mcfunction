@@ -1,2 +1,2 @@
 scoreboard players enable @s world
-dialog show @s {type:"minecraft:notice",title:"Search by: World ID",inputs:[{type:"minecraft:text",key:"id",width:100,label:{text:"Enter World ID"},label_visible:1b,max_length:10}],can_close_with_escape:1b,pause:0b,after_action:"close",action:{label:"Find Worlds!",action:{type:"minecraft:dynamic/run_command",template:"trigger world set 0$(id)"}}}
+dialog show @s {type:notice,title:"Search by: World ID",inputs:[{type:text,key:"id",width:100,label:{text:"Enter World ID"},label_visible:1b,max_length:10}],can_close_with_escape:1b,pause:0b,after_action:"close",action:{label:"Find Worlds!",action:{type:"dynamic/run_command",template:"trigger world set 0$(id)"}}}

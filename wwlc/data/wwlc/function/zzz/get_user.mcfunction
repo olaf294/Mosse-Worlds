@@ -1,1 +1,0 @@
-$http headers value {"Content-Type": "application/json"} store wwlc:http_response UserResponse send "wwlc.legiti.dev/api/user/$(plain)" GET

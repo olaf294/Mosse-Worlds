@@ -1,4 +1,4 @@
-execute store result score .len_list misc run data get storage minecraft:playerlist prev_tick
+execute store result score .len_list misc run data get storage playerlist prev_tick
 execute if score .len_list misc matches 0 run return fail
 
 data modify storage playerlist current_player set from storage playerlist prev_tick[-1]
