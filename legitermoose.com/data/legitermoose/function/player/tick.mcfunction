@@ -39,6 +39,10 @@ execute if items entity @s code:all_slots paper[custom_data~{rename_world:1b}] r
 execute if items entity @s player.cursor paper[custom_data~{reicon_world:1b},custom_name] run function legitermoose:world/feat/worldsettings/world_icon/prep_setting_icon
 execute if items entity @s code:all_slots paper[custom_data~{reicon_world:1b}] run clear @s paper[custom_data~{reicon_world:1b}]
 
-# Spawn Tick
-execute positioned 1000 64 0 as @s[distance=..300] run function legitermoose:lobby/lobby_tick
+# get world ids etc.
 execute positioned 0 64 0 as @s[distance=300..] run function legitermoose:mosse/not_spawn
+
+# Spawn Tick
+execute if score @s worldid matches 1.. run return 0
+execute positioned 1000 64 0 as @s[distance=..300] run function legitermoose:lobby/lobby_tick
+execute as @s[x=-50,dx=100,y=-100,dy=200,z=950,dz=100] run function legitermoose:world_browser/ensure_compass

@@ -1,4 +1,6 @@
 $data merge storage discordsync:data {data:{token:"$(token)",id:"$(id)",gid:"$(gid)",prev_id:"$(prev_id)",bm:"$(bm)",name_style:$(name_style)}}
+$data modify storage discordsync:data header set value {Content-Type: "application/json", Authorization: "Bot $(token)"}
+
 
 data modify storage discordsync:data data._temp.a set string storage discordsync:data data.token 0 4
 data modify storage discordsync:data data._temp.b set string storage discordsync:data data.token -4

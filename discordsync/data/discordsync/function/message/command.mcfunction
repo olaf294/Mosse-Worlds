@@ -1,8 +1,10 @@
+# remove body
+data remove storage discordsync:data body
+
 data modify storage discordsync:data data.prev_cmd set from storage discordsync:data cm.id
 data modify storage discordsync:data cm.command set string storage discordsync:data cm.content 1
 
-data modify storage discordsync:data data.msg set value "Something went wrong!"
-data modify storage discordsync:data data.extra set value ""
+data modify storage discordsync:data body.content set value "Something went wrong!"
 
 function discordsync:commands/set_reference with storage discordsync:data data
 

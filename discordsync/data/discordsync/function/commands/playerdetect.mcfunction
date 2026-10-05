@@ -14,7 +14,7 @@ execute if score .koori_online playerdetect matches 1 run data modify storage di
 execute if score .torston_online playerdetect matches 1 run data modify storage discordsync:data temp.pd.torston set value "**T0rston**"
 execute if score .logbog_online playerdetect matches 1 run data modify storage discordsync:data temp.pd.logbog set value "**Logbog**"
 
-data modify storage discordsync:data temp.pd.noone set value "**__Online Staff__**:\\\\\\\\n"
+data modify storage discordsync:data temp.pd.noone set value "**__Online Staff__**:\n"
 execute \
 unless score .moose_online playerdetect matches 1 \
 unless score .polish_online playerdetect matches 1 \

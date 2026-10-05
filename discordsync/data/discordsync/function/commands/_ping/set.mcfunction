@@ -1,1 +1,1 @@
-$data modify storage discordsync:data data.msg set value "Pong! Latency: *$(d)ms*"
+$data modify storage discordsync:data body.content set value "Pong! Latency: *$(d)ms*"

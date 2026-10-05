@@ -1,1 +1,0 @@
-function discordsync:fetch/bot_data with storage discordsync:data data

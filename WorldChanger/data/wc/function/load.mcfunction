@@ -31,5 +31,5 @@ scoreboard objectives add wc.undo trigger {text:"« Uɴᴅᴏ Oᴘᴇʀᴀᴛɪ�
 
 gamerule max_block_modifications 1000000
 
-gamerule max_command_forks 65536
-gamerule max_command_sequence_length 65536
+gamerule max_command_forks 1048576
+gamerule max_command_sequence_length 1048576

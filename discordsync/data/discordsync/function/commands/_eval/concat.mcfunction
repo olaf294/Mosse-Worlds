@@ -1,0 +1,1 @@
+$data modify storage discordsync:data body.content set value "Ran command \\\"`/$(a)`\\\".\nOutput: `$(b)`"

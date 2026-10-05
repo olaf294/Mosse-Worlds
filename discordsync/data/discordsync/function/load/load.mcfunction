@@ -1,0 +1,1 @@
+http store discordsync:data application headers storage discordsync:data header callback discordsync:load/load_callback send "https://discord.com/api/v10/applications/@me" GET

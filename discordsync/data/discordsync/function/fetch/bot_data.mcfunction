@@ -1,1 +1,0 @@
-$http store discordsync:data application headers value {Content-Type: "application/json", Authorization: "Bot $(token)"} callback discordsync:load/load_callback send "https://discord.com/api/v10/applications/@me" GET

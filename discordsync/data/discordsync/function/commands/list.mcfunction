@@ -9,5 +9,5 @@ execute if data storage discordsync:data temp.list[0] unless data storage discor
 
 # if more are online
 function code:listall_test/test
-data modify storage discordsync:data data.msg set from storage listall:temp players
+data modify storage discordsync:data body.content set from storage listall:temp players
 function discordsync:message/send with storage discordsync:data data
