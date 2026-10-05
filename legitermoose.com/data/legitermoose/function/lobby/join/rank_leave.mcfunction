@@ -3,15 +3,17 @@ function legitermoose:mosse/enter_spawn
 # Get Name
 function legitermoose:util/get_name
 
-data merge entity @s[tag=!is_admin] {abilities:{mayfly:0b,flying:0b}}
+data modify entity @s[tag=!is_admin] abilities.mayfly set value 0b
+data modify entity @s[tag=!is_admin] abilities.flying set value 0b
+
 function legitermoose:triggers/reset/lobby
 
 # Special Players
-execute if entity @s[name=Legitermoose] run tellraw @a[tag=legitermoose.is_playing] [{text:"[",color:gray},{text:"↓",color:yellow},{text:"] ",color:gray},\
+#execute if entity @s[name=Legitermoose] run tellraw @a[tag=legitermoose.is_playing] [{text:"[",color:gray},{text:"↓",color:yellow},{text:"] ",color:gray},\
 {text:"ᴍᴏᴏꜱᴇ ",color:"#FF00FF"},{text:"| ",color:dark_gray},{text:"L",color:"#FF2050"},{text:"e",color:"#FF2160"},{text:"g",color:"#FF2370"},{text:"i",color:"#FF2480"},{text:"t",color:"#FF2690"},\
 {text:"e",color:"#FF27A0"},{text:"r",color:"#FF29AF"},{text:"m",color:"#FF2ABF"},{text:"o",color:"#FF2CCF"},{text:"o",color:"#FF2DDF"},{text:"s",color:"#FF2FEF"},{text:"e",color:"#FF30FF"}]
 
-execute if entity @s[name=Legitermoose] run return run tellraw @a[tag=!legitermoose.is_playing] [{text:"[",color:gray},{text:"↓",color:green},{text:"] ",color:gray},\
+#execute if entity @s[name=Legitermoose] run return run tellraw @a[tag=!legitermoose.is_playing] [{text:"[",color:gray},{text:"↓",color:green},{text:"] ",color:gray},\
 {text:"ᴍᴏᴏꜱᴇ ",color:"#FF00FF"},{text:"| ",color:dark_gray},{text:"L",color:"#FF2050"},{text:"e",color:"#FF2160"},{text:"g",color:"#FF2370"},{text:"i",color:"#FF2480"},{text:"t",color:"#FF2690"},\
 {text:"e",color:"#FF27A0"},{text:"r",color:"#FF29AF"},{text:"m",color:"#FF2ABF"},{text:"o",color:"#FF2CCF"},{text:"o",color:"#FF2DDF"},{text:"s",color:"#FF2FEF"},{text:"e",color:"#FF30FF"}]
 

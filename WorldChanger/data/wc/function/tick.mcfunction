@@ -18,6 +18,12 @@ scoreboard players enable @a[gamemode=creative] wc.2
 execute as @a[scores={wc.2=1..}] at @s run function wc:wand/private/get_pos/2
 scoreboard players reset @a[scores={wc.2=1..}] wc.2
 
+scoreboard players enable @a[gamemode=creative] wc.undo
+execute store result storage wc:undo temp.id int 1 run scoreboard players get @p[scores={wc.undo=1..}] wc.undo_id
+execute as @a[scores={wc.undo=1..}] run function wc:wand/private/undo/load_undo/start with storage wc:undo temp
+scoreboard players reset @a[scores={wc.undo=1..}] wc.undo
+
 scoreboard players reset @a[gamemode=!creative] wc.wand
+scoreboard players reset @a[gamemode=!creative] wc.undo
 scoreboard players reset @a[gamemode=!creative] wc.1
 scoreboard players reset @a[gamemode=!creative] wc.2

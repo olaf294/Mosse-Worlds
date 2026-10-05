@@ -15,7 +15,7 @@ $tellraw @a [{storage:"legitermoose:temp",nbt:playername,interpret:1b,color:yell
 
 tp @s 0 64 0 0 8
 gamemode adventure @s
-clear @s
+item fill entity @s code:all_slots with air
 scoreboard players reset @s legitermoose.rank
 scoreboard players reset @s legitermoose.gamemode
 $tellraw @s [{text:"Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ʙᴀɴɴᴇᴅ.\nRᴇᴀꜱᴏɴ: ",color:red},"$(reason)"]

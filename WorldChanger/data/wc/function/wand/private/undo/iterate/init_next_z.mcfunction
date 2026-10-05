@@ -1,0 +1,1 @@
+$execute positioned ~ ~-$(y) ~1 run function wc:wand/private/undo/iterate/next_z

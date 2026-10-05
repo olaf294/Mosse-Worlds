@@ -21,5 +21,5 @@ function legitermoose:lobby/join/to_array/init
 
 execute as @s[tag=is_am,tag=!is_fm] run return run function legitermoose:lobby/join/rank/am
 execute as @s[tag=is_fm,tag=!is_fm2] run return run function legitermoose:lobby/join/rank/fm
-execute if entity @s[tag=is_fm2,tag=!is_xm] run return run function legitermoose:lobby/join/rank/fm2
-execute if entity @s[tag=is_xm] run return run function legitermoose:lobby/join/rank/xm
+execute as @s[tag=is_fm2,tag=!is_xm] run return run function legitermoose:lobby/join/rank/fm2
+execute as @s[tag=is_xm] run return run function legitermoose:lobby/join/rank/xm

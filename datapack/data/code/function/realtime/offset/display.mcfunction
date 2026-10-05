@@ -33,5 +33,5 @@ tellraw @s [{text:"\n    ᴜᴘᴅᴀᴛᴇ ᴄʟᴏᴄᴋ ᴏꜰꜰꜱᴇᴛ",c
 
 scoreboard players set @s offset 0
 
-execute if entity @s[tag=m_offs] run scoreboard players operation @s p_offset_h *= -1 numbers
+scoreboard players operation @s[tag=m_offs] p_offset_h *= -1 numbers
 tag @s remove m_offs

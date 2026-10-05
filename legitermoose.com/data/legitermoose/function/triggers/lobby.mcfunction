@@ -7,16 +7,10 @@ tellraw @s [{text:"Wᴇʟᴄᴏᴍᴇ ᴛᴏ ",color:gold},{text:"ʟᴇɢɪᴛ�
 
 execute unless entity @s[tag=legitermoose.is_playing] run function legitermoose:lobby/join/rank_join
 
-#execute if entity @s[tag=legitermoose.lobby.gmsp] run gamemode spectator @s
-#execute if entity @s[tag=legitermoose.lobby.gmc] run gamemode creative @s
-#execute if entity @s[tag=legitermoose.lobby.gms] run gamemode survival @s
-#execute if entity @s[tag=legitermoose.lobby.gma] run gamemode adventure @s
-
 scoreboard players add .visits legitermoose.misc 1
 
-clear @s *
+item fill entity @s code:all_slots with air
 effect clear @s
-item replace entity @s player.cursor with air
 
 team join player @s[team=z_spawn]
 

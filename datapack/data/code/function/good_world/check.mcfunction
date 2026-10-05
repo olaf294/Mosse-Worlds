@@ -1,7 +1,9 @@
 # Banned Worlds
-    #execute if data storage api {good_world:{world_uuid:"<banned uuid>"}} run return fail
+execute store result score .is_blacklisted misc run function code:good_world/blacklist/check with storage api temp
+execute if score .is_blacklisted misc matches 1 run tellraw olaf_294 [{text:"⚠ ",color:red},{text:"Wᴏʀʟᴅ ᴡɪᴛʜ ID '",color:white},{storage:api,nbt:"temp.world_uuid",interpret:1b,color:yellow},{text:"' ʜᴀꜱ ʙᴇᴇɴ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ.",color:white}]
+execute if score .is_blacklisted misc matches 2 run tellraw olaf_294 [{text:"⚠ ",color:red},{text:"Oᴡɴᴇʀ ᴡɪᴛʜ ID '",color:white},{storage:api,nbt:"temp.owner_uuid",interpret:1b,color:yellow},{text:"' ʜᴀꜱ ʙᴇᴇɴ ʙʟᴀᴄᴋʟɪꜱᴛᴇᴅ.",color:white}]
+execute if score .is_blacklisted misc matches 1..2 run return 0
 
-# Banned Players
     #execute if data storage api {good_world:{owner_uuid:"<banned uuid>"}} run return fail
 
 # Store values in score

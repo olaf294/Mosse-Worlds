@@ -1,9 +1,8 @@
 # Get Position
-summon marker ~ ~ ~ {Tags:["wc.pos2.temp"]}
-execute store result score @s wc.pos2_x run data get entity @n[type=marker,tag=wc.pos2.temp] Pos[0]
-execute store result score @s wc.pos2_y run data get entity @n[type=marker,tag=wc.pos2.temp] Pos[1]
-execute store result score @s wc.pos2_z run data get entity @n[type=marker,tag=wc.pos2.temp] Pos[2]
-kill @e[type=marker,tag=wc.pos2.temp]
+function wc:wand/private/util/get_pos/current_block
+scoreboard players operation @s wc.pos2_x = .x wc.temp
+scoreboard players operation @s wc.pos2_y = .y wc.temp
+scoreboard players operation @s wc.pos2_z = .z wc.temp
 
 # Get Area
 execute if score @s wc.pos1_x matches -2147483648..2147483647 run function wc:wand/private/calc_area

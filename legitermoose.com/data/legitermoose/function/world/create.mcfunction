@@ -53,13 +53,13 @@ execute if entity @s[tag=is_fm2,tag=!is_xm] run data modify storage legitermoose
 execute if entity @s[tag=is_xm] run data modify storage legitermoose:temp temp.rank set value "xm"
 execute if entity @s[tag=is_xm] run data modify storage legitermoose:temp temp.raw_rank set value [{text:"xᴍ",color:"#ff33ff"},{text:"| ",color:dark_gray}]
 
-# Special Ranks
-execute if entity @s[name=Legitermoose] run data modify storage legitermoose:temp temp.rank set value "moose"
-execute if entity @s[name=PolishKrowa] run data modify storage legitermoose:temp temp.rank set value "admin"
-execute if entity @s[name=Arvelyx] run data modify storage legitermoose:temp temp.rank set value "admin"
-execute if entity @s[name=mmmmmaaaaaxxxxx] run data modify storage legitermoose:temp temp.rank set value "mod"
-execute if entity @s[name=KooriKitsune38] run data modify storage legitermoose:temp temp.rank set value "mod"
-execute if entity @s[name=NobleSkye] run data modify storage legitermoose:temp temp.rank set value "mmo"
+# Special Ranks - discontinued
+#execute if entity @s[name=Legitermoose] run data modify storage legitermoose:temp temp.rank set value "moose"
+#execute if entity @s[name=PolishKrowa] run data modify storage legitermoose:temp temp.rank set value "admin"
+#execute if entity @s[name=Arvelyx] run data modify storage legitermoose:temp temp.rank set value "admin"
+#execute if entity @s[name=mmmmmaaaaaxxxxx] run data modify storage legitermoose:temp temp.rank set value "mod"
+#execute if entity @s[name=KooriKitsune38] run data modify storage legitermoose:temp temp.rank set value "mod"
+#execute if entity @s[name=NobleSkye] run data modify storage legitermoose:temp temp.rank set value "mmo"
 
 
 # Set Icon

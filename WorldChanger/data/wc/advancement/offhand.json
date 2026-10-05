@@ -6,11 +6,11 @@
 				"player": {
 					"type": "entity_properties",
 					"entity": "this",
-					"predicate": {
+					"predicate":{
 						"equipment": {
 							"offhand": {
 								"predicates": {
-									"minecraft:custom_data": {
+									"custom_data": {
 										"wc.wand": true
 									}
 								}

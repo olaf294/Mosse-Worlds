@@ -15,5 +15,6 @@ execute if loaded ~ ~ ~ run inventory @s close
 execute if loaded ~ ~ ~ run tellraw @s {text:"World loaded!",color:green}
 #execute if loaded ~ ~ ~ run scoreboard players reset @s legitermoose.tp
 execute if loaded ~ ~ ~ run setblock ~ 61 ~ test_block[mode=start]
+execute if loaded ~ ~ ~ run tp @s ~ 64 ~
 
 #execute unless loaded ~ ~ ~ run scoreboard players set @s legitermoose.tp 1

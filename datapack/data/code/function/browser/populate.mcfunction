@@ -9,6 +9,7 @@ execute unless data storage a {a:{status_code:200}} run tellraw @a[tag=is_admin,
 
 # Clear the chest
 data remove block -4 64 16 Items
+data modify block -4 64 16 CustomName set value "           ᴡᴏʀʟᴅ ʙʀᴏᴡꜱᴇʀ"
 
 # Get items in array
 scoreboard players set .browser_items misc 0

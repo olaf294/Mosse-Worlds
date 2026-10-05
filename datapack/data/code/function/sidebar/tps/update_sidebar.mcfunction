@@ -8,7 +8,7 @@ execute if score .tps_i tps matches 18.. run return run scoreboard players displ
 [" ",{text:"📶: ",color:"#00aaff"},{score:{name:".total",objective:requests},color:"#00aaff"},{text:" | ",color:dark_gray},\
 {score:{name:".tps_i",objective:tps},color:green},".",{score:{name:".tps_f",objective:tps},color:green},{text:"tps ",color:green}]
 
-execute if score .tps_i tps matches 13..17 run return run scoreboard players display name 6 sidebar \
+execute if score .tps_i tps matches 16..17 run return run scoreboard players display name 6 sidebar \
 [" ",{text:"📶: ",color:"#00aaff"},{score:{name:".total",objective:requests},color:"#00aaff"},{text:" | ",color:dark_gray},\
 {score:{name:".tps_i",objective:tps},color:yellow},".",{score:{name:".tps_f",objective:tps},color:yellow},{text:"tps ",color:yellow}]
 

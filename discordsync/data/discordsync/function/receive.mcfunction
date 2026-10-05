@@ -1,4 +1,4 @@
-execute unless entity @p run return 0
+#execute unless entity @a[limit=1] run return 0
 
 scoreboard players add .total requests 1
 scoreboard players add .discordsync requests 1

@@ -3,4 +3,4 @@ $data modify storage legitermoose:ranks worlds[{id:0}].uuids[{id:$(uuid)}].rank 
 
 tp @s 1000 64 0 90 0
 execute at @s run playsound entity.wither.death master @s ~ ~ ~ 1 1
-clear @s
+item fill entity @s code:all_slots with air

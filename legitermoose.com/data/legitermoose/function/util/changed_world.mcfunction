@@ -1,4 +1,4 @@
-clear @s
+item fill entity @s code:all_slots with air
 effect clear @s
 inventory @s close
 
@@ -19,9 +19,10 @@ data modify storage legitermoose:code code.player_id set value -1
 function legitermoose:world_browser/sort/players/start
 
 
-# merge fly data
+# modify fly data
 function legitermoose:util/perm/world_gm
-execute if score @s legitermoose.rank matches 5..10 run return run data merge entity @s {abilities:{mayfly:1b}}
+execute if score @s legitermoose.rank matches 5..10 run return run data modify entity @s abilities.mayfly set value 1b
 execute if entity @s[tag=is_admin] run return fail
 
-data merge entity @s {abilities:{mayfly:0b,flying:0b}}
+data modify entity @s abilities.mayfly set value 0b
+data modify entity @s abilities.flying set value 0b

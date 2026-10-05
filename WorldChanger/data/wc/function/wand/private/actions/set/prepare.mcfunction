@@ -1,8 +1,4 @@
-execute if score .total_area wc.values > .max_blocks wc.values run return run tellraw @s \
-[{text:"W",color:gold},{text:"C",color:yellow},{text:" » ",color:gray},{text:"Oᴘᴇʀᴀᴛɪᴏɴ ᴇxᴄᴇᴇᴅꜱ ᴍᴀxɪᴍᴜᴍ ʟɪᴍɪᴛ! (",color:red},{score:{name:".total_area",objective:wc.values},color:dark_aqua},{text:"/",color:red},{score:{name:".max_blocks",objective:wc.values},color:aqua},{text:")",color:red}]
-
-execute unless score @s wc.pos1_x matches -2147483648..2147483647 unless score @s wc.pos2_x matches -2147483648..2147483647 run return run tellraw @s \
-[{text:"W",color:gold},{text:"C",color:yellow},{text:" » ",color:gray},{text:"Mᴀᴋᴇ ᴀ ꜱᴇʟᴇᴄᴛɪᴏɴ ꜰɪʀꜱᴛ!",color:red}]
+execute if function wc:wand/private/actions/check_selection run return fail
 
 execute store result storage wc:blocks set.x1 int 1 run scoreboard players get @s wc.pos1_x
 execute store result storage wc:blocks set.y1 int 1 run scoreboard players get @s wc.pos1_y
@@ -15,5 +11,14 @@ execute if items entity @s weapon.offhand * run data modify storage wc:blocks se
 execute if items entity @s weapon.offhand #wc:edgecase_items run function wc:wand/private/actions/set/edgecase_items
 
 execute unless items entity @s weapon.offhand * run data modify storage wc:blocks set.block set value "air"
+
+# Prepare iteration for undo storing
+# Get min and max boundaries
+function wc:wand/private/util/get_pos/min
+function wc:wand/private/util/get_pos/max
+execute store result storage wc:undo temp.min.x int 1 run scoreboard players get .min_x wc.values
+execute store result storage wc:undo temp.min.y int 1 run scoreboard players get .min_y wc.values
+execute store result storage wc:undo temp.min.z int 1 run scoreboard players get .min_z wc.values
+function wc:wand/private/undo/init_iter with storage wc:undo temp.min
 
 function wc:wand/private/actions/set/set_blocks with storage wc:blocks set

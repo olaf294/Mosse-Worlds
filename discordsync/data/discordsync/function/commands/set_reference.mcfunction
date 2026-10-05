@@ -1,0 +1,1 @@
+$data modify storage discordsync:data data.extra set value ",\"message_reference\":{\"message_id\":\"$(prev_cmd)\",\"fail_if_not_exists\":false}"

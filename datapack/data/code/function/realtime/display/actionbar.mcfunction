@@ -42,5 +42,5 @@ title @s actionbar \
 {storage:time,nbt:t.sg,color:yellow,interpret:1b},{storage:time,nbt:t.sh,interpret:1b,color:yellow},{score:{name:"@s",objective:p_offset_h},color:yellow},{text:":",color:yellow},{storage:time,nbt:t.sm,color:yellow,interpret:1b},{score:{name:"@s",objective:p_offset_m},color:yellow},\
 {text:")",color:gold}]
 
-execute if entity @s[tag=m_offs] run scoreboard players operation @s p_offset_h *= -1 numbers
+scoreboard players operation @s[tag=m_offs] p_offset_h *= -1 numbers
 tag @s remove m_offs

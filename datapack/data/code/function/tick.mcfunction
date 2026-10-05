@@ -21,7 +21,7 @@ execute as @a[tag=!legitermoose.is_playing] run function code:browser/tick
 execute if score .globaltimer misc matches 600 run function code:live_vote_count/init
 
 # Mosse Joining
-execute positioned 0 65 4 if block 0 65 4 polished_blackstone_button[powered=true] as @p run function legitermoose:lobby/join_server/pre_check with entity @s
+execute if block 0 65 4 polished_blackstone_button[powered=true] positioned 0 65 4 as @p[distance=..5] run function legitermoose:lobby/join_server/pre_check with entity @s
 
 # Random World, Good World, API Version, Jam World Buttons
 execute if block 0 65 5 stone_button[powered=true] run function code:random_world/get

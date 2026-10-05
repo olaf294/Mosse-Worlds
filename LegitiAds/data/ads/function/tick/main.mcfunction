@@ -1,5 +1,5 @@
 # Run if admins
-execute if entity @a[tag=is_admin] run function ads:tick/trigger
+execute if entity @a[tag=is_admin,limit=1] run function ads:tick/trigger
 scoreboard players reset @a[tag=!is_admin] ads.config
 
 # Ads

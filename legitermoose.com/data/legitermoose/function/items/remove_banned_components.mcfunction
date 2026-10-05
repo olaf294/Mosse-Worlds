@@ -1,11 +1,8 @@
-## Entity Data
-execute if items entity @s [{type:"slot_range",slots:"container.*"},{type:"slot_range",slots:"weapon.offhand"}] *[entity_data~{Pos:[]}] run tellraw @s {text:"Tʜɪꜱ ɪᴛᴇᴍ ᴄᴀɴɴᴏᴛ ʙᴇ ᴜꜱᴇᴅ.",color:dark_red}
-execute if items entity @s [{type:"slot_range",slots:"container.*"},{type:"slot_range",slots:"weapon.offhand"}] *[entity_data~{Pos:[]}] run clear @s *[entity_data~{Pos:[]}]
+execute positioned 1000 64 0 as @s[distance=..300] run function legitermoose:items/no_gma_blocks
 
-## Damage Types
-execute if items entity @s [{type:"slot_range",slots:"container.*"},{type:"slot_range",slots:"weapon.offhand"}] *[damage_type] run tellraw @s {text:"Tʜɪꜱ ɪᴛᴇᴍ ᴄᴀɴɴᴏᴛ ʙᴇ ᴜꜱᴇᴅ.",color:dark_red}
-execute if items entity @s [{type:"slot_range",slots:"container.*"},{type:"slot_range",slots:"weapon.offhand"}] *[damage_type] run clear @s *[damage_type]
+## Entity Data, Damage Type
+execute if items entity @s code:all_slots *[entity_data~{Pos:[]} | damage_type] at @s run function legitermoose:items/clear/banned_components
 
 ## Generic clears
-execute if items entity @s [{type:"slot_range",slots:"container.*"},{type:"slot_range",slots:"weapon.offhand"}] #legitermoose:forbidden_items run clear @s #legitermoose:forbidden_items
-execute if items entity @s[scores={worldid=0}] [{type:"slot_range",slots:"container.*"},{type:"slot_range",slots:"weapon.offhand"}] #legitermoose:lobby_forbidden_items run clear @s #legitermoose:lobby_forbidden_items
+execute if items entity @s code:all_slots #legitermoose:forbidden_items run function legitermoose:items/clear/world_forbidden
+execute if items entity @s[scores={worldid=0}] code:all_slots #legitermoose:lobby_forbidden_items run function legitermoose:items/clear/lobby_forbidden

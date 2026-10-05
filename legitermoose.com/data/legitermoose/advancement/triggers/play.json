@@ -5,7 +5,7 @@
 			"conditions": {
 				"entity": {
 					"type": "entity_properties",
-					"entity": "target_entity",
+					"entity": "this",
 					"predicate": {
 						"entity_tags": {
 							"any_of": [
@@ -21,7 +21,7 @@
 			"conditions": {
 				"entity": {
 					"type": "entity_properties",
-					"entity": "target_entity",
+					"entity": "this",
 					"predicate": {
 						"entity_tags": {
 							"any_of": [

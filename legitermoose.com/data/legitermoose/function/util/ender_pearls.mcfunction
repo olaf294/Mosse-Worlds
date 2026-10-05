@@ -6,5 +6,6 @@ execute store result score .add legitermoose.temp run data get entity @s Motion[
 execute if score .add legitermoose.temp matches ..-1 run scoreboard players operation .add legitermoose.temp *= -1 numbers
 scoreboard players operation @s legitermoose.temp += .add legitermoose.temp
 
-execute if score @s legitermoose.temp matches 20.. run scoreboard players reset @s
+# add type check to not accidentally reset your scores
+execute if score @s legitermoose.temp matches 20.. run scoreboard players reset @s[type=ender_pearl]
 execute if score @s legitermoose.temp matches 20.. run kill @s
