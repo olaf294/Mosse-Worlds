@@ -1,14 +1,14 @@
 {
-	"parent": "code:playerdetect",
+	"parent": "code:playerdetect/roots/mods",
 	"display": {
 		"icon": {
 			"id": "player_head",
             "components": {
-                "profile": "mmmmmaaaaaxxxxx"
+                "profile": "hablethedev"
             }
 		},
-		"title": "Max is online!",
-		"description": "Be online while mmmmmaaaaaxxxxx is on the server.",
+		"title": "Hazel is online!",
+		"description": "Be online while hablethedev is on the server.",
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true

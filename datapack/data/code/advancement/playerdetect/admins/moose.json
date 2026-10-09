@@ -1,14 +1,14 @@
 {
-	"parent": "code:playerdetect",
+	"parent": "code:playerdetect/roots/admins",
 	"display": {
 		"icon": {
 			"id": "player_head",
             "components": {
-                "profile": "Arvelyx"
+                "profile": "Legitermoose"
             }
 		},
-		"title": "Arvelyx is online!",
-		"description": "Be online while Arvelyx is on the server.",
+		"title": "Moose is online!",
+		"description": "Be online while Legitermoose is on the server.",
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true

@@ -1,14 +1,14 @@
 {
-	"parent": "code:playerdetect",
+	"parent": "code:playerdetect/roots/admins",
 	"display": {
 		"icon": {
 			"id": "player_head",
             "components": {
-                "profile": "Logbog"
+                "profile": "PolishKrowa"
             }
 		},
-		"title": "Logbog is online!",
-		"description": "Be online while Logbog is on the server.\n\nThis advancement is probably imposible.",
+		"title": "Polish is online!",
+		"description": "Be online while PolishKrowa is on the server.",
 		"frame": "challenge",
 		"show_toast": true,
 		"announce_to_chat": true

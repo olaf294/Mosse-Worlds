@@ -31,11 +31,17 @@ execute if data storage player_detect a[{players:["mmmmmaaaaaxxxxx"]}] run score
 execute unless data storage player_detect a[{players:["KooriKitsune38"]}] run function code:playerdetect/koori/_not_online
 execute if data storage player_detect a[{players:["KooriKitsune38"]}] run scoreboard players set .koori_online playerdetect 1
 
+execute unless data storage player_detect a[{players:["CJF1"]}] run function code:playerdetect/cjf/_not_online
+execute if data storage player_detect a[{players:["CJF1"]}] run scoreboard players set .cjf_online playerdetect 1
+
+execute unless data storage player_detect a[{players:["hablethedev"]}] run function code:playerdetect/hazel/_not_online
+execute if data storage player_detect a[{players:["hablethedev"]}] run scoreboard players set .hazel_online playerdetect 1
+
 execute unless data storage player_detect a[{players:["T0rston"]}] run function code:playerdetect/torston/_not_online
 execute if data storage player_detect a[{players:["T0rston"]}] run scoreboard players set .torston_online playerdetect 1
 
-execute unless data storage player_detect a[{players:["Ragebird7200"]}] if loaded 41 70 -4 run setblock 41 70 -4 red_concrete
-execute if data storage player_detect a[{players:["Ragebird7200"]}] if loaded 41 70 -4 run setblock 41 70 -4 lime_concrete
+execute unless data storage player_detect a[{players:["Ragebird7200"]}] if loaded 41 70 35 run setblock 41 70 35 red_concrete
+execute if data storage player_detect a[{players:["Ragebird7200"]}] if loaded 41 70 35 run setblock 41 70 35 lime_concrete
 
 function code:playerdetect/grant_advancements
 function code:playerdetect/send_webhooks

@@ -4,4 +4,6 @@ execute if score .polish_online playerdetect matches 1 run function code:playerd
 execute if score .arvelyx_online playerdetect matches 1 run function code:playerdetect/arvelyx/online
 execute if score .max_online playerdetect matches 1 run function code:playerdetect/max/online
 execute if score .koori_online playerdetect matches 1 run function code:playerdetect/koori/online
+execute if score .cjf_online playerdetect matches 1 run function code:playerdetect/cjf/online
+execute if score .hazel_online playerdetect matches 1 run function code:playerdetect/hazel/online
 execute if score .torston_online playerdetect matches 1 run function code:playerdetect/torston/online

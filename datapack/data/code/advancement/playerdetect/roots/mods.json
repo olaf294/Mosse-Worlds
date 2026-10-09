@@ -1,0 +1,18 @@
+{
+	"parent": "code:playerdetect",
+	"display": {
+		"icon": {
+			"id": "lime_concrete"
+		},
+		"title": "Mods",
+		"description": "These players just exist. Maybe ask them for GMC in lobby.",
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"a": {
+			"trigger": "impossible"
+		}
+	}
+}

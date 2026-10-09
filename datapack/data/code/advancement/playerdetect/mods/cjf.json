@@ -1,17 +1,17 @@
 {
-	"parent": "code:playerdetect",
+	"parent": "code:playerdetect/roots/mods",
 	"display": {
 		"icon": {
 			"id": "player_head",
             "components": {
-                "profile": "PolishKrowa"
+                "profile": "CJF1"
             }
 		},
-		"title": "Polish is online!",
-		"description": "Be online while PolishKrowa is on the server.",
+		"title": "CJF1 is online!",
+		"description": "Be online while CJF1 is on the server.",
 		"frame": "challenge",
 		"show_toast": true,
-		"announce_to_chat": false
+		"announce_to_chat": true
 	},
 	"criteria": {
 		"a": {

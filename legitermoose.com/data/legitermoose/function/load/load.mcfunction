@@ -51,6 +51,10 @@ team add M_mood {text:"ᴍᴏᴏᴅ",color:"#1fff0f"}
 team modify M_mood color white
 team modify M_mood prefix [{text:"ᴍᴏᴏᴅ",color:"#1fff0f"},{text:" | ",color:gray}]
 
+team add Mz_mold {text:"ᴍᴏʟᴅ",color:"#82A67D"}
+team modify Mz_mold color white
+team modify Mz_mold prefix [{text:"ᴍᴏʟᴅ",color:"#82A67D"},{text:" | ",color:gray}]
+
 
 tellraw @a[tag=is_admin] [{text:"ʟᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ.ᴄᴏᴍ ʟᴏᴀᴅᴇᴅ!",color:gray}]
 

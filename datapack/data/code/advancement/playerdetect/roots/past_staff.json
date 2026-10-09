@@ -1,0 +1,18 @@
+{
+	"parent": "code:playerdetect",
+	"display": {
+		"icon": {
+			"id": "clock"
+		},
+		"title": "Past staff",
+		"description": "These players are no longer staff and have (more or less) quit the server.",
+		"frame": "task",
+		"show_toast": false,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"a": {
+			"trigger": "impossible"
+		}
+	}
+}

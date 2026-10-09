@@ -1,4 +1,4 @@
-execute positioned 40 69 -12 run tellraw @a[distance=..12] [ {text:"T0ʀꜱᴛᴏɴ ɪꜱ ᴏɴʟɪɴᴇ.\n",color:green},{text:"Wᴏʀʟᴅ: ",color:gray},{storage:player_detect,nbt:'a[{players:["T0rston"]}].world',interpret:1b,color:green}]
+execute positioned 40 69 4 run tellraw @a[distance=..12] [ {text:"T0ʀꜱᴛᴏɴ ɪꜱ ᴏɴʟɪɴᴇ.\n",color:green},{text:"Wᴏʀʟᴅ: ",color:gray},{storage:player_detect,nbt:'a[{players:["T0rston"]}].world',interpret:1b,color:green}]
 
 data modify entity @e[type=text_display,tag=torston_status,limit=1] text.extra[1].text set value "ᴏɴʟɪɴᴇ"
 data modify entity @e[type=text_display,tag=torston_status,limit=1] text.extra[1].color set value "green"
