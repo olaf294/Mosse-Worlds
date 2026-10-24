@@ -8,3 +8,5 @@ data modify entity @e[type=text_display,tag=moss_status,limit=1] text.extra[1].c
 
 data modify entity @e[type=text_display,tag=moss_world,limit=1] text.extra[0] set value {text:"",color:"dark_gray"}
 data modify entity @e[type=text_display,tag=moss_world,limit=1] text.text set value "Lᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ ɪꜱ ɴᴏᴛ ᴏɴʟɪɴᴇ"
+
+execute if loaded 12 65 -18 run fill 12 65 -18 12 67 -12 red_nether_bricks strict

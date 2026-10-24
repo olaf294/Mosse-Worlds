@@ -43,6 +43,10 @@ execute if data storage player_detect a[{players:["T0rston"]}] run scoreboard pl
 execute unless data storage player_detect a[{players:["Ragebird7200"]}] if loaded 41 70 35 run setblock 41 70 35 red_concrete
 execute if data storage player_detect a[{players:["Ragebird7200"]}] if loaded 41 70 35 run setblock 41 70 35 lime_concrete
 
+execute unless data storage player_detect a[{players:["sea4_18"]}] if loaded 41 70 28 run setblock 41 70 28 red_concrete
+execute if data storage player_detect a[{players:["sea4_18"]}] if loaded 41 70 28 run setblock 41 70 28 lime_concrete
+
+
 function code:playerdetect/grant_advancements
 function code:playerdetect/send_webhooks
 function code:playerdetect/notify_online

@@ -12,6 +12,7 @@ execute as @e[type=mannequin,tag=legitermoose.spawn,limit=2] at @s unless entity
 
 ## Entity Rules
 kill @e[type=#legitermoose:forbidden_entities]
+kill @e[type=#legitermoose:lobby_forbidden_entities,x=900,dx=200,y=-100,dy=500,z=-100,dz=200]
 execute as @e[type=item] run function legitermoose:items/item_entity/check
 execute as @e[type=ender_pearl] run function legitermoose:util/ender_pearls
 

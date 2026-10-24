@@ -1,0 +1,2 @@
+loot replace entity e-0-0-0-e armor.head loot {type:generic,pools:[{rolls:1,entries:[{type:item,name:player_head,modifier:{type:fill_player_head,entity:this}}]}]}
+data modify storage discordsync:data temp.name set from entity e-0-0-0-e equipment.head.components.minecraft:profile.name

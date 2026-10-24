@@ -1,0 +1,10 @@
+{
+    "pack": {
+        "description": [
+            {"text":"DiscordSync Add-Ons\n","color":"#7070ff"},
+            {"text":"Mosse Worlds specific code for DiscordSync.","color":"aqua"}
+        ],
+        "min_format": [121,0],
+        "max_format":  121
+    }
+}

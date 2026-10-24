@@ -1,3 +1,13 @@
+## Message Processing
+function discordsync:message/process_style
+
+
+## Return if user is muted
+$execute if data storage discordsync:data muted[{id:"$(id)"}] run return run tellraw @a[tag=is_admin] [{text:"  ",hover_event:{action:show_text,value:[{storage:"discordsync:data",nbt:"cm.time",interpret:1b,color:gray},{text:" UTC",color:gray}]}},\
+ {text:"» ",color:dark_gray}, {text:"‹",color:"#3030aa"},{text:"@",color:"#6666aa"},{storage:"discordsync:data",nbt:"cm.name",interpret:1b,color:"#6666aa"},{text:"› ",color:"#3030aa"},\
+ {storage:"discordsync:data",nbt:cm.att,interpret:1b},{storage:"discordsync:data",nbt:cm.ment,interpret:1b},{storage:"discordsync:data",nbt:"cm.content",interpret:1b,color:"#888888"}]
+
+
 ## Style 1 - Modern
 tellraw @a[scores={ds.style=1}] \
 [{text:"  ",hover_event:{action:show_text,value:[{storage:"discordsync:data",nbt:"cm.time",interpret:1b,color:gray},{text:" UTC",color:gray},\

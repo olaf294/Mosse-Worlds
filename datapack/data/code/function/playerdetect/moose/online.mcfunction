@@ -6,3 +6,5 @@ data modify entity @e[type=text_display,tag=moss_status,limit=1] text.extra[1].c
 data modify entity @e[type=text_display,tag=moss_world,limit=1] text.text set value "Lᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ ɪꜱ ɪɴ "
 data modify entity @e[type=text_display,tag=moss_world,limit=1] text.extra[0] set from storage player_detect a[{players:["Legitermoose"]}].world
 execute if data storage player_detect a[{players:["Legitermoose"],world:"lobby"}] run data modify entity @e[type=text_display,tag=moss_world,limit=1] text.extra[0] set value {text:"Lᴏʙʙʏ",color:gold}
+
+execute if loaded 12 65 -18 run fill 12 65 -18 12 67 -12 green_concrete_powder strict

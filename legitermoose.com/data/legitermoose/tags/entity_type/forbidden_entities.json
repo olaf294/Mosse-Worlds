@@ -1,14 +1,11 @@
 {
     "values": [
-        "splash_potion",
-        "lingering_potion",
         "command_block_minecart",
         "spawner_minecart",
         "tnt_minecart",
         "tnt",
         "end_crystal",
         "fireball",
-        "area_effect_cloud",
         "wither",
         "ender_dragon"
     ]

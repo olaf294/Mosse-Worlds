@@ -30,5 +30,5 @@ unless score .hazel_online playerdetect matches 1 \
 unless score .torston_online playerdetect matches 1 \
 unless score .logbog_online playerdetect matches 1 run data modify storage discordsync:data temp.pd.noone set value "**No staff members are online at the moment.**"
 
-function discordsync:commands/_pd/set_message with storage discordsync:data temp.pd
+function ds-addons:commands/_pd/set_message with storage discordsync:data temp.pd
 function discordsync:message/send with storage discordsync:data data

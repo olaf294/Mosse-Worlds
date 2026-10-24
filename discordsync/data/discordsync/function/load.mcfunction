@@ -1,7 +1,19 @@
-scoreboard objectives add requests dummy
+## Setup 
+# Scoreboards
+scoreboard objectives add ds.rejoin custom:leave_game
 scoreboard objectives add ds.config trigger
 scoreboard objectives add ds.style dummy
 
+scoreboard objectives add requests dummy
+
+# only needed for first join detection, but still exists :skull:
+scoreboard objectives add ds.id dummy
+
+# load the armor stand
+forceload add 990 10
+execute unless entity e-0-0-0-e run summon armor_stand 1000 50 4 {UUID:[I;14,0,0,14]}
+
+## /http On Load
 # Load message
 execute if data storage discordsync:data data.token run schedule function discordsync:load/load 30
 

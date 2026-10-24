@@ -1,0 +1,1 @@
+$data modify storage discordsync:data body.content set value "**There are $(count) players online:**\n  $(a)"

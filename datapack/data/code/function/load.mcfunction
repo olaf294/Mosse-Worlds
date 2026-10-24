@@ -61,6 +61,7 @@ schedule function code:misc/tick_50t 1t replace
 
 execute unless loaded 9 64 -19 run return fail
 
+kill @e[type=text_display,tag=display]
 function code:playerdetect/load_displays
 
 summon text_display 0.5 69.125 9.9 {text:[{text:'"Lɪᴠᴇ" Vᴏᴛᴇ Cᴏᴜɴᴛ: ',color:green},{score:{name:".mosse_votes",objective:misc},color:aqua,underlined:1b}],Rotation:[180,0],transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[3.0f,3.0f,3.0f],translation:[0.0f,0.0f,0.0f]},Tags:["display","counts"],UUID:[I;15,2,0,0]}
@@ -72,7 +73,7 @@ summon text_display -18.5 68.25 -6.9 {text:[{text:"Tᴀʀɢᴇᴛ Jᴀᴍ ID: ",
 scoreboard players set .req_jam_id misc 0
 scoreboard players set .max_jam misc 5
 
-kill @e[tag=discord_join]
+kill @e[tag=discord_join,limit=2]
 summon interaction 5.5 64.5 10.5 {width:2,height:2,Tags:["discord_join"],UUID:[I;15,3,0,1]}
 summon text_display 5.5 66.2 9.9 {text:{text:"Cʟɪᴄᴋ ᴛᴏ ᴊᴏɪɴ ᴛʜᴇ Dɪꜱᴄᴏʀᴅ!",color:blue},Tags:["discord_join","display"],Rotation:[180,0],transformation:{left_rotation:[0.0f,0.0f,0.0f,1.0f],right_rotation:[0.0f,0.0f,0.0f,1.0f],scale:[0.875f,0.875f,0.875f],translation:[0.0f,0.0f,0.0f]}}
 
