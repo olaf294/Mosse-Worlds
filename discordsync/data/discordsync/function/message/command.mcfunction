@@ -12,10 +12,9 @@ function discordsync:commands/set_reference with storage discordsync:data data
 ## check for MATCHING commands
 execute if data storage discordsync:data {cm:{command:"list"}} run return run function discordsync:commands/list
 execute if data storage discordsync:data {cm:{command:"listall"}} run return run function discordsync:commands/list
-
-execute if data storage discordsync:data {cm:{command:"ping"}} run return run function discordsync:commands/ping
-
 execute if data storage discordsync:data {cm:{command:"help"}} run return run function discordsync:commands/help
+execute if data storage discordsync:data {cm:{command:"mute list"}} run return run function discordsync:commands/_mute/list_muted
+execute if data storage discordsync:data {cm:{command:"block list"}} run return run function discordsync:commands/_mute/list_muted
 
 ## check for STARTING_WITH commands
 # 4

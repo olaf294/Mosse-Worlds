@@ -38,4 +38,4 @@ scoreboard players operation .d iso8601convert += .hour iso8601convert
 execute unless score .d iso8601convert matches 0.. run scoreboard players operation .d iso8601convert *= -1 iso8601convert
 execute store result storage discordsync:data temp.d double 1 run scoreboard players get .d iso8601convert
 data modify storage discordsync:data temp.d set string storage discordsync:data temp.d 0 -3
-function discordsync:commands/_ping/set with storage discordsync:data temp
+function ds-addons:commands/_ping/set with storage discordsync:data temp

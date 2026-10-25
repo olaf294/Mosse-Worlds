@@ -19,4 +19,4 @@ data modify storage iso8601:data out.minute set string storage discordsync:data 
 data modify storage iso8601:data out.second set string storage discordsync:data cm.timestamp 17 19
 data modify storage iso8601:data out.ms set string storage discordsync:data cm.timestamp 20 23
 
-function discordsync:commands/_ping/process with storage iso8601:data out
+function ds-addons:commands/_ping/process with storage iso8601:data out
