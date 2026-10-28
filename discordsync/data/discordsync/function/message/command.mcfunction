@@ -7,12 +7,13 @@ data modify storage discordsync:data cm.command set string storage discordsync:d
 
 data modify storage discordsync:data body.content set value "Something went wrong!"
 
-function discordsync:commands/set_reference with storage discordsync:data data
+function discordsync:util/set_reference with storage discordsync:data data
 
 ## check for MATCHING commands
 execute if data storage discordsync:data {cm:{command:"list"}} run return run function discordsync:commands/list
 execute if data storage discordsync:data {cm:{command:"listall"}} run return run function discordsync:commands/list
 execute if data storage discordsync:data {cm:{command:"help"}} run return run function discordsync:commands/help
+execute if data storage discordsync:data {cm:{command:"version"}} run return run function discordsync:commands/version
 execute if data storage discordsync:data {cm:{command:"mute list"}} run return run function discordsync:commands/_mute/list_muted
 execute if data storage discordsync:data {cm:{command:"block list"}} run return run function discordsync:commands/_mute/list_muted
 

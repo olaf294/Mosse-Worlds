@@ -15,10 +15,12 @@ execute if data storage discordsync:data cm.attachments[1] run function discords
 # NO attachments 
 execute unless data storage discordsync:data cm.attachments[] run data modify storage discordsync:data cm.att set value ""
 
-## Process replies and forwards
-execute if data storage discordsync:data cm.message_reference{type:0} run data modify storage discordsync:data cm.ment set value {text:"[ʀᴇᴘʟʏ]",color:"#dd8800",extra:[" "]}
-execute if data storage discordsync:data cm.message_reference{type:1} run data modify storage discordsync:data cm.ment set value {text:"[ꜰᴏʀᴡᴀʀᴅᴇᴅ ᴍᴇꜱꜱᴀɢᴇ]",color:"#888888",extra:[" "]}
-execute unless data storage discordsync:data cm.message_reference.type run data modify storage discordsync:data cm.ment set value ""
+## Process replies, pins and forwards
+execute if data storage discordsync:data cm.message_reference{type:0} run data modify storage discordsync:data cm.modifier set value {text:"[ʀᴇᴘʟʏ]",color:"#dd8800",extra:[" "]}
+execute if data storage discordsync:data {cm:{type:6}} run data modify storage discordsync:data cm.modifier set value {text:"[ᴘɪɴɴᴇᴅ ᴀ ᴍᴇꜱꜱᴀɢᴇ]",color:"#cc2244",extra:[" "]}
+execute if data storage discordsync:data {cm:{type:18}} run data modify storage discordsync:data cm.modifier set value {text:"[ᴄʀᴇᴀᴛᴇᴅ ᴀ ᴛʜʀᴇᴀᴅ]",color:"#aaaa88",extra:[" "]}
+execute if data storage discordsync:data cm.message_reference{type:1} run data modify storage discordsync:data cm.modifier set value {text:"[ꜰᴏʀᴡᴀʀᴅ]",color:"#888888",extra:[" "]}
+execute unless data storage discordsync:data cm.message_reference.type run data modify storage discordsync:data cm.modifier set value ""
 
 ## Process name 
 execute if data storage discordsync:data {data:{name_style:1}} run data modify storage discordsync:data cm.name set from storage discordsync:data cm.author.username

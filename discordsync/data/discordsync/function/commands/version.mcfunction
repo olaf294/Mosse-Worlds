@@ -1,0 +1,3 @@
+# Removing this notice is not authorized in the usage. You must keep this notice avaiable to all users regardless of permissions. 
+data modify storage discordsync:data body.content set value "__DiscordSync v1.0.0__\nCode by olaf_294 with help from sea4_18.\n\nWebsite: https://github.com/olaf294/Mosse-Worlds/tree/main/discordsync\n-# We are not affiliated with Discord. This is not an official Discord project."
+function discordsync:message/send with storage discordsync:data data
