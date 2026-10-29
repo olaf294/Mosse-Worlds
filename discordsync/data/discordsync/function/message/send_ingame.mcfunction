@@ -1,7 +1,3 @@
-## Message Processing
-function discordsync:message/process_style
-
-
 ## Return if user is muted
 $execute if data storage discordsync:data muted[{id:"$(id)"}] run return run tellraw @a[tag=is_admin] [{text:"  ",hover_event:{action:show_text,value:[{storage:"discordsync:data",nbt:cm.time,interpret:1b,color:gray},{text:" UTC",color:gray},\
  {text:"\n🔔",strikethrough:1b,color:gold},{text:" Mᴜᴛᴇᴅ ᴍᴇꜱꜱᴀɢᴇ. Oɴʟʏ ᴀᴅᴍɪɴꜱ ᴄᴀɴ ꜱᴇᴇ ᴛʜɪꜱ. ",color:white},{text:"🔔",strikethrough:1b,color:gold}]}},\

@@ -44,3 +44,7 @@ If you did everything right, you will now be able to send messages in Discord th
 ## Addons
 If you want to expand on DiscordSync, you can use the namespace `ds-addons` and the built-in function tags `function #ds-addons:edit_help` (to edit the `!help` message) and `function #ds-addons:commands` (to add your own custom commands).
 For now, there won't be much documentation on this topic, but it will come in the future.
+
+## Uninstall
+To delete most scoreboards, storage content and blocks, run the function `discordsync:zzz/uninstall`. This will NOT ask for confirmation and there is NO way to restore the data. The datapack should be removed before the next reload.
+You must manually remove the scoreboard `requests` with `scoreboard objectives remove requests`. 
