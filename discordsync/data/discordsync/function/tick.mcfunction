@@ -8,6 +8,9 @@ scoreboard players enable @a ds.config
 execute as @a[scores={ds.config=1..}] run function discordsync:user_config/show
 scoreboard players reset @a[scores={ds.config=1..}] ds.config
 
+scoreboard players enable @a ds.send
+execute as @a[scores={ds.send=1..}] run function discordsync:send/give_book_or_send
+scoreboard players reset @a[scores={ds.send=1..}] ds.send
 
 ## Join / Leave Detections
 # First join

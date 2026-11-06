@@ -2,6 +2,7 @@
 # Scoreboards
 scoreboard objectives add ds.rejoin custom:leave_game
 scoreboard objectives add ds.config trigger
+scoreboard objectives add ds.send trigger
 scoreboard objectives add ds.style dummy
 
 scoreboard objectives add requests dummy

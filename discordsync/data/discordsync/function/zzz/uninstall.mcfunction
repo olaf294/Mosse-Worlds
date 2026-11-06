@@ -14,6 +14,7 @@ scoreboard objectives remove ds.id
 scoreboard objectives remove ds.rejoin
 scoreboard objectives remove ds.config
 scoreboard objectives remove ds.style
+scoreboard objectives remove ds.send
 
 kill e-0-0-0-e
 setblock 1000 49 4 air

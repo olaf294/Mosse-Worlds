@@ -1,0 +1,2 @@
+$data modify storage discordsync:data body.content set value "> **$(user)**: $(msg)"
+$tellraw @s ["",{text:"👾 Dɪꜱᴄᴏʀᴅ",color:"#9999ff"},{text:"Sʏɴᴄ",color:"#7777ff"},{text:" » ",color:gray},{text:"Mᴇꜱꜱᴀɢᴇ ꜱᴇɴᴛ.\n",color:green},{text:"ᴄᴏɴᴛᴇɴᴛ: ",color:dark_green},"$(msg)"]

@@ -5,3 +5,4 @@ $data modify storage discordsync:data body.embeds set value [{"color":47872,"tit
 execute unless score @s ds.style matches -2147483648..2147483647 run scoreboard players set @s ds.style 1
 
 function discordsync:message/send with storage discordsync:data data
+data remove storage discordsync:data body.embeds

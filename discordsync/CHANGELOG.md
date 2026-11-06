@@ -2,6 +2,13 @@
 This changelog documents all releases since v1.0.0.
 
 # v1.x
+## v1.1.0 — November 06, 2026
+### Additions
+- `/trigger ds.send` _(in-game command)_ sends a message from a written book into the Discord chat. 
+- Mentions are disabled with this sent message.
+
+---
+
 ## v1.0.1 — October 29, 2026
 ### Additions
 - !**Permanent**! Uninstall function
@@ -9,6 +16,8 @@ This changelog documents all releases since v1.0.0.
 ### Fixes
 - Link in `!version` command will no longer be embedded
 - Further `!version` tweaks
+
+---
 
 ## v1.0.0 — October 28, 2026
 ### Additions
