@@ -11,7 +11,7 @@ scoreboard players reset @s[tag=!legitermoose.is_playing] legitermoose.rank
 execute as @s[tag=!is_admin] unless score @s legitermoose.rank matches -2147483648..2147483647 run gamemode adventure @s
 
 # Clear those players too
-execute as @s[tag=!is_admin] unless score @s legitermoose.rank matches -2147483648..2147483647 run clear @s *[!custom_data~{ui:1b}, !custom_data~{world_browser:1b}, !custom_data~{noclear:1b}]
+execute as @s[tag=!is_admin] unless score @s legitermoose.rank matches -2147483648..2147483647 run clear @s *[!custom_data~{ui:1b}, !custom_data~{world_browser:1b}, !custom_data~{noclear:1b}, !custom_data~{discordsync_send:1b}]
 
 # All Admins get Rank 10
 scoreboard players set @a[tag=is_admin] legitermoose.rank 10

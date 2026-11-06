@@ -1,6 +1,4 @@
 ## preparations
-# remove body
-data remove storage discordsync:data body
 
 data modify storage discordsync:data data.prev_cmd set from storage discordsync:data cm.id
 data modify storage discordsync:data cm.cmd set string storage discordsync:data cm.content 1

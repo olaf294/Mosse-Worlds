@@ -2,10 +2,17 @@
 This changelog documents all releases since v1.0.0.
 
 # v1.x
+## v1.1.1 — November 06, 2026
+### Fixes
+- Remove body immediately after sending message to not send any stray data twice
+- Send outgoing Discord messages into in-game chat
+
+---
+
 ## v1.1.0 — November 06, 2026
 ### Additions
-- `/trigger ds.send` _(in-game command)_ sends a message from a written book into the Discord chat. 
-- Mentions are disabled with this sent message.
+- `/trigger ds.send` _(in-game command)_ sends a message from a written book into the Discord chat
+- Mentions are disabled with this sent message
 
 ---
 

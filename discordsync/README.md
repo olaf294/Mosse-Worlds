@@ -7,6 +7,8 @@ To use DiscordSync, follow this short guide. DiscordSync has a few useful featur
 
 If you want to request a new feature in regular DiscordSync, then send your feedback at https://discord.gg/KTAusBx2GH in the suggestions channel (<#1475131746352758886>).
 
+You can also open a GitHub issue if you want.
+
 ## Install Guide
 To get started, you need a world where the owner has the ꜰᴍ² rank. You will also need to be on legitimoose.com. 
 
