@@ -1,5 +1,5 @@
-execute if items entity @s weapon.mainhand writable_book[custom_data={discordsync_send:1b}] run return run function discordsync:send/send_content with entity @s SelectedItem.components.minecraft:writable_book_content.pages[0]
-execute if items entity @s weapon.mainhand written_book[custom_data={discordsync_send:1b}] run return run function discordsync:send/send_content with entity @s SelectedItem.components.minecraft:written_book_content.pages[0]
+execute if items entity @s weapon.mainhand writable_book[custom_data={discordsync_send:1b}] run return run function discordsync:send/set_content with entity @s SelectedItem.components.minecraft:writable_book_content.pages[0]
+execute if items entity @s weapon.mainhand written_book[custom_data={discordsync_send:1b}] run return run function discordsync:send/set_content with entity @s SelectedItem.components.minecraft:written_book_content.pages[0]
 
 function discordsync:send/clear_books
 give @s writable_book[custom_data={discordsync_send:1b}]

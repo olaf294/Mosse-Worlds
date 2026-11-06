@@ -8,7 +8,7 @@ execute if score .uninstall ads.config matches 2 run tellraw @a[tag=is_admin] ["
 execute if score .uninstall ads.config matches 2 run return fail
 
 # Uninstall
-tellraw @a[tag=is_admin] [{text:"LᴇɢɪᴛɪAᴅꜱ ",color:yellow},{text:"» ",color:dark_gray},{text:"ᴜɴɪɴꜱᴛᴀʟʟɪɴɢ... ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ.",color:gray}]
+tellraw @a[tag=is_admin] [{text:"LᴇɢɪᴛɪAᴅꜱ ",color:yellow},{text:"» ",color:dark_gray},{text:"ᴜɴɪɴꜱᴛᴀʟʟɪɴɢ… ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ.",color:gray}]
 
 function ads:zzz/_delete_all_data
 

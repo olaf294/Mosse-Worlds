@@ -1,12 +1,8 @@
-function discordsync:send/clear_books
+scoreboard players add .total requests 1
+scoreboard players add .discordsync requests 1
 
-# set name and message
-function discordsync:util/get_name
-data modify storage discordsync:data temp.send.user set from storage discordsync:data temp.name
-$data modify storage discordsync:data temp.send.msg set value "$(raw)"
+$http headers value {Content-Type: "application/json"} body value '{"username":"$(user)","avatar_url":"https://mc-heads.net/avatar/$(user)","content":"$(msg)","allowed_mentions":{"parse":[]}}' send "$(url)"
 
-function discordsync:send/set_content with storage discordsync:data temp.send
+data remove storage discordsync:data temp.send.url
 
-# disallow mentions
-data modify storage discordsync:data body.allowed_mentions set value {parse:[]}
-function discordsync:message/send with storage discordsync:data data
+function discordsync:send/send_outgoing_ingame

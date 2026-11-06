@@ -1,6 +1,6 @@
 tp @s 1000 64 0 90 0
 
-tellraw @s [{text:"Connecting to legitermoose.com...",color:gray}]
+tellraw @s [{text:"Connecting to legitermoose.com…",color:gray}]
 
 execute at @s run playsound block.note_block.pling ui @s ~ ~ ~ 1 2
 tellraw @s [{text:"Wᴇʟᴄᴏᴍᴇ ᴛᴏ ",color:gold},{text:"ʟᴇɢɪᴛᴇʀᴍᴏᴏꜱᴇ.ᴄᴏᴍ",color:"#00AAFF",underlined:1b},{text:"! ",color:gold,underlined:0b},"\n",{text:"Cᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ: ",color:dark_green},{text:"ʟᴏʙʙʏ",color:green}]

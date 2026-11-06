@@ -10,5 +10,8 @@ execute if data storage discordsync:data {cm:{command:"!"}} run function discord
 # Message Processing
 function discordsync:message/process_style
 
+# Process MiniMessage
+execute unless data storage discordsync:data {data:{parse_mm:0}} if data storage discordsync:data cm.content run return run function discordsync:message/process_minimessage with storage discordsync:data cm
+
 # Broadcast the message
 function discordsync:message/send_ingame with storage discordsync:data cm.author

@@ -13,7 +13,7 @@ scoreboard objectives add ds.id dummy
 # load the armor stand with supporting block
 forceload add 990 10
 execute unless entity e-0-0-0-e run summon armor_stand 1000 50 4 {UUID:[I;14,0,0,14]}
-execute unless block 1000 49 4 test_block run setblock 1000 49 4 test_block[mode=start]
+execute unless block 1000 49 4 command_block run setblock 1000 49 4 command_block
 
 
 ## /http On Load

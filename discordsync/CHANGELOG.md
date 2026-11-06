@@ -2,6 +2,17 @@
 This changelog documents all releases since v1.0.0.
 
 # v1.x
+## v1.2.0 — November 06, 2026
+### Additions
+- Parse MiniMessage from incoming DiscordSync messages
+- Option to choose between plain and MiniMessage
+- Profile pictures and usernames show for synced messages
+
+### Fixes
+- Switch to webhook to change synced profile picture
+
+---
+
 ## v1.1.1 — November 06, 2026
 ### Fixes
 - Remove body immediately after sending message to not send any stray data twice
