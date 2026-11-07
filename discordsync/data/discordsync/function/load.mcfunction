@@ -16,6 +16,10 @@ execute unless entity e-0-0-0-e run summon armor_stand 1000 50 4 {UUID:[I;14,0,0
 execute unless block 1000 49 4 command_block run setblock 1000 49 4 command_block
 
 
+## Set Version - Mmp format
+# current version: v1.2.1
+scoreboard players set .version ds.config 121
+
 ## /http On Load
 # Load message
 execute if data storage discordsync:data data.token run schedule function discordsync:load/load 30

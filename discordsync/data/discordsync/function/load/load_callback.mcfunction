@@ -3,3 +3,5 @@ tellraw @a[tag=is_admin] ["",{text:"👾 Dɪꜱᴄᴏʀᴅ",color:"#9999ff"},{te
 {text:" (ʙʏ ",color:"#aaaaff"},{storage:"discordsync:data",nbt:"application.response.owner.username",interpret:1b,color:"#7777ff"},{text:")",color:"#aaaaff"}]
 
 data remove storage discordsync:data application
+
+schedule function discordsync:load/check_for_updates 10

@@ -2,6 +2,15 @@
 This changelog documents all releases since v1.0.0.
 
 # v1.x
+## v1.2.1 — November 07, 2026
+### Additions
+- Experimental update checker: Requests the Mosse Worlds repository.
+
+### Fixes
+- Reduced responsiveness of DiscordSync in order to get more bandwith for `/trigger ds.send`
+
+---
+
 ## v1.2.0 — November 06, 2026
 ### Additions
 - Parse MiniMessage from incoming DiscordSync messages

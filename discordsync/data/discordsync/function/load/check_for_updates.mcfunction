@@ -1,0 +1,2 @@
+http headers value {Accept: "application/vnd.github.raw+json", X-GitHub-Api-Version: "2022-11-28"} \
+     store discordsync:data temp.version callback discordsync:load/update_callback send 'https://api.github.com/repos/olaf294/Mosse-Worlds/contents/discordsync/version.json'

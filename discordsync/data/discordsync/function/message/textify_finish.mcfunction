@@ -1,0 +1,1 @@
+tellraw @a {block:"1000 50 5",nbt:"LastOutput.extra[0].extra[0].with[0]",interpret:1b}
